@@ -397,73 +397,73 @@ var stores = {
         site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608045948399779, 42.9328888254322],
-      }, 
-      properties: {
-        address_it: "Portale Gaita San Giovanni",
-        address_en: "Gaita San Giovanni Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        markerType: "portals",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.608180148251774, 42.932735250662574],
-      }, 
-      properties: {
-        address_it: "Portale Gaita San Giorgio",
-        address_en: "Gaita San Giorgio Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "portals",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.607844084756854, 42.93267580226183],
-      }, 
-      properties: {
-        address_it: "Portale Gaita San Pietro",
-        address_en: "Gaita San Pietro Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "portals",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.60797151822976, 42.932599840332955],
-      }, 
-      properties: {
-        address_it: "Portale Gaita Santa Maria",
-        address_en: "Gaita Santa Maria Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "portals",
-      },
-    },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.608045948399779, 42.9328888254322],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita San Giovanni",
+    //     address_en: "Gaita San Giovanni Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.608180148251774, 42.932735250662574],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita San Giorgio",
+    //     address_en: "Gaita San Giorgio Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.607844084756854, 42.93267580226183],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita San Pietro",
+    //     address_en: "Gaita San Pietro Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "portals",
+    //   },
+    // },
+    // {
+    //   type: "Feature",
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [12.60797151822976, 42.932599840332955],
+    //   }, 
+    //   properties: {
+    //     address_it: "Portale Gaita Santa Maria",
+    //     address_en: "Gaita Santa Maria Portal",
+    //     city: "Bevagna",
+    //     country: "Italy",
+    //     postalCode: "06031",
+    //     description_it: "",
+    //     description_en: "",
+    //     markerType: "portals",
+    //   },
+    // },
     // END PORTALS GAITE
     
     // MESTIERI GAITE
