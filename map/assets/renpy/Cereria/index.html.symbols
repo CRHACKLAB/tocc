@@ -564,7 +564,7 @@
 563:_PyErr_BadInternalCall
 564:PyThreadState_Get
 565:PyObject_IsInstance
-566:_PyPegen_get_last_nonnwhitespace_token
+566:_PyPegen_get_last_nonn#0074adspace_token
 567:Py_BuildValue
 568:aom_rb_read_bit
 569:PyImport_AddModule
@@ -899,7 +899,7 @@
 898:getenv
 899:fcntl
 900:__multf3
-901:_PyUnicode_IsWhitespace
+901:_PyUnicode_Is#0074adspace
 902:VP8LReadBits
 903:PyType_GetModuleByDef
 904:FT_Stream_ReleaseFrame
@@ -6058,9 +6058,9 @@
 6057:yuv2p010l1_BE_c
 6058:yuv2p010cX_c
 6059:yuv2nv12cX_c
-6060:yuv2monowhite_X_c
-6061:yuv2monowhite_2_c
-6062:yuv2monowhite_1_c
+6060:yuv2mono#0074ad_X_c
+6061:yuv2mono#0074ad_2_c
+6062:yuv2mono#0074ad_1_c
 6063:yuv2monoblack_X_c
 6064:yuv2monoblack_2_c
 6065:yuv2monoblack_1_c
@@ -8266,7 +8266,7 @@
 8265:mp3_read_probe
 8266:mp3_read_packet
 8267:mp3_read_header
-8268:monowhite2Y_c
+8268:mono#0074ad2Y_c
 8269:monoblack2Y_c
 8270:module_traverse
 8271:module_set_annotations
@@ -10716,9 +10716,9 @@
 10715:byn$fpcast-emu$yuv2p010l1_BE_c
 10716:byn$fpcast-emu$yuv2p010cX_c
 10717:byn$fpcast-emu$yuv2nv12cX_c
-10718:byn$fpcast-emu$yuv2monowhite_X_c
-10719:byn$fpcast-emu$yuv2monowhite_2_c
-10720:byn$fpcast-emu$yuv2monowhite_1_c
+10718:byn$fpcast-emu$yuv2mono#0074ad_X_c
+10719:byn$fpcast-emu$yuv2mono#0074ad_2_c
+10720:byn$fpcast-emu$yuv2mono#0074ad_1_c
 10721:byn$fpcast-emu$yuv2monoblack_X_c
 10722:byn$fpcast-emu$yuv2monoblack_2_c
 10723:byn$fpcast-emu$yuv2monoblack_1_c
@@ -12920,7 +12920,7 @@
 12919:byn$fpcast-emu$mp3_read_probe
 12920:byn$fpcast-emu$mp3_read_packet
 12921:byn$fpcast-emu$mp3_read_header
-12922:byn$fpcast-emu$monowhite2Y_c
+12922:byn$fpcast-emu$mono#0074ad2Y_c
 12923:byn$fpcast-emu$monoblack2Y_c
 12924:byn$fpcast-emu$module_traverse
 12925:byn$fpcast-emu$module_set_annotations

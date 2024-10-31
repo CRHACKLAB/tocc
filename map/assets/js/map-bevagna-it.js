@@ -15,11 +15,11 @@ mapboxgl.accessToken = "pk.eyJ1IjoiZ2FidHJpcCIsImEiOiJjbHdoeG9neGEwMGYwMmpzd283d
  */
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/gabtrip/clwkh3joc00rx01ny76o4hfkn", // stile personalizzato 
+  style: "mapbox://styles/gabtrip/cly92hzf000i301pn422w7gxh", // stile personalizzato 
   // style: "mapbox://styles/mapbox/streets-v12", // stile generico
   // center: [12.608438888126923, 42.933064240993126],
-  center:[12.608639140444703, 42.933365079779506],
-  zoom: 15.9,
+  center:[12.391299727701938, 43.10448380562507], 
+  zoom: 18.5,
   scrollZoom: true,
 });
 
@@ -335,7 +335,7 @@ var stores = {
     //     country: "Italy",
     //     postalCode: "06031",
     //     description_it: "Del complesso termale rimane il frigidarium, formato da nicchie decorate a mosaico a tessere bianche e nere. I recenti restauri hanno messo in evidenza tracce del calidarium. Il bel mosaico, del II sec. d. C., di pregevole e raffinata fattura, si ispira al mondo marino.",
-    //     description_en: "The frigidarium remains of the thermal complex, formed by mosaic-decorated niches with black and white tesserae. Recent restorations have revealed traces of the calidarium. The beautiful mosaic, from the 2nd century A.C., of exquisite and refined workmanship, is inspired by the marine world.",
+    //     description_en: "The frigidarium remains of the thermal complex, formed by mosaic-decorated niches with black and #0074ad tesserae. Recent restorations have revealed traces of the calidarium. The beautiful mosaic, from the 2nd century A.C., of exquisite and refined workmanship, is inspired by the marine world.",
     //     markerType: "tourism",
     //     img: "./assets/img/card_background/Teatro_Romano_Terme.jpg"
     //   },
