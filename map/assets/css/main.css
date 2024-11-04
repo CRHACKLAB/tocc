@@ -71,7 +71,7 @@ body {
   line-height: 40px;
   padding-top: 10px;
   background-color: #E9E4E3; 
-  color: #32679A; 
+  color: #53c169; 
   margin: 0;
 }
 
@@ -116,15 +116,15 @@ body {
   position: absolute;
   top: 1vmin;
   right: 1vmin;
-  background-color: #32679A;
-  color: white;
+  background-color: #53c169;
+  color: #5A6B66;
   font-size: calc(var(--font-size) * 1.8);
   padding: 1px 7px;
 }
 
 .hide-button:hover {
   background-color: #8cc63f;
-  color: white;
+  color: #5A6B66;
 }
 
 /* BACK BUTTONS */
@@ -132,14 +132,14 @@ body {
   position: absolute;
   top: 1vmin;
   left: 1vmin;
-  background-color: #32679A;
-  color: white;
+  background-color: #53c169;
+  color: #5A6B66;
   font-size: calc(var(--font-size) * 1.8);
 }
 
 .back-button:hover {
   background-color: #8cc63f;
-  color: white;
+  color: #5A6B66;
 }
 
 .fa-solid {
@@ -151,8 +151,8 @@ body {
   position: absolute;
   top: 1vmin;
   left: 1vmin;
-  background-color: #32679A;
-  color: white;
+  background-color: #53c169;
+  color: #5A6B66;
   font-size: calc(var(--font-size) * 1.8);
   padding: 1px 7px;
 }
@@ -168,15 +168,15 @@ body {
 
 .show-button:hover {
   background-color: #8cc63f;
-  color: white;
+  color: #5A6B66;
 }
 
 .filter-button {
   position: absolute;
   top: 1vmin;
   left: 17vmin;
-  background-color: #32679A;
-  color: white;
+  background-color: #53c169;
+  color: #5A6B66;
   font-size: calc(var(--font-size) * 1.7);
 }
 
@@ -194,20 +194,20 @@ body {
   top: 20vh;
   left: 50vw;
   background-color: #00853e;
-  color: white;
+  color: #5A6B66;
 }
 
 #show-info-card:hover {
   background-color: #8cc63f;
-  color: white;
+  color: #5A6B66;
 }
 
 /* FILTER */
 #filter-dropdown {
   top: 13vh;
   right: 7.6vw;
-  background-color: #32679A;
-  color: white;
+  background-color: #53c169;
+  color: #5A6B66;
   font-size: calc(var(--font-size) * 1.4); 
   padding: 0.2px;
 }
@@ -216,8 +216,8 @@ body {
   border: none;
   top: 13vh;
   right: 1vmin;
-  background-color: #32679A;
-  color: white;
+  background-color: #53c169;
+  color: #5A6B66;
   font-size: calc(var(--font-size) * 1.5);
 }
 
@@ -308,7 +308,7 @@ body {
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
   text-decoration: none; 
-  color: white; 
+  color: #5A6B66; 
   background: url(../img/fondinoSHU.svg) no-repeat;
   background-position: center center;
   background-size: cover;
@@ -325,7 +325,7 @@ body {
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
   text-decoration: none; 
-  color: white; 
+  color: #5A6B66; 
   background: url(../img/fondinoSHU.svg) no-repeat;
   background-position: center center;
   background-size: cover;
@@ -342,7 +342,7 @@ body {
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
   text-decoration: none; 
-  color: white; 
+  color: #5A6B66; 
   background-color: #d4a323; 
   padding: 10px; 
   min-height: 120px;
@@ -357,7 +357,7 @@ body {
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
   text-decoration: none; 
-  color: white; 
+  color: #5A6B66; 
   background: url(../img/fondinoSHU.svg)no-repeat;
   background-position: center center;
   background-size: cover;
@@ -374,7 +374,7 @@ body {
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
   text-decoration: none; 
-  color: white; 
+  color: #5A6B66; 
   background: url(../img/fondinoSHU.svg)no-repeat;
   background-position: center center;
   background-size: cover;
@@ -391,7 +391,7 @@ body {
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
   text-decoration: none; 
-  color: white; 
+  color: #5A6B66; 
   background-color: #56a446;
   padding: 10px; 
   min-height: 120px;
@@ -406,7 +406,7 @@ body {
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
   text-decoration: none; 
-  color: white; 
+  color: #5A6B66; 
   background-color: #29B8CE; 
   padding: 10px; 
   min-height: 120px;
@@ -421,7 +421,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #e51ce5;
   padding: 10px;
   min-height: 120px;
@@ -436,7 +436,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #c52639;
   padding: 10px;
   min-height: 120px;
@@ -451,7 +451,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #29B8CE; 
   padding: 10px;
   min-height: 120px;
@@ -466,7 +466,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #29B8CE; 
   padding: 10px;
   min-height: 120px;
@@ -481,7 +481,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #29B8CE; 
   padding: 10px;
   min-height: 120px;
@@ -496,7 +496,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #29B8CE; 
   padding: 10px;
   min-height: 120px;
@@ -511,7 +511,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #F5A04C;
   padding: 10px;
   min-height: 120px;
@@ -526,7 +526,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #1f089f;
   padding: 10px;
   min-height: 120px;
@@ -541,7 +541,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #9455ef;
   padding: 10px;
   min-height: 120px;
@@ -556,7 +556,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: burlywood;
   padding: 10px;
   min-height: 120px;
@@ -571,7 +571,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: burlywood;
   padding: 10px;
   min-height: 120px;
@@ -586,7 +586,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: burlywood;
   padding: 10px;
   min-height: 120px;
@@ -601,7 +601,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: burlywood;
   padding: 10px;
   min-height: 120px;
@@ -616,7 +616,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #ef7876;
   padding: 10px;
   min-height: 120px;
@@ -631,7 +631,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #d8d208;
   padding: 10px;
   min-height: 120px;
@@ -646,7 +646,7 @@ body {
   font-size: calc(var(--font-size) * 1.5);
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: #5A6B66;
   background-color: #69ddff;
   padding: 10px;
   min-height: 120px;
@@ -920,11 +920,11 @@ body {
 #marker-dropdown {
   font-size: large;
   background-color: transparent;
-  color: white;
+  color: #5A6B66;
 }
 
 #marker-dropdown option{
-  background-color: #32679A;
+  background-color: #53c169;
 }
 
 @media only screen and (max-width: 430px) {

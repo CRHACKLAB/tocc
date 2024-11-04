@@ -1,0 +1,528 @@
+
+if (!("remove" in Element.prototype)) {
+  Element.prototype.remove = function () {
+    if (this.parentNode) {
+      this.parentNode.removeChild(this);
+    }
+  };
+}
+
+// mapboxgl.accessToken = "pk.eyJ1IjoiZG9jLWRpdmFnbyIsImEiOiJja2NnbXU0ancwdGx1MnhtMm1pdzV5cWd4In0.NXt0RiFp4HjZ_iy55WADkg"; // token generico
+
+mapboxgl.accessToken = "pk.eyJ1IjoiZ2FidHJpcCIsImEiOiJjbHdoeG9neGEwMGYwMmpzd283dWg2c3hqIn0.7JK3k4zD9eU0OM9iurp0Xg"; // token stile personalizzato
+/**
+ * Add the map to the page
+ */
+var map = new mapboxgl.Map({
+  container: "map",
+  style: "mapbox://styles/gabtrip/cly92yhej00i401pn59fof3ta", // stile personalizzato 
+  // style: "mapbox://styles/mapbox/streets-v12", // stile generico
+  // center: [12.608438888126923, 42.933064240993126],
+  center:[12.391299727701938, 43.10447380562507],
+  zoom: 18.3,
+  scrollZoom: true,
+});
+
+//compass
+const nav = new mapboxgl.NavigationControl({
+  showCompass: true,
+});
+map.on("load", function (e) {
+  map.addControl(nav, "bottom-right");
+});
+var stores = {
+  type: "FeatureCollection",
+  features: [      
+    // PARCHEGGI
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391299727701938, 43.10448380562507],
+      }, 
+      properties: {
+        address_it: "Parcheggio Piazzale Masci Mindolfo",
+        address_en: "Piazzale Masci Mindolfo Parking",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Parcheggio a pagamento",
+        description_en: "Toll Parking",
+        markerType: "parking",
+      },
+    },
+    // FINE PARCHEGGI
+    
+    // ENTRANCE POINT
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608935189233497, 42.931891328001676],
+      }, 
+      properties: {
+        address_it: "Ingresso Porta Todi",
+        address_en: "Porta Todi Entrance",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: ``,
+        description_en: "",
+        markerType: "entrance",
+        img: "./assets/img/card_background/Porta_Todi.jpeg",
+      },
+    },
+    
+    // PORTALS GAITE
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608231387105889, 42.932829261692824],
+      }, 
+      properties: {
+        address_it: "Portale Mercato delle Gaite",
+        address_en: "Mercato delle Gaite Portal",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "Se non hai l'app Zappar potrai scaricarla cliccando sul link sottostante",
+        description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
+        markerType: "portals",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
+      },
+    },
+    
+    // MESTIERI GAITE
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.610776563411152, 42.934996177151284],
+      }, 
+      properties: {
+        address_it: "Mestiere Gaita San Giovanni",
+        address_en: "Gaita San Giovanni Craft",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "sanGiovanni",
+      },
+    },
+    
+    // TOILET
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608545097301263, 42.93266494869125],
+      }, 
+      properties: {
+        address_it: "Bagni pubblici",
+        address_en: "Public toilet",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "toilet",
+      },
+    },
+    // END TOILET
+
+    // WATER POINT
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.608108088084045, 42.932672363152506],
+      }, 
+      properties: {
+        address_it: "Fontana con Acqua Potabile",
+        address_en: "Drinking Water Fountain",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "water",
+      },
+    },
+    // END WATER POINT
+  ],
+};
+
+/**
+ * Assign a unique id to each store. You'll use this `id`
+ * later to associate each point on the map with a listing
+ * in the sidebar.
+ */
+stores.features.forEach(function (store, i) {
+  store.properties.id = i;
+});
+
+// GPS
+var geolocateControl = new mapboxgl.GeolocateControl({
+  positionOptions: {
+      enableHighAccuracy: true
+  },
+  trackUserLocation: true,
+  showUserLocation: true
+});
+
+map.addControl(geolocateControl);
+
+// Save geolocation status in localStorage
+function saveGeolocationStatus(isEnabled) {
+  localStorage.setItem('geolocationEnabled', isEnabled);
+}
+
+// Retrieve geolocation status from localStorage
+function getGeolocationStatus() {
+  return localStorage.getItem('geolocationEnabled') === 'true';
+}
+
+// Usage example when activating geolocation
+if (getGeolocationStatus()) {
+  // Code to activate geolocation
+  activateGeolocation();
+}
+
+// Update geolocation status whenever it's toggled
+function activateGeolocation() {
+  saveGeolocationStatus(true);
+  // Code to activate geolocation
+}
+
+function deactivateGeolocation() {
+  saveGeolocationStatus(false);
+  // Code to deactivate geolocation
+}
+
+/**
+ * Wait until the map loads to make changes to the map.
+*/
+map.on("load", function (e) {
+  /**
+   * This is where your '.addLayer()' used to be, instead
+   * add only the source without styling a layer
+   */
+  map.addSource("places", {
+    type: "geojson",
+    data: stores,
+  });
+
+  /**
+   * Add all the things to the page:
+   * - The location listings on the side of the page
+   * - The markers onto the map
+   * 
+   */
+  buildLocationList(stores);
+  addMarkers();
+});
+
+/**
+ * Add a marker to the map for every store listing.
+ **/
+function addMarkers() {
+  /* For each feature in the GeoJSON object above: */
+  stores.features.forEach(function (marker) {
+    /* Create a div element for the marker. */
+    var el = document.createElement("div");
+    /* Assign a unique `id` to the marker. */
+    el.id = "marker-" + marker.properties.id;
+    /* Assign the `marker` class to each marker for styling. */
+    // el.className = "marker";
+
+    // to have different marker styles for each service
+    if (marker.properties.markerType) {
+      el.className = "marker-" + marker.properties.markerType;
+    } else {
+      el.className = "marker-default"; // Fallback class
+    }
+    /**
+     * Create a marker using the div element
+     * defined above and add it to the map.
+     **/
+    new mapboxgl.Marker(el, { offset: [0, -23] })
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
+
+    /**
+     * Listen to the element and when it is clicked, do three things:
+     * 1. Fly to the point
+     * 2. Close all other popups and display popup for clicked store
+     * 3. Highlight listing in sidebar (and remove highlight for all other listings)
+     **/
+    el.addEventListener("click", function (e) {
+      /* Fly to the point */
+      flyToStore(marker);
+      /* Close all other popups and display popup for clicked store */
+      makeHighlight(marker);
+      showInfoCard(marker.properties.address_it, marker.properties.address_en, marker.properties.description_it, marker.properties.description_en, marker.properties.img, marker.properties.markerType, marker.properties.site);
+      /* Highlight listing in sidebar */
+      e.stopPropagation();
+      
+    });
+  });
+}
+
+// This function is to translate the listings
+
+function updateAddresses(data) {
+  var listings = document.getElementById("listings").children;
+  Array.from(listings).forEach(function (listing, i) {
+      var prop = data.features[i].properties;
+      var link = listing.querySelector("a.title");
+      if (language == "it") {
+          link.innerHTML = prop.address_it;
+      } else {
+          link.innerHTML = prop.address_en;
+      }
+  });
+}
+
+
+let currentFilter = 'all';
+/**
+ * Add a listing for each store to the sidebar.
+**/
+function buildLocationList(data) {
+  if (!data || !data.features || !Array.isArray(data.features)) {
+    console.error('Invalid data format for buildLocationList');
+    return;
+  }
+  const listingsContainer = document.getElementById('listings');
+  listingsContainer.innerHTML = '';
+  data.features.forEach(function (store, i) {
+    /**
+     * Create a shortcut for `store.properties`,
+     * which will be used several times below.
+    **/
+    var prop = store.properties;
+   /* Add a new listing section to the sidebar. */
+    var listings = document.getElementById("listings");
+    var listing = listings.appendChild(document.createElement("div"));
+    /* Assign a unique `id` to the listing. */
+    listing.id = "listing-" + prop.id;
+
+    /* Assign the `item` class to each listing for styling. */
+    if (prop.markerType) {
+      listing.className = "item item-" + prop.markerType;
+    } else {
+      listing.className = "item item-default"; // Fallback class
+    }
+    
+
+    /* Add the link to the individual listing created above. */
+    var link = listing.appendChild(document.createElement("a"));
+    
+    link.href = "#";
+    link.className = "title";
+    link.id = "link-" + prop.id;
+  
+    if (language == "it") {
+      link.innerHTML = prop.address_it;
+    } else {
+      link.innerHTML = prop.address_en;
+    }
+        
+    /**
+     * Listen to the element and when it is clicked, do four things:
+     * 1. Update the `currentFeature` to the store associated with the clicked link
+     * 2. Fly to the point
+     * 3. Close all other popups and display popup for clicked store
+     * 4. Highlight listing in sidebar (and remove highlight for all other listings)
+     **/
+    link.addEventListener("click", function (e) {
+      for (var i = 0; i < data.features.length; i++) {
+        if (this.id === "link-" + data.features[i].properties.id) {
+          var clickedListing = data.features[i];
+          flyToStore(clickedListing);
+          makeHighlight(clickedListing);
+        }
+      }
+      var activeItem = document.getElementsByClassName("active");
+      if (activeItem[0]) {
+        activeItem[0].classList.remove("active");
+      }
+      this.parentNode.classList.add("active");
+    });
+  });
+}
+
+document.getElementById('filter-dropdown').addEventListener('change', handleFilterChange);
+document.getElementById('marker-dropdown').addEventListener('change', handleFilterChange);
+
+function handleFilterChange(event) {
+    const selectedType = event.target.value;
+    currentFilter = selectedType;
+    document.getElementById('filter-dropdown').value = selectedType;
+    document.getElementById('marker-dropdown').value = selectedType;
+    applyFilters(selectedType);
+    return (selectedType);
+}
+
+/**
+ * Use Mapbox GL JS's `flyTo` to move the camera smoothly
+ * a given center point.
+ **/
+function flyToStore(currentFeature) {
+  map.flyTo({
+    center: currentFeature.geometry.coordinates,
+    zoom: 20,
+  });
+  sidebar.setAttribute("hidden", "hidden");
+}
+
+function makeHighlight(currentFeature) {
+  var marker = document.getElementById(
+    "marker-" + currentFeature.properties.id
+  );
+}
+
+//FILTERS
+
+function applyFilters(selectedType) {
+    
+  const filteredListings = stores.features.filter(store => 
+      (selectedType === 'all' || store.properties.markerType === selectedType)
+  );
+  
+  updateListings(filteredListings);
+  updateMarkers(filteredListings);
+
+}
+
+
+function updateListings(filteredListings) {
+  // var listings = document.getElementById("listings");
+  // listings.innerHTML = '';
+  buildLocationList({ type: 'FeatureCollection', features: filteredListings });
+}
+
+function updateMarkers(filteredListings) {
+  stores.features.forEach(feature => {
+      const markerElement = document.getElementById(`marker-${feature.properties.id}`);
+      
+      if (filteredListings.includes(feature)) {
+        if (markerElement) {
+              markerElement.style.display = 'inline';
+          }
+      } else {
+          if (markerElement) {;
+              markerElement.style.display = 'none';
+          }
+      }
+      document.getElementById('marker-dropdown').style.display = 'none';
+  });
+}
+
+function showFilter() {
+  document.getElementById('marker-dropdown').style.display = 'inline';
+}
+
+// TRANSLATION FUNCTION
+const translations = {
+  it: {
+      filterOptions: [
+          "Tutte le categorie",
+          "Le Porte",
+          "Punti d'interesse",
+          "Parcheggi", 
+          "Portali Gaite", 
+          "Mestieri medievali",  
+          "Gaita San Giovanni", 
+          "Gaita San Giorgio", 
+          "Gaita San Pietro", 
+          "Gaita Santa Maria", 
+          "Bagni Pubblici", 
+          "Fontana di Acqua Potabile"
+      ]
+  },
+  en: {
+      filterOptions: [
+          "All Categories", 
+          "The Doors", 
+          "Points of Interest",
+          "Parking lots", 
+          "Gaite Portal", 
+          "Medieval Crafts",
+          "Gaita San Giovanni", 
+          "Gaita San Giorgio", 
+          "Gaita San Pietro", 
+          "Gaita Santa Maria", 
+          "Public Toilet", 
+          "Drinking Water Fountain"
+      ]
+  }
+};
+function translate(language) {
+  
+  document.getElementById('all').innerHTML = translations[language].filterOptions[0];
+  document.getElementById('entrance').innerHTML = translations[language].filterOptions[1];
+  // document.getElementById('tourism').innerHTML = translations[language].filterOptions[2];
+  document.getElementById('parking').innerHTML = translations[language].filterOptions[3];
+  document.getElementById('portals').innerHTML = translations[language].filterOptions[4];
+  document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[6];
+  document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[7];
+  document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[8];
+  document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[9];
+  document.getElementById('toilet').innerHTML = translations[language].filterOptions[10];
+  document.getElementById('water').innerHTML = translations[language].filterOptions[11];
+
+  
+  document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
+  document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[1];
+  // document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[2];
+  document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[3];
+  document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[4];
+  document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[6];
+  document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[7];
+  document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[8];
+  document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[9];
+  document.getElementById('marker-toilet').innerHTML = translations[language].filterOptions[10];
+  document.getElementById('marker-water').innerHTML = translations[language].filterOptions[11];
+  
+  // Reload listings in the correct language
+  language = language;
+  applyFilters(currentFilter);
+}
+
+function english() {
+  language = 'en';
+  translate('en');
+  document.getElementById('privacy-policy-it').style.display = 'none';
+  document.getElementById('privacy-policy-en').style.display = 'block';
+  document.getElementById('credits-it').style.display = 'none';
+  document.getElementById('credits-en').style.display = 'block';
+}
+
+function italian() {
+  language = 'it';
+  translate('it');
+  document.getElementById('privacy-policy-en').style.display = 'none';
+  document.getElementById('privacy-policy-it').style.display = 'block';
+  document.getElementById('credits-en').style.display = 'none';
+  document.getElementById('credits-it').style.display = 'block';
+}
+
+// Automatically set the language based on the browser language setting
+if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {
+  language = "it";
+  translate('it');
+  document.getElementById('privacy-policy-en').style.display = 'none';
+  document.getElementById('privacy-policy-it').style.display = 'block';
+  document.getElementById('credits-en').style.display = 'none';
+  document.getElementById('credits-it').style.display = 'block';
+} else {
+  language = "en";
+  translate('en');
+  document.getElementById('privacy-policy-it').style.display = 'none';
+  document.getElementById('privacy-policy-en').style.display = 'block';
+  document.getElementById('credits-it').style.display = 'none';
+  document.getElementById('credits-en').style.display = 'block';
+};
