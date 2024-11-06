@@ -57,7 +57,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608935189233497, 42.931891328001676],
+        coordinates: [12.39104613121652, 43.104518174134114],
       }, 
       properties: {
         address_it: "Ingresso Porta Todi",
@@ -77,7 +77,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608231387105889, 42.932829261692824],
+        coordinates: [12.391020613602972, 43.10441454119195],
       }, 
       properties: {
         address_it: "Portale Mercato delle Gaite",
@@ -97,7 +97,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.610776563411152, 42.934996177151284],
+        coordinates: [12.391320445562163, 43.104126929748006],
       }, 
       properties: {
         address_it: "Mestiere Gaita San Giovanni",
@@ -116,7 +116,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608545097301263, 42.93266494869125],
+        coordinates: [12.391556483487484, 43.10420611036128],
       }, 
       properties: {
         address_it: "Bagni pubblici",
@@ -136,7 +136,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608108088084045, 42.932672363152506],
+        coordinates: [12.391723942826394, 43.104320223417936],
       }, 
       properties: {
         address_it: "Fontana con Acqua Potabile",
