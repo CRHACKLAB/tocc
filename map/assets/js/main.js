@@ -28,10 +28,6 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
         cardTitle.innerText = title_en;
         cardDescription.innerText = description_en;
     }
-
-    if (markerType == 'food') {
-        cardTitle.innerText = '';
-    }
     
     // shows the image for the portal
     if (portal_img) {
@@ -43,7 +39,7 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
     }
     
     // shows the link for the portal, restaurants and events
-    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria") {
+    if (/^portal[0-5]$/.test(markerType)) {
         var link = document.createElement("a");
         link.href = site;
         link.target = "_blank";

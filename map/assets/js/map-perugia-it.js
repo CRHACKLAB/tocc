@@ -33,123 +33,222 @@ map.on("load", function (e) {
 var stores = {
   type: "FeatureCollection",
   features: [      
-    // PARCHEGGI
+    // PANNELLO 0
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391299727701938, 43.10448380562507],
+        coordinates: [12.391182346608403, 43.1047445320386],
       }, 
       properties: {
-        address_it: "Parcheggio Piazzale Masci Mindolfo",
-        address_en: "Piazzale Masci Mindolfo Parking",
-        city: "Bevagna",
+        address_it: "Fondazione Sant'Anna",
+        // address_en: "Piazzale Masci Mindolfo Parking",
+        city: "Perugia",
         country: "Italy",
-        postalCode: "06031",
-        description_it: "Parcheggio a pagamento",
-        description_en: "Toll Parking",
-        markerType: "parking",
+        postalCode: "06121",
+        description_it: "Pannello 0",
+        // description_en: "Toll Parking",
+        markerType: "panel0",
+        img: "./assets/img/card_background/Piazzale_Masci_Mindolfo_Parking.jpeg",
+        site: "/"
       },
     },
 
-    // ENTRANCE POINT
+    // PANNELLO 1
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.39104613121652, 43.104518174134114],
+        coordinates: [12.391144795686326, 43.104566326839965],
       }, 
       properties: {
-        address_it: "Ingresso Porta Todi",
-        address_en: "Porta Todi Entrance",
-        city: "Bevagna",
+        address_it: "La scuola nel ventennio",
+        // address_en: "Porta Todi Entrance",
+        city: "Perugia",
         country: "Italy",
-        postalCode: "06031",
-        description_it: ``,
-        description_en: "",
-        markerType: "entrance",
+        postalCode: "06121",
+        description_it: `Pannello 1`,
+        // description_en: "",
+        markerType: "panel1",
         img: "./assets/img/card_background/Porta_Todi.jpeg",
+        site: "/"
       },
     },
     
-    // PORTALS GAITE
+    // PANNELLO 2
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391020613602972, 43.10441454119195],
+        coordinates: [12.390957041075941, 43.104493869632854],
       }, 
       properties: {
-        address_it: "Portale Mercato delle Gaite",
-        address_en: "Mercato delle Gaite Portal",
-        city: "Bevagna",
+        address_it: "Foto di classe",
+        // address_en: "Mercato delle Gaite Portal",
+        city: "Perugia",
         country: "Italy",
-        postalCode: "06031",
-        description_it: "Se non hai l'app Zappar potrai scaricarla cliccando sul link sottostante",
-        description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
-        markerType: "portals",
+        postalCode: "06121",
+        description_it: "Pannello 2",
+        // description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
+        markerType: "panel2",
+        img: "./assets/img/card_background/",
         site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
     
-    // MESTIERI GAITE
+    // PANNELLO 3
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391320445562163, 43.104126929748006],
+        coordinates: [12.391053600589851, 43.10436070481235],
       }, 
       properties: {
-        address_it: "Mestiere Gaita San Giovanni",
-        address_en: "Gaita San Giovanni Craft",
-        city: "Bevagna",
+        address_it: "Radio a scuola",
+        // address_en: "Gaita San Giovanni Craft",
+        city: "Perugia",
         country: "Italy",
-        postalCode: "06031",
+        postalCode: "06121",
         description_it: "",
-        description_en: "",
-        markerType: "sanGiovanni",
+        // description_en: "",
+        markerType: "panel3",
+        img: "./assets/img/card_background/",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
     
-    // TOILET
+    // PANNELLO 4
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391556483487484, 43.10420611036128],
+        coordinates: [12.39122794415664, 43.104213831512595],
       }, 
       properties: {
-        address_it: "Bagni pubblici",
-        address_en: "Public toilet",
-        city: "Bevagna",
+        address_it: "Radici di futuro(INDIRE)",
+        // address_en: "Public toilet",
+        city: "Perugia",
         country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "toilet",
+        postalCode: "06121",
+        description_it: "Pannello 4",
+        // description_en: "",
+        markerType: "panel4",
       },
     },
-    // END TOILET
 
-    // WATER POINT
+    // PANNELLO 5
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391723942826394, 43.104320223417936],
+        coordinates: [12.391354007966472, 43.10409829093586],
       }, 
       properties: {
-        address_it: "Fontana con Acqua Potabile",
-        address_en: "Drinking Water Fountain",
-        city: "Bevagna",
+        address_it: "Scuole rurali",
+        // address_en: "Drinking Water Fountain",
+        city: "Perugia",
         country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "water",
+        postalCode: "06121",
+        description_it: "Pannello 5",
+        // description_en: "",
+        markerType: "panel5",
       },
     },
-    // END WATER POINT
+
+    // PANNELLO 6
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391531033741979, 43.10420795657328],
+      }, 
+      properties: {
+        address_it: "Scuole per contadini",
+        // address_en: "Drinking Water Fountain",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 6",
+        // description_en: "",
+        markerType: "panel6",
+      },
+    },
+
+    // PANNELLO 7
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391691966265167, 43.104321538633535],
+      }, 
+      properties: {
+        address_it: "Educandati e convitti",
+        // address_en: "Drinking Water Fountain",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 7",
+        // description_en: "",
+        markerType: "panel7",
+      },
+    },
+
+    // PANNELLO 8
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391673190804127, 43.104405745887],
+      }, 
+      properties: {
+        address_it: "Istruzione agraria",
+        // address_en: "Drinking Water Fountain",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 8",
+        // description_en: "",
+        markerType: "panel8",
+      },
+    },
+
+    // PANNELLO 9
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.39152835153326, 43.104525202489704],
+      }, 
+      properties: {
+        address_it: "Museo delle scuole",
+        // address_en: "Drinking Water Fountain",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 9",
+        // description_en: "",
+        markerType: "panel9",
+      },
+    },
+
+    // PANNELLO 10
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391351325757752, 43.104630950763166],
+      }, 
+      properties: {
+        address_it: "Da definire",
+        // address_en: "Drinking Water Fountain",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 10",
+        // description_en: "",
+        markerType: "panel10",
+      },
+    },
   ],
 };
 

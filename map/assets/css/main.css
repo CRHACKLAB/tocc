@@ -699,7 +699,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.marker-youngMakers {
+[class^="marker-panel"] {
   border: none;
   cursor: pointer;
   height: 48px;
@@ -744,15 +744,6 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
-/* .marker-tourism {
-  border: none;
-  cursor: pointer;
-  height: 49px;
-  width: 35px;
-  background-image: url("../img/markers/monumenti.png");
-  background-size: cover;
-} */
 
 .marker-entrance {
   border: none;
