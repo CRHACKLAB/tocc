@@ -50,7 +50,7 @@ var stores = {
         // description_en: "Toll Parking",
         markerType: "panel0",
         img: "./assets/img/card_background/Piazzale_Masci_Mindolfo_Parking.jpeg",
-        site: "/"
+        site: "https://www.clf4d.eu"
       },
     },
 
@@ -133,6 +133,8 @@ var stores = {
         description_it: "Pannello 4",
         // description_en: "",
         markerType: "panel4",
+        img: "./assets/img/card_background/",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
 
@@ -152,6 +154,8 @@ var stores = {
         description_it: "Pannello 5",
         // description_en: "",
         markerType: "panel5",
+        img: "./assets/img/card_background/",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
 
@@ -171,6 +175,8 @@ var stores = {
         description_it: "Pannello 6",
         // description_en: "",
         markerType: "panel6",
+        img: "./assets/img/card_background/",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
 
@@ -190,6 +196,8 @@ var stores = {
         description_it: "Pannello 7",
         // description_en: "",
         markerType: "panel7",
+        img: "./assets/img/card_background/",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
 
@@ -209,6 +217,8 @@ var stores = {
         description_it: "Pannello 8",
         // description_en: "",
         markerType: "panel8",
+        img: "./assets/img/card_background/",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
 
@@ -228,6 +238,8 @@ var stores = {
         description_it: "Pannello 9",
         // description_en: "",
         markerType: "panel9",
+        img: "./assets/img/card_background/",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
 
@@ -247,6 +259,8 @@ var stores = {
         description_it: "Pannello 10",
         // description_en: "",
         markerType: "panel10",
+        img: "./assets/img/card_background/",
+        site: "https://webxr.run/Vb5Adgw582d6Z",
       },
     },
   ],

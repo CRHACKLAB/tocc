@@ -24,28 +24,21 @@ const showInfoCard = (title_it, title_en, description_it, description_en, portal
     if (language == 'it') {
         cardTitle.innerText = title_it;
         cardDescription.innerText = description_it;
+        var link = document.createElement("a");
+        link.href = site;
+        link.target = "_blank";
+        link.innerText = "\nLink";
+        cardDescription.appendChild(link);
     } else {
         cardTitle.innerText = title_en;
         cardDescription.innerText = description_en;
-    }
-    
-    // shows the image for the portal
-    if (portal_img) {
-        var img = document.createElement("img");
-        img.src = portal_img;
-        img.alt = "immagine";
-        img.classList = "img-background";
-        cardTitle.append(img);
-    }
-    
-    // shows the link for the portal, restaurants and events
-    if (/^portal[0-5]$/.test(markerType)) {
         var link = document.createElement("a");
         link.href = site;
         link.target = "_blank";
         link.innerText = "\nLink";
         cardDescription.appendChild(link);
     }
+    
     //MODIFY WITH DATA FROM MAPBOX
     
     //------
