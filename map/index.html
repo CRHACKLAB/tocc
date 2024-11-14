@@ -35,10 +35,10 @@
             <div class='heading'>
                 <div class="logo">
                     <img class="logo-img" src="./assets/img/ProvaLogo.png" alt="Logo del progetto">
-                    <img class="logo-shu" src="./assets/img/LOGO SHU 2024_Tavola disegno 1 copia.png" alt="Logo SHU2024">
+                    <!-- <img class="logo-shu" src="./assets/img/LOGO SHU 2024_Tavola disegno 1 copia.png" alt="Logo SHU2024"> -->
                 </div>
-                <button type="button" id="italian-btn" class="italian-button sidebarbtn" onclick="italian()"><img src="./assets/img/flags/italianflag.png" alt="Italian version"></button>
-                <button type="button" id="english-btn" class="english-button sidebarbtn" onclick="english()"><img src="./assets/img/flags/britishflag.png" alt="English version"></button>
+                <!-- <button type="button" id="italian-btn" class="italian-button sidebarbtn" onclick="italian()"><img src="./assets/img/flags/italianflag.png" alt="Italian version"></button>
+                <button type="button" id="english-btn" class="english-button sidebarbtn" onclick="english()"><img src="./assets/img/flags/britishflag.png" alt="English version"></button> -->
                 <select id="filter-dropdown" onchange="applyFilters()">
                     <option id="all" value="all"></option>
                     <option id="entrance" value="entrance"></option>
@@ -55,8 +55,8 @@
             </div>
             <div id="listings" class="listings"></div>
             <div class="sidebar-link">
-                <a href="./credits-en.html" id="credits-en">Credits</a>
-                <a href="./credits-it.html" id="credits-it">Credits</a>
+                <!-- <a href="./credits-en.html" id="credits-en">Credits</a>
+                <a href="./credits-it.html" id="credits-it">Credits</a> -->
                 <a href="https://www.socialhackathonumbria.info/en/privacy-policy-2/" id="privacy-policy-en" target="_blank">Privacy policy</a>
                 <a href="https://www.socialhackathonumbria.info/privacy-policy/" id="privacy-policy-it" target="_blank">Informativa sulla privacy</a>
                 <span>(CC BY-NC 4.0)</span>
@@ -65,7 +65,7 @@
         </div>
         <div id="map" class="layer map">
             <button type="button" id="show-sidebar" class="show-button sidebarbtn" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></button>
-            <button type="button" id="filter-marker" class="filter-button sidebarbtn" onclick="showFilter()"><i class="fa-solid fa-sliders" ></i>
+            <button type="button" id="filter-marker" class="filter-button sidebarbtn"><i class="fa-solid fa-sliders" ></i>
                 <select id="marker-dropdown" class="marker-dropdown" onchange="applyFilters()">
                     <option id="marker-all" value="all"></option>
                     <option id="marker-entrance" value="entrance"></option>

@@ -49,7 +49,7 @@ var stores = {
         description_it: "Pannello 0",
         // description_en: "Toll Parking",
         markerType: "panel0",
-        img: "./assets/img/card_background/Piazzale_Masci_Mindolfo_Parking.jpeg",
+        img: "../assets/img/card_background/Piazza.jpg",
         site: "https://www.clf4d.eu"
       },
     },
@@ -260,7 +260,7 @@ var stores = {
         // description_en: "",
         markerType: "panel10",
         img: "./assets/img/card_background/",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
+        site: "https://clf4d.eu/it/",
       },
     },
   ],
@@ -572,69 +572,69 @@ const translations = {
       ]
   }
 };
-function translate(language) {
+// function translate(language) {
   
-  document.getElementById('all').innerHTML = translations[language].filterOptions[0];
-  document.getElementById('entrance').innerHTML = translations[language].filterOptions[1];
-  // document.getElementById('tourism').innerHTML = translations[language].filterOptions[2];
-  document.getElementById('parking').innerHTML = translations[language].filterOptions[3];
-  document.getElementById('portals').innerHTML = translations[language].filterOptions[4];
-  document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[6];
-  document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[7];
-  document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[8];
-  document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[9];
-  document.getElementById('toilet').innerHTML = translations[language].filterOptions[10];
-  document.getElementById('water').innerHTML = translations[language].filterOptions[11];
+//   document.getElementById('all').innerHTML = translations[language].filterOptions[0];
+//   document.getElementById('entrance').innerHTML = translations[language].filterOptions[1];
+//   // document.getElementById('tourism').innerHTML = translations[language].filterOptions[2];
+//   document.getElementById('parking').innerHTML = translations[language].filterOptions[3];
+//   document.getElementById('portals').innerHTML = translations[language].filterOptions[4];
+//   document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[6];
+//   document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[7];
+//   document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[8];
+//   document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[9];
+//   document.getElementById('toilet').innerHTML = translations[language].filterOptions[10];
+//   document.getElementById('water').innerHTML = translations[language].filterOptions[11];
 
   
-  document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
-  document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[1];
-  // document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[2];
-  document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[3];
-  document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[4];
-  document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[6];
-  document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[7];
-  document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[8];
-  document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[9];
-  document.getElementById('marker-toilet').innerHTML = translations[language].filterOptions[10];
-  document.getElementById('marker-water').innerHTML = translations[language].filterOptions[11];
+//   document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
+//   document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[1];
+//   // document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[2];
+//   document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[3];
+//   document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[4];
+//   document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[6];
+//   document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[7];
+//   document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[8];
+//   document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[9];
+//   document.getElementById('marker-toilet').innerHTML = translations[language].filterOptions[10];
+//   document.getElementById('marker-water').innerHTML = translations[language].filterOptions[11];
   
-  // Reload listings in the correct language
-  language = language;
-  applyFilters(currentFilter);
-}
+//   // Reload listings in the correct language
+//   language = language;
+//   applyFilters(currentFilter);
+// }
 
-function english() {
-  language = 'en';
-  translate('en');
-  document.getElementById('privacy-policy-it').style.display = 'none';
-  document.getElementById('privacy-policy-en').style.display = 'block';
-  document.getElementById('credits-it').style.display = 'none';
-  document.getElementById('credits-en').style.display = 'block';
-}
+// function english() {
+//   language = 'en';
+//   translate('en');
+//   document.getElementById('privacy-policy-it').style.display = 'none';
+//   document.getElementById('privacy-policy-en').style.display = 'block';
+//   // document.getElementById('credits-it').style.display = 'none';
+//   // document.getElementById('credits-en').style.display = 'block';
+// }
 
 function italian() {
   language = 'it';
-  translate('it');
+  // translate('it');
   document.getElementById('privacy-policy-en').style.display = 'none';
   document.getElementById('privacy-policy-it').style.display = 'block';
-  document.getElementById('credits-en').style.display = 'none';
-  document.getElementById('credits-it').style.display = 'block';
+  // document.getElementById('credits-en').style.display = 'none';
+  // document.getElementById('credits-it').style.display = 'block';
 }
 
 // Automatically set the language based on the browser language setting
 if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {
   language = "it";
-  translate('it');
+  // translate('it');
   document.getElementById('privacy-policy-en').style.display = 'none';
   document.getElementById('privacy-policy-it').style.display = 'block';
-  document.getElementById('credits-en').style.display = 'none';
-  document.getElementById('credits-it').style.display = 'block';
+  // document.getElementById('credits-en').style.display = 'none';
+  // document.getElementById('credits-it').style.display = 'block';
 } else {
   language = "en";
-  translate('en');
+  // translate('en');
   document.getElementById('privacy-policy-it').style.display = 'none';
   document.getElementById('privacy-policy-en').style.display = 'block';
-  document.getElementById('credits-it').style.display = 'none';
-  document.getElementById('credits-en').style.display = 'block';
+  // document.getElementById('credits-it').style.display = 'none';
+  // document.getElementById('credits-en').style.display = 'block';
 };

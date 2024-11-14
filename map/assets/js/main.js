@@ -18,17 +18,22 @@ const hideInfoCard = () => {
     mapContainer.removeAttribute("hidden");
 };
 
-const showInfoCard = (title_it, title_en, description_it, description_en, portal_img, markerType, site) => {
+const showInfoCard = (title_it, title_en, description_it, description_en, img, site, markerType) => {
     
     // shows the card depending on the language
     if (language == 'it') {
+        console.log(markerType);
         cardTitle.innerText = title_it;
         cardDescription.innerText = description_it;
+        var image = document.createElement("img");
+        image.src = img;
+        image.alt = title_it;
         var link = document.createElement("a");
-        link.href = site;
+        link.href = markerType;
         link.target = "_blank";
         link.innerText = "\nLink";
         cardDescription.appendChild(link);
+        console.log(link);
     } else {
         cardTitle.innerText = title_en;
         cardDescription.innerText = description_en;
