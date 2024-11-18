@@ -30,6 +30,7 @@ const nav = new mapboxgl.NavigationControl({
 map.on("load", function (e) {
   map.addControl(nav, "bottom-right");
 });
+
 var stores = {
   type: "FeatureCollection",
   features: [      
@@ -616,8 +617,8 @@ const translations = {
 function italian() {
   language = 'it';
   // translate('it');
-  document.getElementById('privacy-policy-en').style.display = 'none';
-  document.getElementById('privacy-policy-it').style.display = 'block';
+  // document.getElementById('privacy-policy-en').style.display = 'none';
+  // document.getElementById('privacy-policy-it').style.display = 'block';
   // document.getElementById('credits-en').style.display = 'none';
   // document.getElementById('credits-it').style.display = 'block';
 }
@@ -626,15 +627,15 @@ function italian() {
 if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {
   language = "it";
   // translate('it');
-  document.getElementById('privacy-policy-en').style.display = 'none';
-  document.getElementById('privacy-policy-it').style.display = 'block';
+  // document.getElementById('privacy-policy-en').style.display = 'none';
+  // document.getElementById('privacy-policy-it').style.display = 'block';
   // document.getElementById('credits-en').style.display = 'none';
   // document.getElementById('credits-it').style.display = 'block';
 } else {
   language = "en";
   // translate('en');
-  document.getElementById('privacy-policy-it').style.display = 'none';
-  document.getElementById('privacy-policy-en').style.display = 'block';
+  // document.getElementById('privacy-policy-it').style.display = 'none';
+  // document.getElementById('privacy-policy-en').style.display = 'block';
   // document.getElementById('credits-it').style.display = 'none';
   // document.getElementById('credits-en').style.display = 'block';
 };
