@@ -573,6 +573,7 @@ const translations = {
       ]
   }
 };
+
 // function translate(language) {
   
 //   document.getElementById('all').innerHTML = translations[language].filterOptions[0];
@@ -605,14 +606,14 @@ const translations = {
 //   applyFilters(currentFilter);
 // }
 
-// function english() {
-//   language = 'en';
-//   translate('en');
-//   document.getElementById('privacy-policy-it').style.display = 'none';
-//   document.getElementById('privacy-policy-en').style.display = 'block';
-//   // document.getElementById('credits-it').style.display = 'none';
-//   // document.getElementById('credits-en').style.display = 'block';
-// }
+function english() {
+  language = 'en';
+  translate('en');
+  document.getElementById('privacy-policy-it').style.display = 'none';
+  document.getElementById('privacy-policy-en').style.display = 'block';
+  // document.getElementById('credits-it').style.display = 'none';
+  // document.getElementById('credits-en').style.display = 'block';
+}
 
 function italian() {
   language = 'it';

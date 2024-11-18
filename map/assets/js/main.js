@@ -109,16 +109,3 @@ function errorCallback(error) {
     console.error(`Geolocation error: ${error.message}`);
     alert('Unable to retrieve your location. Please ensure that location services are enabled.');
 }
-
-// Add event listener to the button
-// document.getElementById('enable-gps').addEventListener('click', () => {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
-//             enableHighAccuracy: true,
-//             timeout: 5000,
-//             maximumAge: 0
-//         });
-//     } else {
-//         console.log("Geolocation is not supported by this browser.");
-//     }
-// });
