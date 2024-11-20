@@ -1,0 +1,30 @@
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: auto; /* Ensure touch events work */
+}
+  
+body {
+    margin: 0;
+    overflow: hidden;
+}
+  
+@media (max-width: 768px) {
+
+    #background-video {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    body {
+        overflow: auto;
+    }
+}

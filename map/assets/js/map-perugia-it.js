@@ -58,7 +58,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608935189233497, 42.931891328001676],
+        coordinates: [12.391156308503168, 43.10459775328797],
       }, 
       properties: {
         address_it: "Ingresso Porta Todi",
@@ -78,7 +78,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608231387105889, 42.932829261692824],
+        coordinates: [12.39103669468966, 43.104543025872175],
       }, 
       properties: {
         address_it: "Portale Mercato delle Gaite",
@@ -98,7 +98,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.610776563411152, 42.934996177151284],
+        coordinates: [12.390976090357485, 43.10451857318124],
       }, 
       properties: {
         address_it: "Mestiere Gaita San Giovanni",
@@ -117,7 +117,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608545097301263, 42.93266494869125],
+        coordinates: [12.390923460279542, 43.10449295606595],
       }, 
       properties: {
         address_it: "Bagni pubblici",
@@ -137,12 +137,13 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.608108088084045, 42.932672363152506],
+        coordinates: [12.390936219086313, 43.10447199660003],
       }, 
       properties: {
         address_it: "Fontana con Acqua Potabile",
         address_en: "Drinking Water Fountain",
         city: "Bevagna",
+
         country: "Italy",
         postalCode: "06031",
         description_it: "",
