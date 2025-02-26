@@ -611,6 +611,66 @@ body {
   justify-content: center;
 }
 
+.listings .item-sanGiovanni360 .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #3fad57;
+  padding: 10px;
+  min-height: 120px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listings .item-sanGiorgio360 .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #3fad57;
+  padding: 10px;
+  min-height: 120px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listings .item-sanPietro360 .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #3fad57;
+  padding: 10px;
+  min-height: 120px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listings .item-santaMaria360 .title {
+  display: block;
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  background-color: #3fad57;
+  padding: 10px;
+  min-height: 120px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .listings .item-privateEvents .title {
   display: block;
   font-size: calc(var(--font-size) * 1.5);
@@ -873,6 +933,42 @@ body {
   height: 41px;
   width: 35px;
   background-image: url("../img/markers/SantaMaria1.png");
+  background-size: cover;
+}
+
+.marker-sanGiovanni360 {
+  border: none;
+  cursor: pointer;
+  height: 41px;
+  width: 50px;
+  background-image: url("../img/markers/360-degrees.png");
+  background-size: cover;
+}
+
+.marker-sanPietro360 {
+  border: none;
+  cursor: pointer;
+  height: 41px;
+  width: 50px;
+  background-image: url("../img/markers/360-degrees.png");
+  background-size: cover;
+}
+
+.marker-sanGiorgio360 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 50px;
+  background-image: url("../img/markers/360-degrees.png");
+  background-size: cover;
+}
+
+.marker-santaMaria360 {
+  border: none;
+  cursor: pointer;
+  height: 41px;
+  width: 50px;
+  background-image: url("../img/markers/360-degrees.png");
   background-size: cover;
 }
 

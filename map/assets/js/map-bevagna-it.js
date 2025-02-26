@@ -15,11 +15,11 @@ mapboxgl.accessToken = "pk.eyJ1IjoiZ2FidHJpcCIsImEiOiJjbHdoeG9neGEwMGYwMmpzd283d
  */
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/gabtrip/clwkh3joc00rx01ny76o4hfkn", // stile personalizzato 
+  style: "mapbox://styles/gabtrip/clwhy2he900po01r07pot5f7d", // stile personalizzato 
   // style: "mapbox://styles/mapbox/streets-v12", // stile generico
   // center: [12.608438888126923, 42.933064240993126],
   center:[12.608639140444703, 42.933365079779506],
-  zoom: 15.9,
+  zoom: 16.8,
   scrollZoom: true,
 });
 
@@ -137,7 +137,7 @@ var stores = {
         description_it: "",
         description_en: "",
         markerType: "sanGiovanni",
-        site: "/assets/renpy/Cartiera/index.html",
+        site: "../map/renpy/Cartiera/index.html",
       },
     },
     {
@@ -155,7 +155,7 @@ var stores = {
         description_it: "",
         description_en: "",
         markerType: "sanPietro",
-        site: "/assets/renpy/Cereria/index.html",
+        site: "../map/renpy/Cereria/index.html",
       },
     },
     {
@@ -173,7 +173,7 @@ var stores = {
         description_it: "",
         description_en: "",
         markerType: "sanGiorgio",
-        site: "/assets/renpy/Dipintore/index.html",
+        site: "../map/renpy/Dipintore/index.html",
       },
     },
     {
@@ -191,10 +191,85 @@ var stores = {
         description_it: "",
         description_en: "",
         markerType: "santaMaria",
-        site: "/assets/renpy/Setificio/index.html",
+        site: "../map/renpy/Setificio/index.html",
       },
     },
     // END MESTIERI GAITE
+
+    // 360 GAITE
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.610497137426713, 42.9350113315117],
+      }, 
+      properties: {
+        address_it: "Bottega Gaita San Giovanni",
+        address_en: "Gaita San Giovanni 360",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "sanGiovanni360",
+        site: "https://webxr.run/V7ZGLDbaNgdxz",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.6068223915162, 42.9324415956177],
+      }, 
+      properties: {
+        address_it: "Bottega Gaita San Pietro",
+        address_en: "Gaita San Pietro Craft",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "sanPietro360",
+        site: "https://webxr.run/E2LXQWY5plMJQ",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.609259684427708, 42.93343536250486],
+      }, 
+      properties: {
+        address_it: "Bottega Gaita San Giorgio",
+        address_en: "Gaita San Giorgio 360",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "sanGiorgio360",
+        site: "https://webxr.run/LrLoOPvDWkOD9",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.607203978860518, 42.931652644967606],
+      }, 
+      properties: {
+        address_it: "Bottega Gaita Santa Maria",
+        address_en: "Gaita Santa Maria Craft",
+        city: "Bevagna",
+        country: "Italy",
+        postalCode: "06031",
+        description_it: "",
+        description_en: "",
+        markerType: "santaMaria360",
+        site: "https://webxr.run/EebD89pWY2wMV",
+      },
+    },
+    // END 360 GAITE
 
     // PARCHEGGI
     {
@@ -691,7 +766,16 @@ function addMarkers() {
       flyToStore(marker);
       /* Close all other popups and display popup for clicked store */
       makeHighlight(marker);
-      showInfoCard(marker.properties.address_it, marker.properties.address_en, marker.properties.description_it, marker.properties.description_en, marker.properties.img, marker.properties.markerType, marker.properties.site);
+      if (marker.properties.id >= 0 && marker.properties.id <= 8 && marker.properties.site) {
+        window.open(marker.properties.site, "_blank"); // Open link in a new tab
+      }  else {
+        // Create a popup tooltip with address_it or address_en
+        var popup = new mapboxgl.Popup({ closeOnClick: true }) // Tooltip closes when clicked
+          .setLngLat(marker.geometry.coordinates)
+          .setHTML(`<p>${language === 'it' ? marker.properties.address_it : marker.properties.address_en}</p>`)
+          .addTo(map);
+      }
+      // showInfoCard(marker.properties.address_it, marker.properties.address_en, marker.properties.description_it, marker.properties.description_en, marker.properties.img, marker.properties.markerType, marker.properties.site);
       /* Highlight listing in sidebar */
       e.stopPropagation();
       
@@ -802,7 +886,7 @@ function handleFilterChange(event) {
 function flyToStore(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
-    zoom: 20,
+    zoom: 16.9,
   });
   sidebar.setAttribute("hidden", "hidden");
 }
@@ -864,12 +948,16 @@ const translations = {
           "Gaita San Giovanni", 
           "Gaita San Giorgio", 
           "Gaita San Pietro", 
-          "Gaita Santa Maria", 
+          "Gaita Santa Maria",
           "Le Porte",
           "Punti d'interesse",
           "Parcheggi", 
           "Bagni Pubblici", 
-          "Fontana di Acqua Potabile"
+          "Fontana di Acqua Potabile",
+          "Bottega San Giovanni", 
+          "Bottega San Giorgio", 
+          "Bottega San Pietro", 
+          "Bottega Santa Maria",
       ]
   },
   en: {
@@ -885,7 +973,11 @@ const translations = {
           "Points of Interest",
           "Parking lots", 
           "Public Toilet", 
-          "Drinking Water Fountain"
+          "Drinking Water Fountain",
+          "Workshop San Giovanni", 
+          "Workshop San Giorgio", 
+          "Workshop San Pietro", 
+          "Workshop Santa Maria",
       ]
   }
 };
@@ -902,6 +994,10 @@ function translate(language) {
   document.getElementById('parking').innerHTML = translations[language].filterOptions[9];
   document.getElementById('toilet').innerHTML = translations[language].filterOptions[10];
   document.getElementById('water').innerHTML = translations[language].filterOptions[11];
+  document.getElementById('sanGiovanni360').innerHTML = translations[language].filterOptions[12];
+  document.getElementById('sanGiorgio360').innerHTML = translations[language].filterOptions[13];
+  document.getElementById('sanPietro360').innerHTML = translations[language].filterOptions[14];
+  document.getElementById('santaMaria360').innerHTML = translations[language].filterOptions[15];
 
   
   document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
@@ -909,12 +1005,17 @@ function translate(language) {
   document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[3];
   document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[4];
   document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[5];
+  document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[6];
   document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[7];
   // document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[8];
   document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[9];
   document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[6];
   document.getElementById('marker-toilet').innerHTML = translations[language].filterOptions[10];
   document.getElementById('marker-water').innerHTML = translations[language].filterOptions[11];
+  document.getElementById('marker-sanGiovanni360').innerHTML = translations[language].filterOptions[12];
+  document.getElementById('marker-sanGiorgio360').innerHTML = translations[language].filterOptions[13];
+  document.getElementById('marker-sanPietro360').innerHTML = translations[language].filterOptions[14];
+  document.getElementById('marker-santaMaria360').innerHTML = translations[language].filterOptions[15];
   
   // Reload listings in the correct language
   language = language;

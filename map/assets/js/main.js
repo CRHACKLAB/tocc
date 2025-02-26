@@ -8,7 +8,6 @@ const story = document.getElementById("story");
 const backButton = document.getElementById('back-to-index');
 const portal = document.getElementById('portals');
 
-
 let userCoordinates = null;
 
 const hideInfoCard = () => {
@@ -18,45 +17,45 @@ const hideInfoCard = () => {
     mapContainer.removeAttribute("hidden");
 };
 
-const showInfoCard = (title_it, title_en, description_it, description_en, portal_img, markerType, site) => {
+// const showInfoCard = (title_it, title_en, description_it, description_en, portal_img, markerType, site) => {
     
-    // shows the card depending on the language
-    if (language == 'it') {
-        cardTitle.innerText = title_it;
-        cardDescription.innerText = description_it;
-    } else {
-        cardTitle.innerText = title_en;
-        cardDescription.innerText = description_en;
-    }
+//     // shows the card depending on the language
+//     if (language == 'it') {
+//         cardTitle.innerText = title_it;
+//         cardDescription.innerText = description_it;
+//     } else {
+//         cardTitle.innerText = title_en;
+//         cardDescription.innerText = description_en;
+//     }
 
-    if (markerType == 'food') {
-        cardTitle.innerText = '';
-    }
+//     if (markerType == 'food') {
+//         cardTitle.innerText = '';
+//     }
     
-    // shows the image for the portal
-    if (portal_img) {
-        var img = document.createElement("img");
-        img.src = portal_img;
-        img.alt = "immagine";
-        img.classList = "img-background";
-        cardTitle.append(img);
-    }
+//     // shows the image for the portal
+//     if (portal_img) {
+//         var img = document.createElement("img");
+//         img.src = portal_img;
+//         img.alt = "immagine";
+//         img.classList = "img-background";
+//         cardTitle.append(img);
+//     }
     
-    // shows the link for the portal, restaurants and events
-    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria") {
-        var link = document.createElement("a");
-        link.href = site;
-        link.target = "_blank";
-        link.innerText = "\nLink";
-        cardDescription.appendChild(link);
-    }
-    //MODIFY WITH DATA FROM MAPBOX
+//     // shows the link for the portal, restaurants and events
+//     if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria") {
+//         var link = document.createElement("a");
+//         link.href = site;
+//         link.target = "_blank";
+//         link.innerText = "\nLink";
+//         cardDescription.appendChild(link);
+//     }
+//     //MODIFY WITH DATA FROM MAPBOX
     
-    //------
-    infoCard.removeAttribute("hidden");
-    sidebar.setAttribute("hidden", "hidden");
-    mapContainer.setAttribute("hidden", "hidden");
-};
+//     //------
+//     infoCard.removeAttribute("hidden");
+//     sidebar.setAttribute("hidden", "hidden");
+//     mapContainer.setAttribute("hidden", "hidden");
+// };
 
 const hideSidebar = () => {
     console.log("Hide sidebar");
