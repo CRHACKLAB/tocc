@@ -425,6 +425,41 @@ body {
   background-color: #e5eb09;
 }
 
+/* Popup buttons */
+.popup-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.popup-btn {
+  font-size: 14px;
+  padding: 8px 10px;
+  height: 40px;
+  min-width: 100px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 0;
+}
+
+.site-btn {
+  background-color: #0074ad;
+}
+
+.navigate-btn {
+  background-color: #e5eb09;
+}
+
+.address {
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 430px) {
 
   #filter-dropdown {

@@ -43,12 +43,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Fondazione Sant'Anna",
-        // address_en: "Piazzale Masci Mindolfo Parking",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 0",
-        // description_en: "Toll Parking",
         markerType: "panel0",
         img: "../assets/img/card_background/Piazza.jpg",
         site: "https://www.clf4d.eu"
@@ -64,12 +62,10 @@ var stores = {
       }, 
       properties: {
         address_it: "La scuola nel ventennio",
-        // address_en: "Porta Todi Entrance",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: `Pannello 1`,
-        // description_en: "",
         markerType: "panel1",
         img: "./assets/img/card_background/Porta_Todi.jpeg",
         site: "/"
@@ -85,12 +81,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Foto di classe",
-        // address_en: "Mercato delle Gaite Portal",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 2",
-        // description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
         markerType: "panel2",
         img: "./assets/img/card_background/",
         site: "https://webxr.run/Vb5Adgw582d6Z",
@@ -106,12 +100,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Radio a scuola",
-        // address_en: "Gaita San Giovanni Craft",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "",
-        // description_en: "",
         markerType: "panel3",
         img: "./assets/img/card_background/",
         site: "https://webxr.run/Vb5Adgw582d6Z",
@@ -127,12 +119,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Radici di futuro(INDIRE)",
-        // address_en: "Public toilet",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 4",
-        // description_en: "",
         markerType: "panel4",
         img: "./assets/img/card_background/",
         site: "https://webxr.run/Vb5Adgw582d6Z",
@@ -148,12 +138,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Scuole rurali",
-        // address_en: "Drinking Water Fountain",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 5",
-        // description_en: "",
         markerType: "panel5",
         img: "./assets/img/card_background/",
         site: "https://webxr.run/Vb5Adgw582d6Z",
@@ -169,12 +157,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Scuole per contadini",
-        // address_en: "Drinking Water Fountain",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 6",
-        // description_en: "",
         markerType: "panel6",
         img: "./assets/img/card_background/",
         site: "https://webxr.run/Vb5Adgw582d6Z",
@@ -190,12 +176,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Educandati e convitti",
-        // address_en: "Drinking Water Fountain",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 7",
-        // description_en: "",
         markerType: "panel7",
         img: "./assets/img/card_background/",
         site: "https://webxr.run/Vb5Adgw582d6Z",
@@ -211,12 +195,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Istruzione agraria",
-        // address_en: "Drinking Water Fountain",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 8",
-        // description_en: "",
         markerType: "panel8",
         img: "./assets/img/card_background/",
         site: "https://webxr.run/Vb5Adgw582d6Z",
@@ -232,12 +214,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Museo delle scuole",
-        // address_en: "Drinking Water Fountain",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 9",
-        // description_en: "",
         markerType: "panel9",
         img: "./assets/img/card_background/",
         site: "https://webxr.run/Vb5Adgw582d6Z",
@@ -253,12 +233,10 @@ var stores = {
       }, 
       properties: {
         address_it: "Da definire",
-        // address_en: "Drinking Water Fountain",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 10",
-        // description_en: "",
         markerType: "panel10",
         img: "./assets/img/card_background/",
         site: "https://clf4d.eu/it/",
@@ -337,6 +315,8 @@ map.on("load", function (e) {
   addMarkers();
 });
 
+
+let currentPopup = null;
 /**
  * Add a marker to the map for every store listing.
  **/
@@ -371,14 +351,27 @@ function addMarkers() {
      * 3. Highlight listing in sidebar (and remove highlight for all other listings)
      **/
     el.addEventListener("click", function (e) {
-      /* Fly to the point */
-      flyToStore(marker);
-      /* Close all other popups and display popup for clicked store */
-      makeHighlight(marker);
-      showInfoCard(marker.properties.address_it, marker.properties.address_en, marker.properties.description_it, marker.properties.description_en, marker.properties.img, marker.properties.markerType, marker.properties.site);
-      /* Highlight listing in sidebar */
       e.stopPropagation();
       
+      var destination = marker.geometry.coordinates;
+      
+      // Contenuto del popup
+      var popupContent = `
+          <p class="address">${(marker.properties.address_it || marker.properties.address_en).replace(/\n/g, "<br>")}</p>
+          <div class="popup-buttons">
+              <button class="popup-btn site-btn" onclick="window.open('${marker.properties.site}', '_blank')">Ascolta</button>
+              <button class="popup-btn navigate-btn" onclick="startNavigation(${destination[0]}, ${destination[1]})">Scopri di più</button>
+          </div>
+        `;
+
+        if (currentPopup) {
+        currentPopup.remove();
+      }
+      
+      currentPopup = new mapboxgl.Popup({ closeOnClick: true })
+          .setLngLat(destination)
+          .setHTML(popupContent)
+          .addTo(map);
     });
   });
 }
