@@ -19,7 +19,7 @@ var map = new mapboxgl.Map({
   // style: "mapbox://styles/mapbox/streets-v12", // stile generico
   // center: [12.608438888126923, 42.933064240993126],
   center:[12.391299727701938, 43.10448380562507], 
-  zoom: 18.5,
+  zoom: 18.2,
   scrollZoom: true,
 });
 
@@ -58,7 +58,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391144795686326, 43.104566326839965],
+        coordinates: [12.391358705311927, 43.10464296262472],
       }, 
       properties: {
         address_it: "La scuola nel ventennio",
@@ -77,7 +77,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.390957041075941, 43.104493869632854],
+        coordinates: [12.391507050410365, 43.10451313889803, ],
       }, 
       properties: {
         address_it: "Foto di classe",
@@ -96,7 +96,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391053600589851, 43.10436070481235],
+        coordinates: [12.391653655290698, 43.1043846937967],
       }, 
       properties: {
         address_it: "Radio a scuola",
@@ -115,7 +115,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.39122794415664, 43.104213831512595],
+        coordinates: [12.39174838459799, 43.10428588968922],
       }, 
       properties: {
         address_it: "Radici di futuro(INDIRE)",
@@ -134,7 +134,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391354007966472, 43.10409829093586],
+        coordinates: [12.391626642369769, 43.1042116175783],
       }, 
       properties: {
         address_it: "Scuole rurali",
@@ -153,7 +153,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391531033741979, 43.10420795657328],
+        coordinates: [12.391493364478103, 43.10413338107681],
       }, 
       properties: {
         address_it: "Scuole per contadini",
@@ -172,7 +172,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391691966265167, 43.104321538633535],
+        coordinates: [12.391356808703952, 43.10405583568679],
       }, 
       properties: {
         address_it: "Educandati e convitti",
@@ -191,7 +191,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391673190804127, 43.104405745887],
+        coordinates: [12.391197493634106, 43.10417769268415],
       }, 
       properties: {
         address_it: "Istruzione agraria",
@@ -210,7 +210,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.39152835153326, 43.104525202489704],
+        coordinates: [12.391045764996159,43.104310627313716],
       }, 
       properties: {
         address_it: "Museo delle scuole",
@@ -229,7 +229,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391351325757752, 43.104630950763166],
+        coordinates: [12.390916795653906, 43.10445187004133],
       }, 
       properties: {
         address_it: "Da definire",
@@ -238,6 +238,42 @@ var stores = {
         postalCode: "06121",
         description_it: "Pannello 10",
         markerType: "panel10",
+        img: "./assets/img/card_background/",
+        site: "https://clf4d.eu/it/",
+      },
+    },
+    // PANNELLO 11
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391127319139057, 43.10456818733702],
+      }, 
+      properties: {
+        address_it: "Da definire",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 11",
+        markerType: "panel11",
+        img: "./assets/img/card_background/",
+        site: "https://clf4d.eu/it/",
+      },
+    },
+    // PANNELLO 12
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.39104661708316, 43.10468728498523],
+      }, 
+      properties: {
+        address_it: "Da definire",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 12",
+        markerType: "panel12",
         img: "./assets/img/card_background/",
         site: "https://clf4d.eu/it/",
       },

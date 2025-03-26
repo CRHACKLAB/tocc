@@ -326,7 +326,7 @@ body {
   justify-content: center;
 }
 
-.listings .item-panel0 .title, .listings .item-panel1 .title, .listings .item-panel2 .title, .listings .item-panel3 .title, .listings .item-panel4 .title, .listings .item-panel5 .title, .listings .item-panel6 .title, .listings .item-panel7 .title, .listings .item-panel8 .title, .listings .item-panel9 .title, .listings .item-panel10 .title {
+.listings .item-panel0 .title {
   display: block;
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
@@ -391,12 +391,132 @@ body {
   background-repeat: no-repeat;
 }
 
-[class^="marker-panel"] {
+.marker-panel0 {
   border: none;
   cursor: pointer;
-  height: 48px;
-  width: 43px;
-  background-image: url("../img/markers/icone\ SHU\ young.svg");
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel0.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel1 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel2 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel3 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel4 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel5 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel5.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel6 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel6.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel7 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel7.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel8 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel8.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel9 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel9.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel10 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel10.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel11 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel11.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel12 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel12.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
