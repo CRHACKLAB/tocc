@@ -96,16 +96,3 @@ function initializeMap(latitude, longitude) {
     userCoordinates = [longitude, latitude]; //store the user's coordinates
 }
 
-// Function to handle successful geolocation
-function successCallback(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-    initializeMap(latitude, longitude);
-}
-
-// Function to handle geolocation errors
-function errorCallback(error) {
-    console.error(`Geolocation error: ${error.message}`);
-    alert('Unable to retrieve your location. Please ensure that location services are enabled.');
-}

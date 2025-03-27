@@ -24,12 +24,7 @@
 <body>
     <div class="container">
         <div id="info-card-layer" class="layer info-card" hidden>
-            <button type="button" id="back-to-index" class="back-button sidebarbtn" onclick="back2Index()"><i class="fa-solid fa-arrow-left"></i></button>
-            <div id="card-container">
-                <p id="card-title"></p>
-                <p id="card-description"></p>
-            </div>
-            
+
         </div>
         <div id="sidebar" class="layer sidebar" hidden>
             <div class='heading'>
@@ -41,30 +36,13 @@
                 </select>
             </div>
             <div id="listings" class="listings"></div>
-            <div class="sidebar-link">
-                <p class="creative-commons">
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank">
-                        <img alt="Creative Commons 4.0 International" src="https://mirrors.creativecommons.org/presskit/icons/cc.xlarge.png">
-                        <img alt="Creative Commons 4.0 International BY" src="https://mirrors.creativecommons.org/presskit/icons/by.xlarge.png">
-                    </a>
-                </p>
             
-            </div>
-            <button type="button" id="hide-sidebar" class="hide-button sidebarbtn" onclick="hideSidebar()"><i class="fa-solid fa-xmark"></i></button>
+            
         </div>
         <div id="map" class="layer map">
             <button type="button" id="filter-marker" class="filter-button sidebarbtn"><i class="fa-solid fa-sliders" ></i>
                 <select id="marker-dropdown" class="marker-dropdown" onchange="applyFilters()">
-                    <option id="marker-all" value="all"></option>
-                    <option id="marker-entrance" value="entrance"></option>
-                    <option id="marker-parking" value="parking"></option>
-                    <option id="marker-portals" value="portals"></option>
-                    <option id="marker-sanGiovanni" value="sanGiovanni"></option>
-                    <option id="marker-sanGiorgio" value="sanGiorgio"></option>
-                    <option id="marker-sanPietro" value="sanPietro"></option>
-                    <option id="marker-santaMaria" value="santaMaria"></option>
-                    <option id="marker-toilet" value="toilet"></option>
-                    <option id="marker-water" value="water"></option>
+                    
                 </select> 
             </button> 
         </div>

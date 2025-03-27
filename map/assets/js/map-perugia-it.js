@@ -23,14 +23,6 @@ var map = new mapboxgl.Map({
   scrollZoom: true,
 });
 
-//compass
-const nav = new mapboxgl.NavigationControl({
-  showCompass: true,
-});
-map.on("load", function (e) {
-  map.addControl(nav, "bottom-right");
-});
-
 var stores = {
   type: "FeatureCollection",
   features: [      
@@ -48,8 +40,8 @@ var stores = {
         postalCode: "06121",
         description_it: "Pannello 0",
         markerType: "panel0",
-        img: "../assets/img/card_background/Piazza.jpg",
-        site: "https://www.clf4d.eu"
+        img: "https://clf4d.dev/fotofsa/picture.php?/5116/category/277",
+        site: "https://www.istitutosantanna.com/"
       },
     },
 
@@ -61,14 +53,14 @@ var stores = {
         coordinates: [12.391358705311927, 43.10464296262472],
       }, 
       properties: {
-        address_it: "La scuola nel ventennio",
+        address_it: "La scuola in camicia nera",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: `Pannello 1`,
         markerType: "panel1",
-        img: "./assets/img/card_background/Porta_Todi.jpeg",
-        site: "/"
+        img: "https://clf4d.dev/fotofsa/index.php?/category/278",
+        site: "https://webxr.run/P3dRJwGYOr8A4"
       },
     },
     
@@ -80,14 +72,14 @@ var stores = {
         coordinates: [12.391507050410365, 43.10451313889803, ],
       }, 
       properties: {
-        address_it: "Foto di classe",
+        address_it: "La foto di classe",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 2",
         markerType: "panel2",
-        img: "./assets/img/card_background/",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/281",
+        site: "https://webxr.run/55Gmd26lez4X2",
       },
     },
     
@@ -99,14 +91,14 @@ var stores = {
         coordinates: [12.391653655290698, 43.1043846937967],
       }, 
       properties: {
-        address_it: "Radio a scuola",
+        address_it: "La radio a scuola",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "",
         markerType: "panel3",
-        img: "./assets/img/card_background/",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/279",
+        site: "https://webxr.run/oPQaXyo9yb21N",
       },
     },
     
@@ -118,14 +110,14 @@ var stores = {
         coordinates: [12.39174838459799, 43.10428588968922],
       }, 
       properties: {
-        address_it: "Radici di futuro(INDIRE)",
+        address_it: "Radici di futuro",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 4",
         markerType: "panel4",
-        img: "./assets/img/card_background/",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/287",
+        site: "https://webxr.run/55pnv69g394o2",
       },
     },
 
@@ -137,14 +129,14 @@ var stores = {
         coordinates: [12.391626642369769, 43.1042116175783],
       }, 
       properties: {
-        address_it: "Scuole rurali",
+        address_it: "Le scuole rurali",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 5",
         markerType: "panel5",
-        img: "./assets/img/card_background/",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/283",
+        site: "https://webxr.run/dY7050pdW8XZ",
       },
     },
 
@@ -156,18 +148,18 @@ var stores = {
         coordinates: [12.391493364478103, 43.10413338107681],
       }, 
       properties: {
-        address_it: "Scuole per contadini",
+        address_it: "Le scuole per contadini",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 6",
         markerType: "panel6",
-        img: "./assets/img/card_background/",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/280",
+        site: "https://webxr.run/3NoDaOY6RVW2",
       },
     },
 
-    // PANNELLO 7
+    // PANNELLO 7(8)
     {
       type: "Feature",
       geometry: {
@@ -175,18 +167,18 @@ var stores = {
         coordinates: [12.391356808703952, 43.10405583568679],
       }, 
       properties: {
-        address_it: "Educandati e convitti",
+        address_it: "Istruzione tecnica",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 7",
         markerType: "panel7",
-        img: "./assets/img/card_background/",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/289",
+        site: "https://webxr.run/4XwoNyY8dwer3",
       },
     },
 
-    // PANNELLO 8
+    // PANNELLO 8(9)
     {
       type: "Feature",
       geometry: {
@@ -194,18 +186,18 @@ var stores = {
         coordinates: [12.391197493634106, 43.10417769268415],
       }, 
       properties: {
-        address_it: "Istruzione agraria",
+        address_it: "Il museo della scuola",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 8",
         markerType: "panel8",
-        img: "./assets/img/card_background/",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/286",
+        site: "https://webxr.run/xER5WXrkyQyGk",
       },
     },
 
-    // PANNELLO 9
+    // PANNELLO 9 (10)
     {
       type: "Feature",
       geometry: {
@@ -213,18 +205,18 @@ var stores = {
         coordinates: [12.391045764996159,43.104310627313716],
       }, 
       properties: {
-        address_it: "Museo delle scuole",
+        address_it: "La scoperta dell'infanzia",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 9",
         markerType: "panel9",
-        img: "./assets/img/card_background/",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/284",
+        site: "https://webxr.run/VOk7O82LA2Am4",
       },
     },
 
-    // PANNELLO 10
+    // PANNELLO 10(11)
     {
       type: "Feature",
       geometry: {
@@ -232,17 +224,17 @@ var stores = {
         coordinates: [12.390916795653906, 43.10445187004133],
       }, 
       properties: {
-        address_it: "Da definire",
+        address_it: "Il sistema dei licei",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 10",
         markerType: "panel10",
-        img: "./assets/img/card_background/",
-        site: "https://clf4d.eu/it/",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/285",
+        site: "https://webxr.run/RYXkDv5aaG0zZ",
       },
     },
-    // PANNELLO 11
+    // PANNELLO 11(12)
     {
       type: "Feature",
       geometry: {
@@ -250,17 +242,17 @@ var stores = {
         coordinates: [12.391127319139057, 43.10456818733702],
       }, 
       properties: {
-        address_it: "Da definire",
+        address_it: "Il viaggio continua",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 11",
         markerType: "panel11",
-        img: "./assets/img/card_background/",
-        site: "https://clf4d.eu/it/",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/288",
+        site: "https://www.istitutosantanna.com/",
       },
     },
-    // PANNELLO 12
+    // PANNELLO 12(7)
     {
       type: "Feature",
       geometry: {
@@ -268,14 +260,14 @@ var stores = {
         coordinates: [12.39104661708316, 43.10468728498523],
       }, 
       properties: {
-        address_it: "Da definire",
+        address_it: "L'educatorio S. Anna e gli educandati",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
         description_it: "Pannello 12",
         markerType: "panel12",
-        img: "./assets/img/card_background/",
-        site: "https://clf4d.eu/it/",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/282",
+        site: "https://webxr.run/Ll6v5JAMD19Q0",
       },
     },
   ],
@@ -290,43 +282,43 @@ stores.features.forEach(function (store, i) {
   store.properties.id = i;
 });
 
-// GPS
-var geolocateControl = new mapboxgl.GeolocateControl({
-  positionOptions: {
-      enableHighAccuracy: true
-  },
-  trackUserLocation: true,
-  showUserLocation: true
-});
+// // GPS
+// var geolocateControl = new mapboxgl.GeolocateControl({
+//   positionOptions: {
+//       enableHighAccuracy: true
+//   },
+//   trackUserLocation: true,
+//   showUserLocation: true
+// });
 
-map.addControl(geolocateControl);
+// map.addControl(geolocateControl);
 
-// Save geolocation status in localStorage
-function saveGeolocationStatus(isEnabled) {
-  localStorage.setItem('geolocationEnabled', isEnabled);
-}
+// // Save geolocation status in localStorage
+// function saveGeolocationStatus(isEnabled) {
+//   localStorage.setItem('geolocationEnabled', isEnabled);
+// }
 
-// Retrieve geolocation status from localStorage
-function getGeolocationStatus() {
-  return localStorage.getItem('geolocationEnabled') === 'true';
-}
+// // Retrieve geolocation status from localStorage
+// function getGeolocationStatus() {
+//   return localStorage.getItem('geolocationEnabled') === 'true';
+// }
 
-// Usage example when activating geolocation
-if (getGeolocationStatus()) {
-  // Code to activate geolocation
-  activateGeolocation();
-}
+// // Usage example when activating geolocation
+// if (getGeolocationStatus()) {
+//   // Code to activate geolocation
+//   activateGeolocation();
+// }
 
-// Update geolocation status whenever it's toggled
-function activateGeolocation() {
-  saveGeolocationStatus(true);
-  // Code to activate geolocation
-}
+// // Update geolocation status whenever it's toggled
+// function activateGeolocation() {
+//   saveGeolocationStatus(true);
+//   // Code to activate geolocation
+// }
 
-function deactivateGeolocation() {
-  saveGeolocationStatus(false);
-  // Code to deactivate geolocation
-}
+// function deactivateGeolocation() {
+//   saveGeolocationStatus(false);
+//   // Code to deactivate geolocation
+// }
 
 /**
  * Wait until the map loads to make changes to the map.
@@ -395,8 +387,8 @@ function addMarkers() {
       var popupContent = `
           <p class="address">${(marker.properties.address_it || marker.properties.address_en).replace(/\n/g, "<br>")}</p>
           <div class="popup-buttons">
-              <button class="popup-btn site-btn" onclick="window.open('${marker.properties.site}', '_blank')">Ascolta</button>
-              <button class="popup-btn navigate-btn" onclick="startNavigation(${destination[0]}, ${destination[1]})">Scopri di più</button>
+              <button class="popup-btn site-btn" onclick="window.open('${marker.properties.site}', '_blank')">Scopri di più</button>
+              <button class="popup-btn navigate-btn" onclick="window.open('${marker.properties.img}', '_blank')">Mostra</button>
           </div>
         `;
 
