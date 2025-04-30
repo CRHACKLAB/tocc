@@ -31,10 +31,10 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391182346608403, 43.1047445320386],
+        coordinates: [12.3910983197146036, 43.10480413880485],
       }, 
       properties: {
-        address_it: "Fondazione Sant'Anna",
+        address_it: "L'umbria in classe",
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
@@ -95,7 +95,7 @@ var stores = {
         city: "Perugia",
         country: "Italy",
         postalCode: "06121",
-        description_it: "",
+        description_it: "Pannello 3",
         markerType: "panel3",
         img: "https://clf4d.dev/fotofsa/index.php?/category/279",
         site: "https://webxr.run/oPQaXyo9yb21N",
@@ -239,7 +239,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391127319139057, 43.10456818733702],
+        coordinates: [12.391064180771064, 43.10454242558743],
       }, 
       properties: {
         address_it: "Il viaggio continua",
@@ -257,7 +257,7 @@ var stores = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.39104661708316, 43.10468728498523],
+        coordinates: [12.391177977249525, 43.10468920668317],
       }, 
       properties: {
         address_it: "L'educatorio S. Anna e gli educandati",
@@ -268,6 +268,24 @@ var stores = {
         markerType: "panel12",
         img: "https://clf4d.dev/fotofsa/index.php?/category/282",
         site: "https://webxr.run/Ll6v5JAMD19Q0",
+      },
+    },
+    // PANNELLO SMA
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.39130694659178, 43.10435548689001],
+      }, 
+      properties: {
+        address_it: "Mostra Smascherati",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello Smascherati",
+        markerType: "panelSma",
+        img: "https://izwla.zappar.io/6180731706942438470/v76.0/",
+        site: "https://www.smascherati.it/",
       },
     },
   ],
@@ -281,44 +299,6 @@ var stores = {
 stores.features.forEach(function (store, i) {
   store.properties.id = i;
 });
-
-// // GPS
-// var geolocateControl = new mapboxgl.GeolocateControl({
-//   positionOptions: {
-//       enableHighAccuracy: true
-//   },
-//   trackUserLocation: true,
-//   showUserLocation: true
-// });
-
-// map.addControl(geolocateControl);
-
-// // Save geolocation status in localStorage
-// function saveGeolocationStatus(isEnabled) {
-//   localStorage.setItem('geolocationEnabled', isEnabled);
-// }
-
-// // Retrieve geolocation status from localStorage
-// function getGeolocationStatus() {
-//   return localStorage.getItem('geolocationEnabled') === 'true';
-// }
-
-// // Usage example when activating geolocation
-// if (getGeolocationStatus()) {
-//   // Code to activate geolocation
-//   activateGeolocation();
-// }
-
-// // Update geolocation status whenever it's toggled
-// function activateGeolocation() {
-//   saveGeolocationStatus(true);
-//   // Code to activate geolocation
-// }
-
-// function deactivateGeolocation() {
-//   saveGeolocationStatus(false);
-//   // Code to deactivate geolocation
-// }
 
 /**
  * Wait until the map loads to make changes to the map.
@@ -364,6 +344,19 @@ function addMarkers() {
     } else {
       el.className = "marker-default"; // Fallback class
     }
+
+    /*Add attributes for accessibility*/
+
+    el.setAttribute("role", "button");
+    el.setAttribute("tabindex", "0");
+    el.setAttribute("aria-label", `${marker.properties.address_it}, ${marker.properties.description_it || "Pannello informativo"}`);
+
+    el.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        el.click();
+    }
+});
     /**
      * Create a marker using the div element
      * defined above and add it to the map.
@@ -384,10 +377,12 @@ function addMarkers() {
       var destination = marker.geometry.coordinates;
       
       // Contenuto del popup
+      var siteLabel = (marker.properties.markerType === "panelSma" || marker.properties.markerType === "panel0") ? "Visita il sito" : "Scopri di più";
+
       var popupContent = `
           <p class="address">${(marker.properties.address_it || marker.properties.address_en).replace(/\n/g, "<br>")}</p>
           <div class="popup-buttons">
-              <button class="popup-btn site-btn" onclick="window.open('${marker.properties.site}', '_blank')">Scopri di più</button>
+              <button class="popup-btn site-btn" onclick="window.open('${marker.properties.site}', '_blank')">${siteLabel}</button>
               <button class="popup-btn navigate-btn" onclick="window.open('${marker.properties.img}', '_blank')">Mostra</button>
           </div>
         `;
@@ -457,6 +452,7 @@ function buildLocationList(data) {
     link.href = "#";
     link.className = "title";
     link.id = "link-" + prop.id;
+    link.setAttribute("tabindex", "0")
   
     if (language == "it") {
       link.innerHTML = prop.address_it;
@@ -520,15 +516,41 @@ function makeHighlight(currentFeature) {
 
 //FILTERS
 
-function applyFilters(selectedType) {
+function updateMarkers(filteredListings) {
+  stores.features.forEach(feature => {
+    const markerElement = document.getElementById(`marker-${feature.properties.id}`);
     
-  const filteredListings = stores.features.filter(store => 
-      (selectedType === 'all' || store.properties.markerType === selectedType)
-  );
-  
+    if (filteredListings.includes(feature)) {
+      if (markerElement) {
+        markerElement.style.display = 'inline';
+      }
+    } else {
+      if (markerElement) {
+        markerElement.style.display = 'none';
+      }
+    }
+  });
+}
+
+function applyFilters(selectedType) {
+  let filteredListings;
+
+  if (selectedType === 'all') {
+    filteredListings = stores.features;
+  } else if (selectedType === 'panels012') {
+    filteredListings = stores.features.filter(store => {
+      const type = store.properties.markerType;
+      return type && /^panel\d+$/.test(type) && type !== 'panelSma';
+    });
+  } else if (selectedType === 'panelSma') {
+    filteredListings = stores.features.filter(store => store.properties.markerType === 'panelSma');
+  } else {
+    filteredListings = stores.features.filter(store => store.properties.markerType === selectedType);
+  }
+
   updateListings(filteredListings);
   updateMarkers(filteredListings);
-
+  console.log(filteredListings);
 }
 
 
@@ -536,23 +558,6 @@ function updateListings(filteredListings) {
   // var listings = document.getElementById("listings");
   // listings.innerHTML = '';
   buildLocationList({ type: 'FeatureCollection', features: filteredListings });
-}
-
-function updateMarkers(filteredListings) {
-  stores.features.forEach(feature => {
-      const markerElement = document.getElementById(`marker-${feature.properties.id}`);
-      
-      if (filteredListings.includes(feature)) {
-        if (markerElement) {
-              markerElement.style.display = 'inline';
-          }
-      } else {
-          if (markerElement) {;
-              markerElement.style.display = 'none';
-          }
-      }
-      document.getElementById('marker-dropdown').style.display = 'none';
-  });
 }
 
 function showFilter() {

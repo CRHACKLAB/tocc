@@ -71,7 +71,7 @@ body {
   line-height: 40px;
   padding-top: 10px;
   background-color: #E9E4E3; 
-  color: #e5eb09; 
+  color: #786560; 
   margin: 0;
 }
 
@@ -116,7 +116,7 @@ body {
   position: absolute;
   top: 1vmin;
   right: 1vmin;
-  background-color: #e5eb09;
+  background-color: #786560;
   color: #0074ad;
   font-size: calc(var(--font-size) * 1.8);
   padding: 1px 7px;
@@ -132,7 +132,7 @@ body {
   position: absolute;
   top: 1vmin;
   left: 1vmin;
-  background-color: #e5eb09;
+  background-color: #786560;
   color: #0074ad;
   font-size: calc(var(--font-size) * 1.8);
 }
@@ -144,6 +144,7 @@ body {
 
 .fa-solid {
   padding: 0;
+  color: #fff;
 }
 
 /* SHOW BUTTONS */
@@ -151,7 +152,7 @@ body {
   position: absolute;
   top: 1vmin;
   left: 1vmin;
-  background-color: #e5eb09;
+  background-color: #786560;
   color: #0074ad;
   font-size: calc(var(--font-size) * 1.8);
   padding: 1px 7px;
@@ -175,8 +176,8 @@ body {
   position: absolute;
   top: 1vmin;
   left: 17vmin;
-  background-color: #e5eb09;
-  color: #0074ad;
+  background-color: #786560;
+  color: #fff;
   font-size: calc(var(--font-size) * 1.7);
 }
 
@@ -206,8 +207,8 @@ body {
 #filter-dropdown {
   top: 13vh;
   right: 7.6vw;
-  background-color: #e5eb09;
-  color: #0074ad;
+  background-color: #786560;
+  color: #fff;
   font-size: calc(var(--font-size) * 1.4); 
   padding: 0.2px;
   display: none;
@@ -217,8 +218,8 @@ body {
   border: none;
   top: 13vh;
   right: 1vmin;
-  background-color: #e5eb09;
-  color: #0074ad;
+  background-color: #786560;
+  color: #fff;
   font-size: calc(var(--font-size) * 1.5);
 }
 
@@ -248,7 +249,7 @@ body {
 
 #card-container {
   position: absolute;
-  background-color: #e5eb09;
+  background-color: #786560;
   border-radius: 25px;
   left: calc(50vw - 10em);
   top: 6%;
@@ -521,29 +522,42 @@ body {
   background-repeat: no-repeat;
 }
 
-#filter-marker {
-  display: none;
-  align-items: center;
-  justify-content: space-around;
-  padding: 4px;
+.marker-panelSma {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panelSma.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#show-sidebar {
+.filter-control {
+  position: absolute;
+  top: 1vmin;
+  left: 1vmin;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 4px 6px;
+  gap: 10px;
+  background-color: #786560;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 18px;
+  z-index: 7;
 }
 
-#marker-dropdown {
-  font-size: large;
+.filter-control select {
   background-color: transparent;
-  color: #0074ad;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
 }
 
-#marker-dropdown option{
-  background-color: #e5eb09;
+.filter-control option {
+  background-color: #786560;
 }
+
 
 .mapboxgl-popup-content {
   width: 300px;

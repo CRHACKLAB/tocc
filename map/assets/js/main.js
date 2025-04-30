@@ -50,6 +50,7 @@ const showInfoCard = (title_it, title_en, description_it, description_en, img, m
     
     //------
     infoCard.removeAttribute("hidden");
+    infoCard.focus();
     sidebar.setAttribute("hidden", "hidden");
     mapContainer.setAttribute("hidden", "hidden");
 };

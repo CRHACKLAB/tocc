@@ -22,31 +22,34 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="info-card-layer" class="layer info-card" hidden>
+    <main class="container">
+        <section id="info-card-layer" class="layer info-card" hidden role="dialog" aria-live="polite" tabindex="-1">
 
-        </div>
-        <div id="sidebar" class="layer sidebar" hidden>
+        </section>
+
+        <aside id="sidebar" class="layer sidebar" hidden role="complementary" aria-label="Sidebar con i luoghi mappati">
             <div class='heading'>
                 <div class="logo">
-                    <img class="logo-img" src="./assets/img/logosanna.png" alt="Logo del progetto">
+                    <img class="logo-img" src="./assets/img/logosanna.png" alt="Logo del progetto Fondazione Sant'Anna">
                 </div>
                 <select id="filter-dropdown">
                     
                 </select>
             </div>
-            <div id="listings" class="listings"></div>
-            
-            
-        </div>
-        <div id="map" class="layer map">
-            <button type="button" id="filter-marker" class="filter-button sidebarbtn"><i class="fa-solid fa-sliders" ></i>
-                <select id="marker-dropdown" class="marker-dropdown" onchange="applyFilters()">
-                    
-                </select> 
-            </button> 
-        </div>
-    </div>
+            <div id="listings" class="listings" aria-label="Elenco dei pannelli"></div>
+        </aside>
+
+        <section id="map" class="layer map" aria-label="Mappa interattiva dei pannelli">
+            <div id="filter-marker" class="filter-control">
+                <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                <select id="marker-dropdown" class="marker-dropdown" aria-label="Filtro per la mappa">
+                    <option value="all">Tutti</option>
+                    <option value="panels012">L'Umbria in classe</option>
+                    <option value="panelSma">Mostra Smascherati</option>
+                </select>
+            </div>
+        </section>
+    </main>
     
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/map-perugia-it.js"></script>
