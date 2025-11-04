@@ -18,42 +18,39 @@ const hideInfoCard = () => {
     mapContainer.removeAttribute("hidden");
 };
 
-const showInfoCard = (title_it, title_en, description_it, description_en, portal_img, markerType, site) => {
+const showInfoCard = (title_it, title_en, description_it, description_en, img, markerType, site) => {
     
     // shows the card depending on the language
     if (language == 'it') {
         cardTitle.innerText = title_it;
         cardDescription.innerText = description_it;
+        var image = document.createElement("img");
+        image.src = img;
+        image.alt = title_it;
+        cardDescription.appendChild(image);
+        var link = document.createElement("a");
+        link.href = site;
+        link.target = "_blank";
+        link.innerText = "\nLink";
+        cardDescription.appendChild(link);
     } else {
         cardTitle.innerText = title_en;
         cardDescription.innerText = description_en;
-    }
-
-    if (markerType == 'food') {
-        cardTitle.innerText = '';
-    }
-    
-    // shows the image for the portal
-    if (portal_img) {
-        var img = document.createElement("img");
-        img.src = portal_img;
-        img.alt = "immagine";
-        img.classList = "img-background";
-        cardTitle.append(img);
-    }
-    
-    // shows the link for the portal, restaurants and events
-    if (markerType == "portals" || markerType == "sanGiovanni" || markerType == "sanGiorgio" || markerType == "sanPietro" || markerType == "santaMaria") {
+        var image = document.createElement("img");
+        image.src = img;
+        image.alt = title_en;
         var link = document.createElement("a");
         link.href = site;
         link.target = "_blank";
         link.innerText = "\nLink";
         cardDescription.appendChild(link);
     }
+    
     //MODIFY WITH DATA FROM MAPBOX
     
     //------
     infoCard.removeAttribute("hidden");
+    infoCard.focus();
     sidebar.setAttribute("hidden", "hidden");
     mapContainer.setAttribute("hidden", "hidden");
 };
@@ -100,29 +97,3 @@ function initializeMap(latitude, longitude) {
     userCoordinates = [longitude, latitude]; //store the user's coordinates
 }
 
-// Function to handle successful geolocation
-function successCallback(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-    initializeMap(latitude, longitude);
-}
-
-// Function to handle geolocation errors
-function errorCallback(error) {
-    console.error(`Geolocation error: ${error.message}`);
-    alert('Unable to retrieve your location. Please ensure that location services are enabled.');
-}
-
-// Add event listener to the button
-// document.getElementById('enable-gps').addEventListener('click', () => {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
-//             enableHighAccuracy: true,
-//             timeout: 5000,
-//             maximumAge: 0
-//         });
-//     } else {
-//         console.log("Geolocation is not supported by this browser.");
-//     }
-// });

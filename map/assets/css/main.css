@@ -71,7 +71,7 @@ body {
   line-height: 40px;
   padding-top: 10px;
   background-color: #E9E4E3; 
-  color: #53c169; 
+  color: #786560; 
   margin: 0;
 }
 
@@ -116,15 +116,15 @@ body {
   position: absolute;
   top: 1vmin;
   right: 1vmin;
-  background-color: #53c169;
-  color: #5A6B66;
+  background-color: #786560;
+  color: #0074ad;
   font-size: calc(var(--font-size) * 1.8);
   padding: 1px 7px;
 }
 
 .hide-button:hover {
   background-color: #8cc63f;
-  color: #5A6B66;
+  color: #0074ad;
 }
 
 /* BACK BUTTONS */
@@ -132,18 +132,19 @@ body {
   position: absolute;
   top: 1vmin;
   left: 1vmin;
-  background-color: #53c169;
-  color: #5A6B66;
+  background-color: #786560;
+  color: #0074ad;
   font-size: calc(var(--font-size) * 1.8);
 }
 
 .back-button:hover {
   background-color: #8cc63f;
-  color: #5A6B66;
+  color: #0074ad;
 }
 
 .fa-solid {
   padding: 0;
+  color: #fff;
 }
 
 /* SHOW BUTTONS */
@@ -151,8 +152,8 @@ body {
   position: absolute;
   top: 1vmin;
   left: 1vmin;
-  background-color: #53c169;
-  color: #5A6B66;
+  background-color: #786560;
+  color: #0074ad;
   font-size: calc(var(--font-size) * 1.8);
   padding: 1px 7px;
 }
@@ -168,15 +169,15 @@ body {
 
 .show-button:hover {
   background-color: #8cc63f;
-  color: #5A6B66;
+  color: #0074ad;
 }
 
 .filter-button {
   position: absolute;
   top: 1vmin;
   left: 17vmin;
-  background-color: #53c169;
-  color: #5A6B66;
+  background-color: #786560;
+  color: #fff;
   font-size: calc(var(--font-size) * 1.7);
 }
 
@@ -194,30 +195,31 @@ body {
   top: 20vh;
   left: 50vw;
   background-color: #00853e;
-  color: #5A6B66;
+  color: #0074ad;
 }
 
 #show-info-card:hover {
   background-color: #8cc63f;
-  color: #5A6B66;
+  color: #0074ad;
 }
 
 /* FILTER */
 #filter-dropdown {
   top: 13vh;
   right: 7.6vw;
-  background-color: #53c169;
-  color: #5A6B66;
+  background-color: #786560;
+  color: #fff;
   font-size: calc(var(--font-size) * 1.4); 
   padding: 0.2px;
+  display: none;
 }
 
 #filter-btn {
   border: none;
   top: 13vh;
   right: 1vmin;
-  background-color: #53c169;
-  color: #5A6B66;
+  background-color: #786560;
+  color: #fff;
   font-size: calc(var(--font-size) * 1.5);
 }
 
@@ -247,11 +249,11 @@ body {
 
 #card-container {
   position: absolute;
-  border: 6px double ;
+  background-color: #786560;
   border-radius: 25px;
-  left: calc(50vw - 9em);
+  left: calc(50vw - 10em);
   top: 6%;
-  width: 18em;
+  width: 20em;
 }
 
 #card-title {
@@ -269,6 +271,11 @@ body {
   margin: 0 4px 15px;
   text-align: center;
   padding: 0 4px;
+}
+
+#card-description img {
+  max-width: 95%;
+  max-height: 100%;
 }
 
 #card-description a {
@@ -308,7 +315,7 @@ body {
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
   text-decoration: none; 
-  color: #5A6B66; 
+  color: #0074ad; 
   background: url(../img/fondinoSHU.svg) no-repeat;
   background-position: center center;
   background-size: cover;
@@ -320,12 +327,12 @@ body {
   justify-content: center;
 }
 
-.listings .item-youngMakers .title {
+.listings .item-panel0 .title {
   display: block;
   font-size: calc(var(--font-size) * 1.5); 
   font-weight: 700;
   text-decoration: none; 
-  color: #5A6B66; 
+  color: #ffffff; 
   background: url(../img/fondinoSHU.svg) no-repeat;
   background-position: center center;
   background-size: cover;
@@ -336,341 +343,27 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-.listings .item-food .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5); 
-  font-weight: 700;
-  text-decoration: none; 
-  color: #5A6B66; 
-  background-color: #d4a323; 
-  padding: 10px; 
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-infopoint .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5); 
-  font-weight: 700;
-  text-decoration: none; 
-  color: #5A6B66; 
-  background: url(../img/fondinoSHU.svg)no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 10px; 
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-shuKids .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5); 
-  font-weight: 700;
-  text-decoration: none; 
-  color: #5A6B66; 
-  background: url(../img/fondinoSHU.svg)no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 10px; 
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-wellness .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5); 
-  font-weight: 700;
-  text-decoration: none; 
-  color: #5A6B66; 
-  background-color: #56a446;
-  padding: 10px; 
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-tourism .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5); 
-  font-weight: 700;
-  text-decoration: none; 
-  color: #5A6B66; 
-  background-color: #29B8CE; 
-  padding: 10px; 
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-entrance .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #e51ce5;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-events .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #c52639;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-drones .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #29B8CE; 
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-stopMotion .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #29B8CE; 
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-auditorium .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #29B8CE; 
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-robotArena .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #29B8CE; 
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-bus .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #F5A04C;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-parking .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #1f089f;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-portals .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #9455ef;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-sanGiovanni .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: burlywood;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-sanGiorgio .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: burlywood;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-sanPietro .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: burlywood;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-santaMaria .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: burlywood;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-privateEvents .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #ef7876;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-toilet .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #d8d208;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listings .item-water .title {
-  display: block;
-  font-size: calc(var(--font-size) * 1.5);
-  font-weight: 700;
-  text-decoration: none;
-  color: #5A6B66;
-  background-color: #69ddff;
-  padding: 10px;
-  min-height: 120px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 
 .sidebar-link {
-  font-size: calc(var(--font-size)*0.8);
   display: flex;
-  left: 50%;
-  transform: translateX(-50%); 
-  margin-bottom: 4px;
-  position: absolute;
-  bottom: 0;
+  justify-content: flex-end;
+  margin-right: 5px;
 }
 
-.sidebar-link a {
-  color: black;
-  margin: 0 10px 0 0;
-  text-decoration: none;
+.creative-commons {
+  display: flex; 
+  align-items: center;
+  flex-direction: row; 
+  gap: 8px; 
+}
+
+.creative-commons img {
+  width: 40px; 
+  height: auto; 
+}
+
+.creative-commons a {
+  display: inline-flex; 
 }
 
 ::-webkit-scrollbar {
@@ -699,232 +392,212 @@ body {
   background-repeat: no-repeat;
 }
 
-.marker-youngMakers {
-  border: none;
-  cursor: pointer;
-  height: 48px;
-  width: 43px;
-  background-image: url("../img/markers/icone\ SHU\ young.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.marker-infopoint {
-  border: none;
-  cursor: pointer;
-  height: 48px;
-  width: 43px;
-  background-image: url("../img/markers/infopoint.png");
-  background-size: cover;
-}
-
-.marker-shuKids {
-  border: none;
-  cursor: pointer;
-  height: 48px;
-  width: 43px;
-  background-image: url("../img/markers/SHUkids.png");
-  background-size: cover;
-}
-
-.marker-wellness {
-  cursor: pointer;
-  height: 60px;
-  width: 43px;
-  background-image: url("../img/markers/benessere\ 1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.marker-food {
-  cursor: pointer;
-  height: 59px;
-  width: 42px;
-  background-image: url("../img/markers/Cibo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-/* .marker-tourism {
-  border: none;
-  cursor: pointer;
-  height: 49px;
-  width: 35px;
-  background-image: url("../img/markers/monumenti.png");
-  background-size: cover;
-} */
-
-.marker-entrance {
-  border: none;
-  cursor: pointer;
-  height: 49px;
-  width: 35px;
-  background-image: url("../img/markers/Porte.png");
-  background-size: cover;
-}
-
-.marker-events {
-  filter: hue-rotate(-15deg);
-  border: none;
-  cursor: pointer;
-  height: 52px;
-  width: 40px;
-  background-image: url("../img/markers/Eventi.png");
-  background-size: cover;
-}
-
-.marker-robotArena {
-  filter: hue-rotate(-15deg);
-  border: none;
-  cursor: pointer;
-  height: 52px;
-  width: 40px;
-  background-image: url("../img/markers/robotArena.png");
-  background-size: cover;
-}
-
-.marker-auditorium {
-  filter: hue-rotate(-15deg);
-  border: none;
-  cursor: pointer;
-  height: 52px;
-  width: 40px;
-  background-image: url("../img/markers/auditorium.png");
-  background-size: cover;
-}
-
-.marker-drones {
-  filter: hue-rotate(-15deg);
-  border: none;
-  cursor: pointer;
-  height: 52px;
-  width: 40px;
-  background-image: url("../img/markers/droni.png");
-  background-size: cover;
-}
-
-.marker-stopMotion {
-  filter: hue-rotate(-15deg);
-  border: none;
-  cursor: pointer;
-  height: 52px;
-  width: 40px;
-  background-image: url("../img/markers/stopMotion.png");
-  background-size: cover;
-}
-
-.marker-bus {
-  border: none;
-  cursor: pointer;
-  height: 52px;
-  width: 40px;
-  background-image: url("../img/markers/02_bus\ stop.png");
-  background-size: cover;
-}
-
-.marker-parking {
-  border: none;
-  cursor: pointer;
-  height: 47px;
-  width: 33px;
-  background-image: url("../img/markers/Parcheggio.png");
-  background-size: cover;
-}
-
-.marker-portals {
-  border: none;
-  cursor: pointer;
-  height: 49px;
-  width: 35px;
-  background-image: url("../img/markers/Portali\ 2.png");
-  background-size: cover;
-}
-
-.marker-sanGiovanni {
-  border: none;
-  cursor: pointer;
-  height: 41px;
-  width: 35px;
-  background-image: url("../img/markers/SanGiovanni1.png");
-  background-size: cover;
-}
-
-.marker-sanPietro {
-  border: none;
-  cursor: pointer;
-  height: 41px;
-  width: 35px;
-  background-image: url("../img/markers/SanPietro1.png");
-  background-size: cover;
-}
-
-.marker-sanGiorgio {
+.marker-panel0 {
   border: none;
   cursor: pointer;
   height: 44px;
-  width: 39px;
-  background-image: url("../img/markers/SanGiorgio1.png");
-  background-size: cover;
+  width: 36px;
+  background-image: url("../img/panel0.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.marker-santaMaria {
+.marker-panel1 {
   border: none;
   cursor: pointer;
-  height: 41px;
-  width: 35px;
-  background-image: url("../img/markers/SantaMaria1.png");
-  background-size: cover;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.marker-privateEvents {
+.marker-panel2 {
   border: none;
   cursor: pointer;
-  height: 48px;
-  width: 41px;
-  background-image: url("../img/markers/eventiPrivati.png");
-  background-size: cover;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.marker-toilet {
+.marker-panel3 {
   border: none;
   cursor: pointer;
-  height: 48px;
-  width: 41px;
-  background-image: url("../img/markers/toilet.png");
-  background-size: cover;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.marker-water {
+.marker-panel4 {
   border: none;
   cursor: pointer;
-  height: 48px;
-  width: 41px;
-  background-image: url("../img/markers/water.png");
-  background-size: cover;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#filter-marker {
+.marker-panel5 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel5.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel6 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel6.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel7 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel7.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel8 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel8.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel9 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel9.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel10 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel10.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel11 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel11.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panel12 {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panel12.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marker-panelSma {
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 36px;
+  background-image: url("../img/panelSma.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.filter-control {
+  position: absolute;
+  top: 1vmin;
+  left: 1vmin;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 4px;
+  gap: 10px;
+  background-color: #786560;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 18px;
+  z-index: 7;
 }
 
-#show-sidebar {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 4px 6px;
-}
-
-#marker-dropdown {
-  font-size: large;
+.filter-control select {
   background-color: transparent;
-  color: #5A6B66;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
 }
 
-#marker-dropdown option{
-  background-color: #53c169;
+.filter-control option {
+  background-color: #786560;
+}
+
+
+.mapboxgl-popup-content {
+  width: 300px;
+}
+
+/* Popup buttons */
+.popup-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.popup-btn {
+  font-size: 14px;
+  padding: 8px 10px;
+  height: 40px;
+  min-width: 120px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 0;
+}
+
+.site-btn {
+  background-color: #fff;
+  border: 2px solid #786560;
+  color: #786560;
+}
+
+.navigate-btn {
+  background-color: #786560;
+}
+
+.address {
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 430px) {
@@ -1031,3 +704,4 @@ body {
     font-size: calc(var(--font-size)*0.6);
   }
 }
+

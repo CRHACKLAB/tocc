@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Smascherati! - Mostra Virtuale</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Montefalco Palazzo Comune Piazza" name="keywords">
+    <meta content="Palazzo del Comune e Piazza" name="description">
+    <script src="../dist/aframe-min.js"></script>
+    <script src="../dist/look-at.js"></script>
+    <script src="../assets/scripts/components.js"></script>
+    <script src="../assets/scripts/main.js"></script>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+</head>
+<body>
+    <!------>
+    <div id="slides" class="hidden">
+        <div class="inner" >
+            <div id="slide" style="background: url('F492AP01S01H01.jpg') 0 0; background-repeat: no-repeat; 	background-size: cover;">
+                <img id="closebut" src="../assets/images/close.png"  onclick="closeSlides()">
+                <img id="previousbut" src="../assets/images/previous.png"  onclick="previousSlide()">
+                <img id="nextbut" src="../assets/images/next.png"  onclick="nextSlide()">
+            </div>
+        </div>
+    </div>
+    <!-- A-Frame Scene -->
+    <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .interactive" inspector>
+        <!-- Assets -->
+        <a-assets>
+            <img id="logoscietondo" src="../assets/images/logoscietondo.png">
+            <img id="infopanel" src="../assets/images/info.png">
+            <img id="sky" src="R0010199.jpg">
+            <img id="linkpreview01" src="../S02/F492AP01S02.jpg">
+        </a-assets>
+        <!-- Portals and hotspots -->
+        <a-entity id="hotspots">
+            <!-- Portals -->
+            <a-link class="interactable" href="../S02/index.html" title="Vai a Torre Campanaria" image="#linkpreview01" position="0 2.5 3" rotation="0 0 0" scale="0.25 0.25 0.25"></a-link>
+            <!-- Info Panel-->
+            <a-circle id="F492AP01S01S00" class="interactable" src="#infopanel" radius="0.1" position="-2.5 3 -3" look-at="#cam" show-info="href: info/index.html"></a-circle>
+            <!-- Hotspots --> 
+            <a-circle id="F492AP01S01H01" class="interactable" src="#logoscietondo" radius="0.1" position="-0.6 -0.2 -3" look-at="#cam" show-slides="src: F492AP01S01H01.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:4;">
+                <a-text  value="Info su Piazza" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
+            </a-circle>
+            <a-circle id="F492AP01S01H02" class="interactable" src="#logoscietondo" radius="0.1" position="0 1.5 3" look-at="#cam" show-slides="src: F492AP01S01H02.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:5;">
+                <a-text  value="Info su Palazzo Comune" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
+            </a-circle>
+            <a-circle id="F492AP01S01H03" class="interactable" src="#logoscietondo" radius="0.1" position="0.2 0.8 -3" look-at="#cam" show-slides="src: F492AP01S01H03.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:2;">
+                <a-text  value="Info su S. Maria in Piazza" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
+            </a-circle>
+        </a-entity>
+        <!-- Camera and sky -->
+        <a-camera id="cam"  wasd-controls="enabled: true" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">
+        </a-camera>
+        <a-sky id="skybox" src="#sky" rotation="0 -90 0"></a-sky>
+    </a-scene>
+</body>
+</html>

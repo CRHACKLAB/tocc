@@ -1,0 +1,116 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Smascherati! - Mostra Virtuale</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Montefalco Palazzo Comune Piazza" name="keywords">
+    <meta content="Palazzo del Comune e Piazza" name="description">
+    <script src="../dist/aframe-min.js"></script>
+    <script src="../dist/look-at.js"></script>
+    <script src="../assets/scripts/components.js"></script>
+    <script src="../assets/scripts/main.js"></script>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!-- Fontawesome cdn -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    
+</head>
+<body>
+    <!------>
+    <div id="slides" class="hidden">
+        <div class="inner" >
+            <div id="slide" style="background: url('F492AP01S01H01.jpg') 0 0; background-repeat: no-repeat; 	background-size: cover;">
+                <img id="closebut" src="../assets/images/close.png"  onclick="closeSlides()">
+                <img id="previousbut" src="../assets/images/previous.png"  onclick="previousSlide()">
+                <img id="nextbut" src="../assets/images/next.png"  onclick="nextSlide()">
+            </div>
+        </div>
+    </div>
+    <!-- overlay video fullscreen -->
+    <div id="videoOverlay" style="
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    flex-direction: column;
+    gap: 1rem;
+    ">
+    <div style="position: absolute; top: 1rem; right: 1rem;">
+        <button id="closeVideoBtn" style="font-size:1.5rem;">✕</button>
+    </div>
+    
+    <video id="overlayVideo" style="max-width: 90vw; max-height: 70vh;" controls></video>
+    
+    <!-- <div>
+        <button id="playPauseBtn"><i class="fa-solid fa-play"></i>/<i class="fa-solid fa-pause"></i></button>
+        <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="1">
+    </div> -->
+</div>
+
+<!-- A-Frame Scene -->
+<a-scene cursor="rayOrigin: mouse;" raycaster="objects: .interactable" inspector>
+    <!-- Assets -->
+    <a-assets>
+        <img id="sky" src="R0010196.jpg">
+        <img id="room7" src="../room7/R0010200.jpg">
+        <img id="entrance" src="../entrance/tempo_equirettangolare.png">
+        <!-- rumble -->
+        <img id="rumble" src="../assets/images/10_2003_rumble.jpg">
+        <video id="rumbleVideo" src="../../../toccSma/Fila Sedie Teatro Rumble.mp4" preload="auto" loop></video>
+        <!-- dispersi -->
+        <img id="dispersi" src="../assets/images/29_2020_dispersi.jpg">
+        <video id="dispersiVideo" src="../../../toccSma/Finestre Dispersi.mp4" preload="auto" loop></video>
+        <!-- brand -->
+        <img id="brand" src="../assets/images/25_2016_brand.jpg">
+        <video id="brandVideo" src="../../../toccSma/Tappeto Brand.mp4" preload="auto" loop></video>
+        <!-- enpassant -->
+        <img id="enpassant" src="../assets/images//08_2001_enPassant.jpg">
+        <video id="enpassantVideo" src="../../../toccSma/Scarpe En passant... (2001).mp4" preload="auto" loop></video>
+        <!-- nubi -->
+        <img id="nubi" src="../assets/images/28_2019_nubi.jpg">
+        <video id="nubiVideo" src="../../../toccSma/NuvoleNubi.mp4" preload="auto" loop></video>
+        <!-- oh gregor -->
+        <img id="ohGregor" src="../assets/images/26_2017_ohGregor.jpg">
+        <video id="ohGregorVideo" src="../../../toccSma/Portale Panche Oh Gregor!.mp4" preload="auto" loop></video>
+    </a-assets>
+    <!-- Portals and hotspots -->
+    <a-entity id="hotspots">
+        <!-- Portals -->
+        <a-link class="interactable" href="../entrance/index.html" title="Vai all'ingresso" image="#entrance" position="7.55467 2.05776 -6.40502" rotation="3.1042853340188 -53.127 0.11688339020668795" scale="0.80887 0.80887 0.80887" link="backgroundColor: #d7f8fe" geometry="primitive: circle" material="backgroundColor: #bc8f8f"></a-link>
+        <a-link class="interactable" href="../room7/index.html" title="Prosegui" image="#room7"  position="8.55155 2.13367 -2.45028" rotation="3.5701000214601595 -73.80154767521107 -1.7526778953051882" scale="0.80887 0.80887 0.80887" link="backgroundColor: #d7f8fe" geometry="primitive: circle" material="backgroundColor: #bc8f8f"></a-link>
+        
+        <!-- Info Panel-->
+        <!-- <a-circle id="F492AP01S01S00" class="interactable" src="#infopanel" radius="0.1" position="-2.5 3 -3" look-at="#cam" show-info="href: info/index.html"></a-circle> -->
+        <!-- Hotspots --> 
+        <!-- <a-circle id="F492AP01S01H01" class="interactable" src="#logoscietondo" radius="0.1" position="-0.6 -0.2 -3" look-at="#cam" show-slides="src: F492AP01S01H01.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:4;">
+            <a-text  value="Info su Piazza" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
+        </a-circle> -->
+        <a-circle id="rumbleBtn" class="interactable" src="#rumble" radius="0.4" position="-2.2 2 -3" look-at="#cam" video-overlay="src: #rumbleVideo;">
+            <a-text  value="Rumble" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center"></a-text>
+        </a-circle>
+        <a-circle id="dispersiBtn" class="interactable" src="#dispersi" radius="0.4" position="2.53 -0.22 5.248" look-at="#cam" video-overlay="src: #dispersiVideo" material="" geometry="" scale="1.256 1.25575 1.25575">
+            <a-text value="Dispersi" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="brandBtn" class="interactable" src="#brand" radius="0.4" position="-2.89415 0.37921 3.58988" look-at="#cam" video-overlay="src: #brandVideo" material="" geometry="">
+            <a-text value="Brand" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="enpassantBtn" class="interactable" src="#enpassant" radius="0.4" position="-6.17812 0.36452 1.31205" look-at="#cam" video-overlay="src: #enpassantVideo" material="" geometry="">
+            <a-text value="En Passant" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="nubiBtn" class="interactable" src="#nubi" radius="0.4" position="-6.66743 1.62841 2.06571" look-at="#cam" video-overlay="src: #nubiVideo" material="" geometry="">
+            <a-text value="Nubi" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="ohGregorBtn" class="interactable" src="#ohGregor" radius="0.4" position="-4.06605 2.32907 4.11388" look-at="#cam" video-overlay="src: #ohGregorVideo" material="" geometry="">
+            <a-text value="Oh Gregor!" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+    </a-entity>
+    <!-- Plane for video texture display -->
+    <!-- Camera and sky -->
+    <a-camera id="cam"  wasd-controls="enabled: true" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">
+    </a-camera>
+    <a-sky id="skybox" src="#sky" rotation="0 -90 0"></a-sky>
+</a-scene>
+</body>
+</html>

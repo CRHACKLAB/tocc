@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>TOCC Smascherati</title>
+    <title>Smascherati</title>
     <!-- favicon -->
-    <link rel="shortcut icon" href="./assets/img/logo_smascherati-300x104.png" type="image/svg+xml">
+    <link rel="shortcut icon" href="./assets/img/logosanna.png" type="image/svg+xml">
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/normalize.css" media="screen">
     <link rel="stylesheet" href="./assets/css/main.css" media="screen"> 
@@ -22,70 +22,36 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="info-card-layer" class="layer info-card" hidden>
-            <button type="button" id="back-to-index" class="back-button sidebarbtn" onclick="back2Index()"><i class="fa-solid fa-arrow-left"></i></button>
-            <div id="card-container">
-                <p id="card-title"></p>
-                <p id="card-description"></p>
-            </div>
-            
-        </div>
-        <div id="sidebar" class="layer sidebar" hidden>
+    <main class="container">
+        <section id="info-card-layer" class="layer info-card" hidden role="dialog" aria-live="polite" tabindex="-1">
+
+        </section>
+
+        <aside id="sidebar" class="layer sidebar" hidden role="complementary" aria-label="Sidebar con i luoghi mappati">
             <div class='heading'>
                 <div class="logo">
-                    <img class="logo-img" src="./assets/img/ProvaLogo.png" alt="Logo del progetto">
-                    <img class="logo-shu" src="./assets/img/LOGO SHU 2024_Tavola disegno 1 copia.png" alt="Logo SHU2024">
+                    <img class="logo-img" src="./assets/img/logosanna.png" alt="Logo del progetto Fondazione Sant'Anna">
                 </div>
-                <button type="button" id="italian-btn" class="italian-button sidebarbtn" onclick="italian()"><img src="./assets/img/flags/italianflag.png" alt="Italian version"></button>
-                <button type="button" id="english-btn" class="english-button sidebarbtn" onclick="english()"><img src="./assets/img/flags/britishflag.png" alt="English version"></button>
-                <select id="filter-dropdown" onchange="applyFilters()">
-                    <option id="all" value="all"></option>
-                    <option id="entrance" value="entrance"></option>
-                    <!-- <option id="tourism" value="tourism"></option> -->
-                    <option id="parking" value="parking"></option>
-                    <option id="portals" value="portals"></option>
-                    <option id="sanGiovanni" value="sanGiovanni"></option>
-                    <option id="sanGiorgio" value="sanGiorgio"></option>
-                    <option id="sanPietro" value="sanPietro"></option>
-                    <option id="santaMaria" value="santaMaria"></option>
-                    <option id="toilet" value="toilet"></option>
-                    <option id="water" value="water"></option>
+                <select id="filter-dropdown">
+                    
                 </select>
             </div>
-            <div id="listings" class="listings"></div>
-            <div class="sidebar-link">
-                <a href="./credits-en.html" id="credits-en">Credits</a>
-                <a href="./credits-it.html" id="credits-it">Credits</a>
-                <a href="https://www.socialhackathonumbria.info/en/privacy-policy-2/" id="privacy-policy-en" target="_blank">Privacy policy</a>
-                <a href="https://www.socialhackathonumbria.info/privacy-policy/" id="privacy-policy-it" target="_blank">Informativa sulla privacy</a>
-                <span>(CC BY-NC 4.0)</span>
+            <div id="listings" class="listings" aria-label="Elenco dei pannelli"></div>
+        </aside>
+
+        <section id="map" class="layer map" aria-label="Mappa interattiva dei pannelli">
+            <div id="filter-marker" class="filter-control">
+                <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                <select id="marker-dropdown" class="marker-dropdown" aria-label="Filtro per la mappa">
+                    <option value="all">Tutti</option>
+                    <option value="panels012">L'Umbria in classe</option>
+                    <option value="panelSma" selected>Mostra Smascherati</option>
+                </select>
             </div>
-            <button type="button" id="hide-sidebar" class="hide-button sidebarbtn" onclick="hideSidebar()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div id="map" class="layer map">
-            <button type="button" id="show-sidebar" class="show-button sidebarbtn" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></button>
-            <button type="button" id="filter-marker" class="filter-button sidebarbtn" onclick="showFilter()"><i class="fa-solid fa-sliders" ></i>
-                <select id="marker-dropdown" class="marker-dropdown" onchange="applyFilters()">
-                    <option id="marker-all" value="all"></option>
-                    <option id="marker-entrance" value="entrance"></option>
-                    <!-- <option id="marker-tourism" value="tourism"></option> -->
-                    <option id="marker-parking" value="parking"></option>
-                    <option id="marker-portals" value="portals"></option>
-                    <option id="marker-sanGiovanni" value="sanGiovanni"></option>
-                    <option id="marker-sanGiorgio" value="sanGiorgio"></option>
-                    <option id="marker-sanPietro" value="sanPietro"></option>
-                    <option id="marker-santaMaria" value="santaMaria"></option>
-                    <option id="marker-toilet" value="toilet"></option>
-                    <option id="marker-water" value="water"></option>
-                </select> 
-            </button> 
-        </div>
-    </div>
+        </section>
+    </main>
     
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/map-perugia-it.js"></script>
 </body>
 </html>
-
-

@@ -15,143 +15,279 @@ mapboxgl.accessToken = "pk.eyJ1IjoiZ2FidHJpcCIsImEiOiJjbHdoeG9neGEwMGYwMmpzd283d
  */
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/gabtrip/cly92yhej00i401pn59fof3ta", // stile personalizzato 
+  style: "mapbox://styles/gabtrip/cly92hzf000i301pn422w7gxh", // stile personalizzato 
   // style: "mapbox://styles/mapbox/streets-v12", // stile generico
   // center: [12.608438888126923, 42.933064240993126],
-  center:[12.391299727701938, 43.10447380562507],
-  zoom: 18.3,
+  center:[12.391299727701938, 43.10448380562507], 
+  zoom: 18.2,
   scrollZoom: true,
 });
 
-//compass
-const nav = new mapboxgl.NavigationControl({
-  showCompass: true,
-});
-map.on("load", function (e) {
-  map.addControl(nav, "bottom-right");
-});
 var stores = {
   type: "FeatureCollection",
   features: [      
-    // PARCHEGGI
+    // PANNELLO 0
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.391299727701938, 43.10448380562507],
+        coordinates: [12.3910983197146036, 43.10480413880485],
       }, 
       properties: {
-        address_it: "Parcheggio Piazzale Masci Mindolfo",
-        address_en: "Piazzale Masci Mindolfo Parking",
-        city: "Bevagna",
+        address_it: "L'umbria in classe",
+        city: "Perugia",
         country: "Italy",
-        postalCode: "06031",
-        description_it: "Parcheggio a pagamento",
-        description_en: "Toll Parking",
-        markerType: "parking",
+        postalCode: "06121",
+        description_it: "Pannello 0",
+        markerType: "panel0",
+        img: "https://clf4d.dev/fotofsa/picture.php?/5116/category/277",
+        site: "https://www.istitutosantanna.com/"
       },
     },
-    // FINE PARCHEGGI
-    
-    // ENTRANCE POINT
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.391156308503168, 43.10459775328797],
-      }, 
-      properties: {
-        address_it: "Ingresso Porta Todi",
-        address_en: "Porta Todi Entrance",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: ``,
-        description_en: "",
-        markerType: "entrance",
-        img: "./assets/img/card_background/Porta_Todi.jpeg",
-      },
-    },
-    
-    // PORTALS GAITE
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.39103669468966, 43.104543025872175],
-      }, 
-      properties: {
-        address_it: "Portale Mercato delle Gaite",
-        address_en: "Mercato delle Gaite Portal",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "Se non hai l'app Zappar potrai scaricarla cliccando sul link sottostante",
-        description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
-        markerType: "portals",
-        site: "https://webxr.run/Vb5Adgw582d6Z",
-      },
-    },
-    
-    // MESTIERI GAITE
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.390976090357485, 43.10451857318124],
-      }, 
-      properties: {
-        address_it: "Mestiere Gaita San Giovanni",
-        address_en: "Gaita San Giovanni Craft",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "sanGiovanni",
-      },
-    },
-    
-    // TOILET
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [12.390923460279542, 43.10449295606595],
-      }, 
-      properties: {
-        address_it: "Bagni pubblici",
-        address_en: "Public toilet",
-        city: "Bevagna",
-        country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "toilet",
-      },
-    },
-    // END TOILET
 
-    // WATER POINT
+    // PANNELLO 1
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [12.390936219086313, 43.10447199660003],
+        coordinates: [12.391358705311927, 43.10464296262472],
       }, 
       properties: {
-        address_it: "Fontana con Acqua Potabile",
-        address_en: "Drinking Water Fountain",
-        city: "Bevagna",
-
+        address_it: "La scuola in camicia nera",
+        city: "Perugia",
         country: "Italy",
-        postalCode: "06031",
-        description_it: "",
-        description_en: "",
-        markerType: "water",
+        postalCode: "06121",
+        description_it: `Pannello 1`,
+        markerType: "panel1",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/278",
+        site: "https://webxr.run/P3dRJwGYOr8A4"
       },
     },
-    // END WATER POINT
+    
+    // PANNELLO 2
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391507050410365, 43.10451313889803, ],
+      }, 
+      properties: {
+        address_it: "La foto di classe",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 2",
+        markerType: "panel2",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/281",
+        site: "https://webxr.run/55Gmd26lez4X2",
+      },
+    },
+    
+    // PANNELLO 3
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391653655290698, 43.1043846937967],
+      }, 
+      properties: {
+        address_it: "La radio a scuola",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 3",
+        markerType: "panel3",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/279",
+        site: "https://webxr.run/oPQaXyo9yb21N",
+      },
+    },
+    
+    // PANNELLO 4
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.39174838459799, 43.10428588968922],
+      }, 
+      properties: {
+        address_it: "Radici di futuro",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 4",
+        markerType: "panel4",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/287",
+        site: "https://webxr.run/55pnv69g394o2",
+      },
+    },
+
+    // PANNELLO 5
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391626642369769, 43.1042116175783],
+      }, 
+      properties: {
+        address_it: "Le scuole rurali",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 5",
+        markerType: "panel5",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/283",
+        site: "https://webxr.run/dY7050pdW8XZ",
+      },
+    },
+
+    // PANNELLO 6
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391493364478103, 43.10413338107681],
+      }, 
+      properties: {
+        address_it: "Le scuole per contadini",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 6",
+        markerType: "panel6",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/280",
+        site: "https://webxr.run/3NoDaOY6RVW2",
+      },
+    },
+
+    // PANNELLO 7(8)
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391356808703952, 43.10405583568679],
+      }, 
+      properties: {
+        address_it: "Istruzione tecnica",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 7",
+        markerType: "panel7",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/289",
+        site: "https://webxr.run/4XwoNyY8dwer3",
+      },
+    },
+
+    // PANNELLO 8(9)
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391197493634106, 43.10417769268415],
+      }, 
+      properties: {
+        address_it: "Il museo della scuola",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 8",
+        markerType: "panel8",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/286",
+        site: "https://webxr.run/xER5WXrkyQyGk",
+      },
+    },
+
+    // PANNELLO 9 (10)
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391045764996159,43.104310627313716],
+      }, 
+      properties: {
+        address_it: "La scoperta dell'infanzia",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 9",
+        markerType: "panel9",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/284",
+        site: "https://webxr.run/VOk7O82LA2Am4",
+      },
+    },
+
+    // PANNELLO 10(11)
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.390916795653906, 43.10445187004133],
+      }, 
+      properties: {
+        address_it: "Il sistema dei licei",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 10",
+        markerType: "panel10",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/285",
+        site: "https://webxr.run/RYXkDv5aaG0zZ",
+      },
+    },
+    // PANNELLO 11(12)
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391064180771064, 43.10454242558743],
+      }, 
+      properties: {
+        address_it: "Il viaggio continua",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 11",
+        markerType: "panel11",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/288",
+        site: "https://www.istitutosantanna.com/",
+      },
+    },
+    // PANNELLO 12(7)
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.391177977249525, 43.10468920668317],
+      }, 
+      properties: {
+        address_it: "L'educatorio S. Anna e gli educandati",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello 12",
+        markerType: "panel12",
+        img: "https://clf4d.dev/fotofsa/index.php?/category/282",
+        site: "https://webxr.run/Ll6v5JAMD19Q0",
+      },
+    },
+    // PANNELLO SMA
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [12.39130694659178, 43.10435548689001],
+      }, 
+      properties: {
+        address_it: "Mostra Smascherati",
+        city: "Perugia",
+        country: "Italy",
+        postalCode: "06121",
+        description_it: "Pannello Smascherati",
+        markerType: "panelSma",
+        img: "./aframe/entrance/index.html",
+        site: "https://www.smascherati.it/",
+      },
+    },
   ],
 };
 
@@ -163,44 +299,6 @@ var stores = {
 stores.features.forEach(function (store, i) {
   store.properties.id = i;
 });
-
-// GPS
-var geolocateControl = new mapboxgl.GeolocateControl({
-  positionOptions: {
-      enableHighAccuracy: true
-  },
-  trackUserLocation: true,
-  showUserLocation: true
-});
-
-map.addControl(geolocateControl);
-
-// Save geolocation status in localStorage
-function saveGeolocationStatus(isEnabled) {
-  localStorage.setItem('geolocationEnabled', isEnabled);
-}
-
-// Retrieve geolocation status from localStorage
-function getGeolocationStatus() {
-  return localStorage.getItem('geolocationEnabled') === 'true';
-}
-
-// Usage example when activating geolocation
-if (getGeolocationStatus()) {
-  // Code to activate geolocation
-  activateGeolocation();
-}
-
-// Update geolocation status whenever it's toggled
-function activateGeolocation() {
-  saveGeolocationStatus(true);
-  // Code to activate geolocation
-}
-
-function deactivateGeolocation() {
-  saveGeolocationStatus(false);
-  // Code to deactivate geolocation
-}
 
 /**
  * Wait until the map loads to make changes to the map.
@@ -223,8 +321,11 @@ map.on("load", function (e) {
    */
   buildLocationList(stores);
   addMarkers();
+  applyFilters(document.getElementById('marker-dropdown').value);
 });
 
+
+let currentPopup = null;
 /**
  * Add a marker to the map for every store listing.
  **/
@@ -244,6 +345,19 @@ function addMarkers() {
     } else {
       el.className = "marker-default"; // Fallback class
     }
+
+    /*Add attributes for accessibility*/
+
+    el.setAttribute("role", "button");
+    el.setAttribute("tabindex", "0");
+    el.setAttribute("aria-label", `${marker.properties.address_it}, ${marker.properties.description_it || "Pannello informativo"}`);
+
+    el.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        el.click();
+    }
+});
     /**
      * Create a marker using the div element
      * defined above and add it to the map.
@@ -259,14 +373,29 @@ function addMarkers() {
      * 3. Highlight listing in sidebar (and remove highlight for all other listings)
      **/
     el.addEventListener("click", function (e) {
-      /* Fly to the point */
-      flyToStore(marker);
-      /* Close all other popups and display popup for clicked store */
-      makeHighlight(marker);
-      showInfoCard(marker.properties.address_it, marker.properties.address_en, marker.properties.description_it, marker.properties.description_en, marker.properties.img, marker.properties.markerType, marker.properties.site);
-      /* Highlight listing in sidebar */
       e.stopPropagation();
       
+      var destination = marker.geometry.coordinates;
+      
+      // Contenuto del popup
+      var siteLabel = (marker.properties.markerType === "panelSma" || marker.properties.markerType === "panel0") ? "Visita il sito" : "Scopri di più";
+
+      var popupContent = `
+          <p class="address">${(marker.properties.address_it || marker.properties.address_en).replace(/\n/g, "<br>")}</p>
+          <div class="popup-buttons">
+              <button class="popup-btn site-btn" onclick="window.open('${marker.properties.site}', '_blank')">${siteLabel}</button>
+              <button class="popup-btn navigate-btn" onclick="window.open('${marker.properties.img}', '_blank')">Mostra</button>
+          </div>
+        `;
+
+        if (currentPopup) {
+        currentPopup.remove();
+      }
+      
+      currentPopup = new mapboxgl.Popup({ closeOnClick: true })
+          .setLngLat(destination)
+          .setHTML(popupContent)
+          .addTo(map);
     });
   });
 }
@@ -324,6 +453,7 @@ function buildLocationList(data) {
     link.href = "#";
     link.className = "title";
     link.id = "link-" + prop.id;
+    link.setAttribute("tabindex", "0")
   
     if (language == "it") {
       link.innerHTML = prop.address_it;
@@ -387,15 +517,41 @@ function makeHighlight(currentFeature) {
 
 //FILTERS
 
-function applyFilters(selectedType) {
+function updateMarkers(filteredListings) {
+  stores.features.forEach(feature => {
+    const markerElement = document.getElementById(`marker-${feature.properties.id}`);
     
-  const filteredListings = stores.features.filter(store => 
-      (selectedType === 'all' || store.properties.markerType === selectedType)
-  );
-  
+    if (filteredListings.includes(feature)) {
+      if (markerElement) {
+        markerElement.style.display = 'inline';
+      }
+    } else {
+      if (markerElement) {
+        markerElement.style.display = 'none';
+      }
+    }
+  });
+}
+
+function applyFilters(selectedType) {
+  let filteredListings;
+
+  if (selectedType === 'all') {
+    filteredListings = stores.features;
+  } else if (selectedType === 'panels012') {
+    filteredListings = stores.features.filter(store => {
+      const type = store.properties.markerType;
+      return type && /^panel\d+$/.test(type) && type !== 'panelSma';
+    });
+  } else if (selectedType === 'panelSma') {
+    filteredListings = stores.features.filter(store => store.properties.markerType === 'panelSma');
+  } else {
+    filteredListings = stores.features.filter(store => store.properties.markerType === selectedType);
+  }
+
   updateListings(filteredListings);
   updateMarkers(filteredListings);
-
+  console.log(filteredListings);
 }
 
 
@@ -403,23 +559,6 @@ function updateListings(filteredListings) {
   // var listings = document.getElementById("listings");
   // listings.innerHTML = '';
   buildLocationList({ type: 'FeatureCollection', features: filteredListings });
-}
-
-function updateMarkers(filteredListings) {
-  stores.features.forEach(feature => {
-      const markerElement = document.getElementById(`marker-${feature.properties.id}`);
-      
-      if (filteredListings.includes(feature)) {
-        if (markerElement) {
-              markerElement.style.display = 'inline';
-          }
-      } else {
-          if (markerElement) {;
-              markerElement.style.display = 'none';
-          }
-      }
-      document.getElementById('marker-dropdown').style.display = 'none';
-  });
 }
 
 function showFilter() {
@@ -461,69 +600,70 @@ const translations = {
       ]
   }
 };
-function translate(language) {
+
+// function translate(language) {
   
-  document.getElementById('all').innerHTML = translations[language].filterOptions[0];
-  document.getElementById('entrance').innerHTML = translations[language].filterOptions[1];
-  // document.getElementById('tourism').innerHTML = translations[language].filterOptions[2];
-  document.getElementById('parking').innerHTML = translations[language].filterOptions[3];
-  document.getElementById('portals').innerHTML = translations[language].filterOptions[4];
-  document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[6];
-  document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[7];
-  document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[8];
-  document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[9];
-  document.getElementById('toilet').innerHTML = translations[language].filterOptions[10];
-  document.getElementById('water').innerHTML = translations[language].filterOptions[11];
+//   document.getElementById('all').innerHTML = translations[language].filterOptions[0];
+//   document.getElementById('entrance').innerHTML = translations[language].filterOptions[1];
+//   // document.getElementById('tourism').innerHTML = translations[language].filterOptions[2];
+//   document.getElementById('parking').innerHTML = translations[language].filterOptions[3];
+//   document.getElementById('portals').innerHTML = translations[language].filterOptions[4];
+//   document.getElementById('sanGiovanni').innerHTML = translations[language].filterOptions[6];
+//   document.getElementById('sanGiorgio').innerHTML = translations[language].filterOptions[7];
+//   document.getElementById('sanPietro').innerHTML = translations[language].filterOptions[8];
+//   document.getElementById('santaMaria').innerHTML = translations[language].filterOptions[9];
+//   document.getElementById('toilet').innerHTML = translations[language].filterOptions[10];
+//   document.getElementById('water').innerHTML = translations[language].filterOptions[11];
 
   
-  document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
-  document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[1];
-  // document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[2];
-  document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[3];
-  document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[4];
-  document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[6];
-  document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[7];
-  document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[8];
-  document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[9];
-  document.getElementById('marker-toilet').innerHTML = translations[language].filterOptions[10];
-  document.getElementById('marker-water').innerHTML = translations[language].filterOptions[11];
+//   document.getElementById('marker-all').innerHTML = translations[language].filterOptions[0];
+//   document.getElementById('marker-entrance').innerHTML = translations[language].filterOptions[1];
+//   // document.getElementById('marker-tourism').innerHTML = translations[language].filterOptions[2];
+//   document.getElementById('marker-parking').innerHTML = translations[language].filterOptions[3];
+//   document.getElementById('marker-portals').innerHTML = translations[language].filterOptions[4];
+//   document.getElementById('marker-sanGiovanni').innerHTML = translations[language].filterOptions[6];
+//   document.getElementById('marker-sanGiorgio').innerHTML = translations[language].filterOptions[7];
+//   document.getElementById('marker-sanPietro').innerHTML = translations[language].filterOptions[8];
+//   document.getElementById('marker-santaMaria').innerHTML = translations[language].filterOptions[9];
+//   document.getElementById('marker-toilet').innerHTML = translations[language].filterOptions[10];
+//   document.getElementById('marker-water').innerHTML = translations[language].filterOptions[11];
   
-  // Reload listings in the correct language
-  language = language;
-  applyFilters(currentFilter);
-}
+//   // Reload listings in the correct language
+//   language = language;
+//   applyFilters(currentFilter);
+// }
 
 function english() {
   language = 'en';
   translate('en');
   document.getElementById('privacy-policy-it').style.display = 'none';
   document.getElementById('privacy-policy-en').style.display = 'block';
-  document.getElementById('credits-it').style.display = 'none';
-  document.getElementById('credits-en').style.display = 'block';
+  // document.getElementById('credits-it').style.display = 'none';
+  // document.getElementById('credits-en').style.display = 'block';
 }
 
 function italian() {
   language = 'it';
-  translate('it');
-  document.getElementById('privacy-policy-en').style.display = 'none';
-  document.getElementById('privacy-policy-it').style.display = 'block';
-  document.getElementById('credits-en').style.display = 'none';
-  document.getElementById('credits-it').style.display = 'block';
+  // translate('it');
+  // document.getElementById('privacy-policy-en').style.display = 'none';
+  // document.getElementById('privacy-policy-it').style.display = 'block';
+  // document.getElementById('credits-en').style.display = 'none';
+  // document.getElementById('credits-it').style.display = 'block';
 }
 
 // Automatically set the language based on the browser language setting
 if (navigator.language === "it" || navigator.language == "it-IT" || navigator.language == "it-CH") {
   language = "it";
-  translate('it');
-  document.getElementById('privacy-policy-en').style.display = 'none';
-  document.getElementById('privacy-policy-it').style.display = 'block';
-  document.getElementById('credits-en').style.display = 'none';
-  document.getElementById('credits-it').style.display = 'block';
+  // translate('it');
+  // document.getElementById('privacy-policy-en').style.display = 'none';
+  // document.getElementById('privacy-policy-it').style.display = 'block';
+  // document.getElementById('credits-en').style.display = 'none';
+  // document.getElementById('credits-it').style.display = 'block';
 } else {
   language = "en";
-  translate('en');
-  document.getElementById('privacy-policy-it').style.display = 'none';
-  document.getElementById('privacy-policy-en').style.display = 'block';
-  document.getElementById('credits-it').style.display = 'none';
-  document.getElementById('credits-en').style.display = 'block';
+  // translate('en');
+  // document.getElementById('privacy-policy-it').style.display = 'none';
+  // document.getElementById('privacy-policy-en').style.display = 'block';
+  // document.getElementById('credits-it').style.display = 'none';
+  // document.getElementById('credits-en').style.display = 'block';
 };
