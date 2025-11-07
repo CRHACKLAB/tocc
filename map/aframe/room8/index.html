@@ -23,36 +23,74 @@
             </div>
         </div>
     </div>
-    <!-- A-Frame Scene -->
-    <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .interactive" inspector>
-        <!-- Assets -->
-        <a-assets>
-            <img id="logoscietondo" src="../assets/images/logoscietondo.png">
-            <img id="infopanel" src="../assets/images/info.png">
-            <img id="sky" src="R0010202.jpg">
-            <img id="linkpreview01" src="../S02/F492AP01S02.jpg">
-        </a-assets>
-        <!-- Portals and hotspots -->
-        <a-entity id="hotspots">
-            <!-- Portals -->
-            <a-link class="interactable" href="../S02/index.html" title="Vai a Torre Campanaria" image="#linkpreview01" position="0 2.5 3" rotation="0 0 0" scale="0.25 0.25 0.25"></a-link>
-            <!-- Info Panel-->
-            <a-circle id="F492AP01S01S00" class="interactable" src="#infopanel" radius="0.1" position="-2.5 3 -3" look-at="#cam" show-info="href: info/index.html"></a-circle>
-            <!-- Hotspots --> 
-            <a-circle id="F492AP01S01H01" class="interactable" src="#logoscietondo" radius="0.1" position="-0.6 -0.2 -3" look-at="#cam" show-slides="src: F492AP01S01H01.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:4;">
-                <a-text  value="Info su Piazza" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
-            </a-circle>
-            <a-circle id="F492AP01S01H02" class="interactable" src="#logoscietondo" radius="0.1" position="0 1.5 3" look-at="#cam" show-slides="src: F492AP01S01H02.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:5;">
-                <a-text  value="Info su Palazzo Comune" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
-            </a-circle>
-            <a-circle id="F492AP01S01H03" class="interactable" src="#logoscietondo" radius="0.1" position="0.2 0.8 -3" look-at="#cam" show-slides="src: F492AP01S01H03.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:2;">
-                <a-text  value="Info su S. Maria in Piazza" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
-            </a-circle>
-        </a-entity>
-        <!-- Camera and sky -->
-        <a-camera id="cam"  wasd-controls="enabled: true" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">
-        </a-camera>
-        <a-sky id="skybox" src="#sky" rotation="0 -90 0"></a-sky>
-    </a-scene>
+    <!-- overlay video fullscreen -->
+    <div id="videoOverlay" style="
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    flex-direction: column;
+    gap: 1rem;
+    ">
+    <div style="position: absolute; top: 1rem; right: 1rem;">
+        <button id="closeVideoBtn" style="font-size:1.5rem;">✕</button>
+    </div>
+    
+    <video id="overlayVideo" style="max-width: 90vw; max-height: 70vh;" controls></video>
+    
+    <!-- <div>
+        <button id="playPauseBtn"><i class="fa-solid fa-play"></i>/<i class="fa-solid fa-pause"></i></button>
+        <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="1">
+    </div> -->
+</div>
+<!-- A-Frame Scene -->
+<a-scene cursor="rayOrigin: mouse;" raycaster="objects: .interactive" inspector>
+    <!-- Assets -->
+    <a-assets>
+        <img id="sky" src="R0010202.jpg">
+        <img id="linkpreview01" src="../S02/F492AP01S02.jpg">
+        <img id="room5" src="../room5/R0010197.jpg">
+        <img id="room7" src="../room7/R0010200.jpg">
+        <!-- end bag -->
+        <img id="endBag" src="../assets/images/24_2016_senzaDove.jpg">
+        <video id="endBagVideo" src="../../../toccSma/Valigie End Bag.mp4" preload="auto" loop></video>
+        <!-- papiers -->
+        <img id="papier" src="../assets/images/15_2007_papiers.jpg">
+        <video id="papierVideo" src="../../../toccSma/Bancale Papier.mp4" preload="auto" loop></video>
+        <!-- dal gorgo -->
+        <img id="dalGorgo" src="../assets/images/07_2001_dalGorgo.jpg">
+        <video id="dalGorgoVideo" src="../../../toccSma/Acquario Dal Gorgo.mp4" preload="auto" loop></video>
+        <!-- spifferi -->
+        <img id="spifferi" src="../assets/images/20_2012_spifferi.jpg">
+        <video id="spifferiVideo" src="../../../toccSma/Finestrella Spifferi.mp4" preload="auto" loop></video>
+    </a-assets>
+    <!-- Portals and hotspots -->
+    <a-entity id="hotspots">
+        <!-- Portals -->
+        <a-link class="interactable" href="../room5/index.html" title="Prosegui" image="#room5" position="7.17426 1.4595 -0.50463" rotation="3.1042853340188 -68.03816521399013 1.1069544601927506" scale="0.80887 0.80887 0.80887" link="backgroundColor: #d7f8fe" geometry="primitive: circle; segments: 64" material="backgroundColor: #d7f8fe; shader: portal; side: double; pano: http://127.0.0.1:5500/map/aframe/room5/R0010197.jpg"></a-link>
+        <a-link class="interactable" href="../room7/index.html" title="Prosegui" image="#room7" position="4.52246 1.52202 3.96381" rotation="2.4092875285251116 -127.77703676551027 -0.3300236899953542" scale="0.80887 0.80887 0.80887" link="backgroundColor: #d7f8fe" geometry="primitive: circle; segments: 64" material="backgroundColor: #d7f8fe; shader: portal; side: double; pano: http://127.0.0.1:5500/map/aframe/room7/R0010200.jpg"><a-entity text="color: white; align: center; font: kelsonsans; value: Prosegui; width: 5" position="0 1.5 0" rotation="-4.789927167293682 -3.9952347054472304 0.8267780983737779"></a-entity></a-link>
+        
+        <!-- Hotspots --> 
+        <a-circle id="endBagBtn" class="interactable" src="#endBag" radius="0.4" position="2.81967 0.66125 -5.70127" look-at="#cam" video-overlay="src: #endBagVideo" material="" geometry="" rotation="-8.395803638840546 -26.315560753399915 0">
+            <a-text value="End Bag" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="papierBtn" class="interactable" src="#papier" radius="0.4" position="-1.38543 2.12826 -4.44127" look-at="#cam" video-overlay="src: #papierVideo" material="" geometry="" rotation="6.47802371934824 17.325026846946006 0">
+            <a-text value="Papiers" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="spifferiBtn" class="interactable" src="#spifferi" radius="0.4" position="3.77602 1.38708 7.46728" look-at="#cam" video-overlay="src: #spifferiVideo" material="" geometry="">
+            <a-text value="Spifferi" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="dalGorgo" class="interactable" src="#dalGorgo" radius="0.4" position="0.13644 0.77851 -5.22628" look-at="#cam" video-overlay="src: #dalGorgoVideo" material="" geometry="">
+            <a-text value="Dal Gorgo" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+    </a-entity>
+    <!-- Camera and sky -->
+    <a-camera id="cam"  wasd-controls="enabled: true" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">
+    </a-camera>
+    <a-sky id="skybox" src="#sky" rotation="0 -90 0"></a-sky>
+</a-scene>
 </body>
 </html>
