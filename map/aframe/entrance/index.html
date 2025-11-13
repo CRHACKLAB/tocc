@@ -23,33 +23,114 @@
             </div>
         </div>
     </div>
+    <!-- overlay video fullscreen -->
+    <div id="videoOverlay" style="
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    flex-direction: column;
+    gap: 1rem;
+    ">
+    <div style="position: absolute; top: 1rem; right: 1rem;">
+        <button id="closeVideoBtn" style="font-size:1.5rem;">✕</button>
+    </div>
+    
+    <video id="overlayVideo" style="max-width: 90vw; max-height: 70vh;" controls></video>
+    
+    <!-- <div>
+        <button id="playPauseBtn"><i class="fa-solid fa-play"></i>/<i class="fa-solid fa-pause"></i></button>
+        <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="1">
+    </div> -->
+    </div>
     <!-- A-Frame Scene -->
     <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .interactive" inspector>
         <!-- Assets -->
         <a-assets>
             <img id="sky" src="tempo3.jpg">
+            <img id="room4" src="../room4/R0010196.jpg">
+            <img id= "imagine" src="../assets/images/01_1995_imagine.jpg">
+            <video id="imagineVideo" src="../../../toccSma/01_Imagine.mp4" preload="auto" loop></video>
+            <img id="souvenir" src="../assets/images/02_1996_souvenir.jpg">
+            <video id="souvenirVideo" src="../../../toccSma/02 Souvenir.mp4" preload="auto" loop></video>
+            <img id="strangeFruit" src="../assets/images/03_1997_strangeFruit.jpg">
+            <video id="strangeFruitVideo" src="../../../toccSma/03 Strange Fruit.mp4" preload="auto" loop></video>
+            <img id="strangAngels" src="../assets/images/04_1998_strangeAngels.jpg">
+            <video id="strangeAngelsVideo" src="../../../toccSma//04 Strange Angels.mp4" preload="auto" loop></video>
+            <img id="barbari" src="../assets/images/05_1999_barbari.jpg">
+            <video id="barbariVideo" src="../../../toccSma/05 Barbari.mp4" preload="auto" loop></video>
+            <img id="terra" src="../assets/images/06_2000_terra.jpg">
+            <video id="terraVideo" src="../../../toccSma/06 Terra.mp4" preload="auto" loop></video>
+            <img id="dalGorgo" src="../assets/images/07_2001_dalGorgo.jpg">
+            <video id="dalGorgoVideo" src="../../../toccSma/08 Dal Gorgo.mp4" preload="auto" loop></video>
+            <img id="quizas" src="../assets/images/09_2002_quizas.jpg">
+            <video id="quizasVideo" src="../../../toccSma/09 Quiza's, Quiza's, Quiza's.mp4" preload="auto" loop></video>
+            <img id="rumble" src="../assets/images/10_2003_rumble.jpg">
+            <video id="rumbleVideo" src="../../../toccSma/10 Rumble.mp4" preload="auto" loop></video>
+            <img id="tana" src="../assets/images/11_2004_tana.jpg">
+            <video id="tanaVideo" src="../../../toccSma/11 Tana.mp4" preload="auto" loop></video>
+            <img src="../assets/images/12_2005_nonSo.jpg" id="nonSo">
+            <video id="nonSoVideo" src="../../../toccSma/12 Nonsoò.mp4" preload="auto" loop></video>
+            <img src="../assets/images/13_2006_pardon.jpg" id="pardon">
+            <video id="pardonVideo" src="../../../toccSma/13 Pardon.mp4" preload="auto" loop></video>
+            <img src="../assets/images/14_2007_dry.jpg" id="dry">
+            <video id="dryVideo" src="../../../toccSma/14 Dry.mp4" preload="auto" loop></video>
+            <img src="../assets/images/15_2007_papiers.jpg" id="papiers">
+            <video id="papiersVideo" src="../../../toccSma/15 Papiers.mp4" preload="auto" loop></video>
+            <img src="../assets/images/16_2008_tilt.jpg" id="tilt">
+            <video id="tiltVideo" src="../../../toccSma/16 Tilt.mp4" preload="auto" loop></video>
+            <img src="../assets/images/17_2009_break.jpg" id="break">
+            <video id="breakVideo" src="../../../toccSma/17 Break.mp4" preload="auto" loop></video>
+            <img src="../assets/images/18_2010_trouble.jpg" id="trouble">
+            <video id="troubleVideo" src="../../../toccSma/18 Trabol.mp4" preload="auto" loop></video>
+            <img src="../assets/images/19_2011_oldNews.jpg" id="oldNews">
+            <video id="oldNewsVideo" src="../../../toccSma/19 Old News.mp4" preload="auto" loop></video>
+            <img src="../assets/images/20_2012_spifferi.jpg" id="spifferi">
+            <video id="spifferiVideo" src="../../../toccSma/20 Spifferi.mp4" preload="auto" loop></video>
+            <img src="../assets/images/21_2013_effimere.jpg" id="effimere">
+            <video id="effimereVideo" src="../../../toccSma/21 Effimere.mp4" preload="auto" loop></video>
+            <img src="../assets/images/22_2014_desidera.jpg" id="desidera">
+            <video id="desideraVideo" src="../../../toccSma/22 Desidera.mp4" preload="auto" loop></video>
+            <img src="../assets/images/23_2015_babel.jpg" id="babel">
+            <video id="babelVideo" src="../../../toccSma/23 Babel.mp4" preload="auto" loop></video>
+            <img src="../assets/images/24_2016_senzaDove.jpg" id="senzaDove">
+            <video id="senzaDoveVideo" src="../../../toccSma/25 Senza Dove.mp4" preload="auto" loop></video>
+            <img src="../assets/images/25_2016_brand.jpg" id="brand">
+            <video id="brandVideo" src="../../../toccSma/27 Brand.mp4" preload="auto" loop></video>
+            <img src="../assets/images/26_2017_ohGregor.jpg" id="ohGregor">
+            <video id="ohGregorVideo" src="../../../toccSma/26 Oh Gregor.mp4" preload="auto" loop></video>
+            <img src="../assets/images/27_2018_viaDiQua.jpg" id="viaDiQua">
+            <video id="viaDiQuaVideo" src="../../../toccSma/28 Via di Qua.mp4" preload="auto" loop></video>
+            <img src="../assets/images/28_2019_nubi.jpg" id="nubi">
+            <video id="nubiVideo" src="../../../toccSma/29 Nubi.mp4" preload="auto" loop></video>
+            <img src="../assets/images/29_2020_dispersi.jpg" id="dispersi">
+            <video id="dispersiVideo" src="../../../toccSma/30 Dispersi.mp4" preload="auto" loop></video>
+            <img src="../assets/images/30_2021_nellOpaco.jpg" id="nellOpaco">
+            <video id="nellOpacoVideo" src="../../../toccSma/31 Nell'Opaco.mp4" preload="auto" loop></video>
+            <img src="../assets/images/31_2022_stormyWeather.jpg" id="stormyWeather">
+            <video id="stormyWeatherVideo" src="../../../toccSma/32 Stormy Weather.mp4" preload="auto" loop></video>
+            <img src="../assets/images/32_2023_bracePosition.jpg" id="bracePosition">
+            <video id="bracePositionVideo" src="../../../toccSma/33 Brace Position.mp4" preload="auto" loop></video>
+            <img src="../assets/images/33_2024_ilCieloMuto.jpg" id="ilCieloMuto">
+            <video id="ilCieloMutoVideo" src="../../../toccSma/34 Il Cielo È Muto.mp4" preload="auto" loop></video>
+
         </a-assets>
         <!-- Portals and hotspots -->
         <a-entity id="hotspots">
             <!-- Portals -->
-            <a-link class="interactable" href="../S02/index.html" title="Vai a Torre Campanaria" image="#linkpreview01" position="0 2.5 3" rotation="0 0 0" scale="0.25 0.25 0.25"></a-link>
-            <!-- Info Panel-->
-            <a-circle id="F492AP01S01S00" class="interactable" src="#tempo" radius="1" position="-2.5 3 -3" look-at="#cam" show-info="href: info/index.html"></a-circle>
+            <a-link class="interactable" href="../room4/index.html" title="Vai al chiostro" image="#room4" position="0 2.5 3" rotation="0 0 0" scale="0.25 0.25 0.25"></a-link>
             <!-- Hotspots --> 
-            <a-circle id="F492AP01S01H01" class="interactable" src="#logoscietondo" radius="0.1" position="-0.6 -0.2 -3" look-at="#cam" show-slides="src: F492AP01S01H01.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:4;">
-                <a-text  value="Info su Piazza" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
-            </a-circle>
-            <a-circle id="F492AP01S01H02" class="interactable" src="#logoscietondo" radius="0.1" position="0 1.5 3" look-at="#cam" show-slides="src: F492AP01S01H02.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:5;">
-                <a-text  value="Info su Palazzo Comune" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
-            </a-circle>
-            <a-circle id="F492AP01S01H03" class="interactable" src="#logoscietondo" radius="0.1" position="0.2 0.8 -3" look-at="#cam" show-slides="src: F492AP01S01H03.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:2;">
-                <a-text  value="Info su S. Maria in Piazza" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
-            </a-circle>
+            <a-plane id="imagineBtn" class="interactable" src="#imagine" height="2.5" width="1.5" position="2.30083 2.8291 -10.25268" look-at="#cam" video-overlay="src: #imagineVideo" material="" geometry="" rotation="6.7310940241830295 -10.099618325503165 -1.0008218156939281e-16">
+                <a-text value="Imagine" color="white" scale="1 1 1" position="0 1.5 0" align="center" text=""></a-text>
+            </a-plane>
         </a-entity>
         <!-- Camera and sky -->
         <a-camera id="cam"  wasd-controls="enabled: true" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">
         </a-camera>
-        <a-sky id="skybox" src="#sky" rotation="0 0 0"></a-sky>
+        <a-sky id="skybox" src="#sky" rotation="0 230 0"></a-sky>
     </a-scene>
 </body>
 </html>
