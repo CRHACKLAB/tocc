@@ -66,6 +66,8 @@
             <video id="terraVideo" src="../../../toccSma/06 Terra.mp4" preload="auto" loop></video>
             <img id="dalGorgo" src="../assets/images/07_2001_dalGorgo.jpg">
             <video id="dalGorgoVideo" src="../../../toccSma/08 Dal Gorgo.mp4" preload="auto" loop></video>
+            <img id="enPassant" src="../assets/images/08_2001_enPassant.jpg">
+            <video id="enPassantVideo" src="../../../toccSma/07 ...En Passant.mp4" preload="auto" loop></video>
             <img id="quizas" src="../assets/images/09_2002_quizas.jpg">
             <video id="quizasVideo" src="../../../toccSma/09 Quiza's, Quiza's, Quiza's.mp4" preload="auto" loop></video>
             <img id="rumble" src="../assets/images/10_2003_rumble.jpg">
@@ -121,10 +123,106 @@
         <!-- Portals and hotspots -->
         <a-entity id="hotspots">
             <!-- Portals -->
-            <a-link class="interactable" href="../room4/index.html" title="Vai al chiostro" image="#room4" position="0 2.5 3" rotation="0 0 0" scale="0.25 0.25 0.25"></a-link>
+            <a-link class="interactable" href="../room4/index.html" title="Vai al chiostro" image="#room4" position="0.04648 2.79646 -2.73715" rotation="0 179.69274258231417 0" scale="0.25 0.25 0.25" geometry="primitive: circle; segments: 64" material="shader: portal; pano: http://127.0.0.1:5500/map/aframe/room4/R0010196.jpg; side: double" link=""><a-entity text="color: white; align: center; font: kelsonsans; value: Vai al chiostro; width: 8" position="0 1.5 0" rotation="0 180 0"></a-entity></a-link>
             <!-- Hotspots --> 
             <a-plane id="imagineBtn" class="interactable" src="#imagine" height="2.5" width="1.5" position="2.30083 2.8291 -10.25268" look-at="#cam" video-overlay="src: #imagineVideo" material="" geometry="" rotation="6.7310940241830295 -10.099618325503165 -1.0008218156939281e-16">
-                <a-text value="Imagine" color="white" scale="1 1 1" position="0 1.5 0" align="center" text=""></a-text>
+                <a-text value="Imagine" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="souvenirBtn" class="interactable" src="#souvenir" height="2.5" width="1.5" position="3.5352 1.82396 -8.5521" look-at="#cam" video-overlay="src: #souvenirVideo" material="" geometry="" rotation="1.386372706815106 -22.45883869019372 9.94214371862454e-17">
+                <a-text value="Souvenir" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="strangeFruitBtn" class="interactable" src="#strangeFruit" height="2.5" width="1.5" position="6.23344 2.86202 -9.28764" look-at="#cam" video-overlay="src: #strangeFruitVideo" material="" geometry="" rotation="6.437239368293835 -33.867708905665594 -6.001377149846379e-16">
+                <a-text value="Strange Fruit" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="strangAngelsBtn" class="interactable" src="#strangAngels" height="2.5" width="1.5" position="7.78153 1.82396 -8.01235" look-at="#cam" video-overlay="src: #strangeAngelsVideo" material="" geometry="" rotation="1.1487213305023054 -44.16270920150837 -4.970615653576343e-17">
+                <a-text value="Strange Angels" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="barbariBtn" class="interactable" src="#barbari" height="2.5" width="1.5" position="9.20469 2.86202 -6.46656" look-at="#cam" video-overlay="src: #barbariVideo" material="" geometry="" rotation="6.437239368293835 -54.83729079849163 -6.001377149846379e-16">
+                <a-text value="Barbari" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="terraBtn" class="interactable" src="#terra" height="2.5" width="1.5" position="9.21003 1.82396 -4.26962" look-at="#cam" video-overlay="src: #terraVideo" material="" geometry="" rotation="1.2638326539082043 -65.12832857698675 0">
+                <a-text value="Terra" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="dalGorgoBtn" class="interactable" src="#dalGorgo" height="2.5" width="1.5" position="10.05024 2.86202 -2.51439" look-at="#cam" video-overlay="src: #dalGorgoVideo" material="" geometry="" rotation="6.945361184147363 -75.95393792817747 1.2015248934588874e-15">
+                <a-text value="Dal Gorgo" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="enPassantBtn" class="interactable" src="#enPassant" height="2.5" width="1.5" position="10.14079 2.76334 -0.65076" look-at="#cam" video-overlay="src: #enPassantVideo" material="" geometry="" rotation="6.530981320321476 -86.32822046361099 -4.001662144314255e-16">
+                <a-text value="En Passant" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="quizasBtn" class="interactable" src="#quizas" height="2.5" width="1.5" position="9.09211 1.82396 0.99951" look-at="#cam" video-overlay="src: #quizasVideo" material="" geometry="" rotation="1.402597824712139 -96.27342503957797 9.942212255425128e-17">
+                <a-text value="Quizas" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="rumbleBtn" class="interactable" src="#rumble" height="2.5" width="1.5" position="7.48666 2.86202 2.37614" look-at="#cam" video-overlay="src: #rumbleVideo" material="" geometry="" rotation="9.127755043613975 -107.60856302937167 0">
+                <a-text value="Rumble" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="tanaBtn" class="interactable" src="#tana" height="2.5" width="1.4" position="7.33941 1.82396 3.92135" look-at="#cam" video-overlay="src: #tanaVideo" material="" geometry="" rotation="1.541691303356889 -118.11500251599038 -9.942832559078957e-17">
+                <a-text value="Tana" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="nonSoBtn" class="interactable" src="#nonSo" height="2.5" width="1.4" position="6.02198 2.86202 4.88412" look-at="#cam" video-overlay="src: #nonSoVideo" material="" geometry="" rotation="9.244674320607144 -129.04374107322283 4.0280119772185805e-16">
+                <a-text value="Non So" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="pardonBtn" class="interactable" src="#pardon" height="2.5" width="1.2" position="4.4882 1.82396 5.31014" look-at="#cam" video-overlay="src: #pardonVideo" material="" geometry="" rotation="1.844942247308083 -139.79506672510044 9.944388405386028e-17">
+                <a-text value="Pardon" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="dryBtn" class="interactable" src="#dry" height="2.5" width="1.2" position="3.49591 2.86202 6.21962" look-at="#cam" video-overlay="src: #dryVideo" material="" geometry="" rotation="10.03088645174955 -150.66062805512715 4.037409183134168e-16">
+                <a-text value="Dry" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="papiersBtn" class="interactable" src="#papiers" height="2.5" width="1.2" position="2.20567 2.82038 6.55739" look-at="#cam" video-overlay="src: #papiersVideo" material="" geometry="" rotation="10.003841871347161 -161.4089130062832 2.0185362853838277e-16">
+                <a-text value="Papiers" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="tiltBtn" class="interactable" src="#tilt" height="2.5" width="1.2" position="1.03678 1.69449 6.89678" look-at="#cam" video-overlay="src: #tiltVideo" material="" geometry="" rotation="0.7762166475909638 -171.45084884211084 0">
+                <a-text value="Tilt" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="breakBtn" class="interactable" src="#break" height="2.5" width="1.2" position="-0.28703 2.86202 7.13766" look-at="#cam" video-overlay="src: #breakVideo" material="" geometry="" rotation="9.127755043613975 -181.6716269708031 0">
+                <a-text value="Break" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="troubleBtn" class="interactable" src="#trouble" height="2.5" width="1.2" position="-1.54265 1.82396 7.19015" look-at="#cam" video-overlay="src: #troubleVideo" material="" geometry="" rotation="1.7444095619133984 167.89074076925715 0">
+                <a-text value="Trouble" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="oldNewsBtn" class="interactable" src="#oldNews" height="2.5" width="1.2" position="-3.01403 2.86202 6.94828" look-at="#cam" video-overlay="src: #oldNewsVideo" material="" geometry="" rotation="9.244674320607144 157.95625892677717 0">
+                <a-text value="Old News" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="spifferiBtn" class="interactable" src="#spifferi" height="2.5" width="1.2" position="-4.24668 1.82396 6.40654" look-at="#cam" video-overlay="src: #spifferiVideo" material="" geometry="" rotation="1.8449422473080834 147.8514590606791 0">
+                <a-text value="Spifferi" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="effimereBtn" class="interactable" src="#effimere" height="2.5" width="1.2" position="-5.52468 2.86202 5.66558" look-at="#cam" video-overlay="src: #effimereVideo" material="" geometry="" rotation="9.127755043613975 137.3914366026341 0">
+                <a-text value="Effimere" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="desideraBtn" class="interactable" src="#desidera" height="2.5" width="1.2" position="-6.61403 1.82396 4.75239" look-at="#cam" video-overlay="src: #desideraVideo" material="" geometry="" rotation="1.5416913033568892 126.88499708470962 0">
+                <a-text value="Desidera" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="babelBtn" class="interactable" src="#babel" height="2.5" width="1.2" position="-7.94007 2.86202 3.77629" look-at="#cam" video-overlay="src: #babelVideo" material="" geometry="" rotation="8.168242205599103 115.43571760149071 0">
+                <a-text value="Babel" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="senzaDoveBtn" class="interactable" src="#senzaDove" height="2.5" width="1.2" position="-8.05283 1.82396 2.0669" look-at="#cam" video-overlay="src: #senzaDoveVideo" material="" geometry="" rotation="1.5430704271298459 104.3952251638149 0">
+                <a-text value="Senza Dove" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="brandBtn" class="interactable" src="#brand" height="2.5" width="1.2" position="-7.03406 1.8265 0.59372" look-at="#cam" video-overlay="src: #brandVideo" material="" geometry="" rotation="1.8377829876259757 94.8246969938901 3.977739383179092e-16">
+                <a-text value="Brand" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="ohGregorBtn" class="interactable" src="#ohGregor" height="2.5" width="1.2" position="-7.60204 2.86202 -0.86061" look-at="#cam" video-overlay="src: #ohGregorVideo" material="" geometry="" rotation="9.366987945989502 83.54117098472962 -8.058842493858022e-16">
+                <a-text value="Oh Gregor" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="viaDiQuaBtn" class="interactable" src="#viaDiQua" height="2.5" width="1.2" position="-6.96237 1.82396 -2.1177" look-at="#cam" video-overlay="src: #viaDiQuaVideo" material="" geometry="" rotation="1.762727295292499 73.08214438828315 -1.9887878049908726e-16">
+                <a-text value="Via Di\n Qua" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="nubiBtn" class="interactable" src="#nubi" height="2.5" width="1.2" position="-5.78431 2.86202 -3.00254" look-at="#cam" video-overlay="src: #nubiVideo" material="" geometry="" rotation="10.959422379676456 62.56691762498441 -8.099097470831969e-16">
+                <a-text value="Nubi" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="dispersiBtn" class="interactable" src="#dispersi" height="2.5" width="1.2" position="-4.81419 1.82396 -3.8085" look-at="#cam" video-overlay="src: #dispersiVideo" material="" geometry="" rotation="2.089482463005224 51.65252065414134 9.945846338312054e-17">
+                <a-text value="Dispersi" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="nellOpacoBtn" class="interactable" src="#nellOpaco" height="2.5" width="1.1" position="-4.63241 2.86202 -5.43535" look-at="#cam" video-overlay="src: #nellOpacoVideo" material="" geometry="" rotation="10.021518147238876 40.440107503849 -4.0372924716573483e-16">
+                <a-text value="Nell'Opaco" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="stormyWeatherBtn" class="interactable" src="#stormyWeather" height="2.5" width="1.2" position="-3.79334 1.82396 -6.36267" look-at="#cam" video-overlay="src: #stormyWeatherVideo" material="" geometry="" rotation="1.7269058705308826 31.06996325091657 1.4915624466208507e-16">
+                <a-text value="Stormy\n Weather" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="bracePositionBtn" class="interactable" src="#bracePosition" height="2.5" width="1.2" position="-2.26923 2.86202 -6.21126" look-at="#cam" video-overlay="src: #bracePositionVideo" material="" geometry="" rotation="10.79258075022269 20.248499583972308 0">
+                <a-text value="Brace\n Position" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
+            </a-plane>
+            <a-plane id="ilCieloMutoBtn" class="interactable" src="#ilCieloMuto" height="2.5" width="1.2" position="-1.11894 1.82396 -7.07932" look-at="#cam" video-overlay="src: #ilCieloMutoVideo" material="" geometry="" rotation="1.7897900720391726 8.981728182172397 0">
+                <a-text value="Il Cielo\n e' Muto" color="white" scale="1.4 1.4 1.4" position="0 1.8 0" align="center" text=""></a-text>
             </a-plane>
         </a-entity>
         <!-- Camera and sky -->
