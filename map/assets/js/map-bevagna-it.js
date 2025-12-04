@@ -50,7 +50,7 @@ var stores = {
         description_en: "If you don't have the Zappar app, you'll be redirected to the app store to download it, then you can enjoy the portal!",
         markerType: "portals",
         site: "https://webxr.run/Vb5Adgw582d6Z",
-      },
+      }, 
     },
     // {
     //   type: "Feature",
@@ -120,7 +120,7 @@ var stores = {
     //   },
     // },
     // END PORTALS GAITE
-    
+
     // MESTIERI GAITE
     {
       type: "Feature",
