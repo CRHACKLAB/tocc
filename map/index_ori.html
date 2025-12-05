@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>L'Umbria in Classe - Fondazione Sant'Anna</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/img/logosanna.png" type="image/svg+xml">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/normalize.css" media="screen">
+    <link rel="stylesheet" href="./assets/css/main.css" media="screen"> 
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--mapbox-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+    <link
+    href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css"
+    rel="stylesheet"
+    />
+</head>
+
+<body>
+    <main class="container">
+        <section id="info-card-layer" class="layer info-card" hidden role="dialog" aria-live="polite" tabindex="-1">
+
+        </section>
+
+        <aside id="sidebar" class="layer sidebar" hidden role="complementary" aria-label="Sidebar con i luoghi mappati">
+            <div class='heading'>
+                <div class="logo">
+                    <img class="logo-img" src="./assets/img/            logosanna.png" alt="Logo del progetto Fondazione Sant'Anna">
+                </div>
+                <select id="filter-dropdown">
+                    
+                </select>
+            </div>
+            <div id="listings" class="listings" aria-label="Elenco dei pannelli"></div>
+        </aside>
+
+        <section id="map" class="layer map" aria-label="Mappa interattiva dei pannelli">
+            <div id="filter-marker" class="filter-control">
+                <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                <select id="marker-dropdown" class="marker-dropdown" aria-label="Filtro per la mappa">
+                    <option value="all">Tutti</option>
+                    <option value="panels012">L'Umbria in classe</option>
+                    <option value="panelSma">Mostra Smascherati</option>
+                </select>
+            </div>
+        </section>
+    </main>
+    
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/map-perugia-it.js"></script>
+</body>
+</html>

@@ -2,56 +2,97 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>L'Umbria in Classe - Fondazione Sant'Anna</title>
+    
     <!-- favicon -->
     <link rel="shortcut icon" href="./assets/img/logosanna.png" type="image/svg+xml">
+    
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/normalize.css" media="screen">
     <link rel="stylesheet" href="./assets/css/main.css" media="screen"> 
+    <link rel="stylesheet" href="./assets/css/accessibility.css" media="screen">
+    
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!--mapbox-->
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
-    <link
-    href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css"
-    rel="stylesheet"
-    />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
 </head>
 
 <body>
-    <main class="container">
-        <section id="info-card-layer" class="layer info-card" hidden role="dialog" aria-live="polite" tabindex="-1">
+    <!-- Skip Links per navigazione rapida -->
+    <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
+    <a href="#sidebar" class="skip-link">Vai all'elenco dei pannelli</a>
+    <a href="#map" class="skip-link">Vai alla mappa</a>
 
-        </section>
+    <!-- Live Region per annunci screen reader -->
+    <div id="sr-announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
-        <aside id="sidebar" class="layer sidebar" hidden role="complementary" aria-label="Sidebar con i luoghi mappati">
+    <main id="main-content" class="container">
+        <!-- Info Card con migliore accessibilità -->
+        <!-- <section id="info-card-layer" class="layer info-card" hidden role="dialog" aria-modal="true" aria-labelledby="card-title" aria-describedby="card-description">
+            <div class="card-content">
+                <button id="close-card" class="close-button" aria-label="Chiudi scheda informativa">
+                    <i class="fa-solid fa-times" aria-hidden="true"></i>
+                    <span class="sr-only">Chiudi</span>
+                </button>
+                <h2 id="card-title"></h2>
+                <div id="card-description"></div>
+                <button id="back-to-map" class="btn-primary">Torna alla mappa</button>
+            </div>
+        </section> -->
+
+        <!-- Sidebar con miglioramenti accessibilità -->
+        <aside id="sidebar" class="layer sidebar" hidden role="complementary" aria-label="Pannello laterale con elenco dei luoghi">
             <div class='heading'>
                 <div class="logo">
-                    <img class="logo-img" src="./assets/img/logosanna.png" alt="Logo del progetto Fondazione Sant'Anna">
+                    <img class="logo-img" src="./assets/img/logosanna.png" alt="Logo Fondazione Sant'Anna - L'Umbria in Classe">
                 </div>
-                <select id="filter-dropdown">
-                    
+                <label for="filter-dropdown" class="sr-only">Filtra per categoria</label>
+                <select id="filter-dropdown" aria-label="Seleziona categoria per filtrare i pannelli">
+                    <!-- Le opzioni verranno popolate dinamicamente -->
                 </select>
             </div>
-            <div id="listings" class="listings" aria-label="Elenco dei pannelli"></div>
+            
+            <nav aria-label="Elenco pannelli informativi">
+                <div id="listings" class="listings"></div>
+            </nav>
         </aside>
 
-        <section id="map" class="layer map" aria-label="Mappa interattiva dei pannelli">
+        <!-- Mappa con controlli accessibili -->
+        <section id="map" class="layer map" role="region" aria-label="Mappa interattiva dei pannelli informativi di Perugia">
             <div id="filter-marker" class="filter-control">
+                <label for="marker-dropdown" class="sr-only">Filtra marcatori sulla mappa</label>
                 <i class="fa-solid fa-sliders" aria-hidden="true"></i>
-                <select id="marker-dropdown" class="marker-dropdown" aria-label="Filtro per la mappa">
-                    <option value="all">Tutti</option>
+                <select id="marker-dropdown" class="marker-dropdown" aria-label="Seleziona categoria per filtrare i marcatori sulla mappa">
+                    <option value="all">Tutti i pannelli</option>
                     <option value="panels012">L'Umbria in classe</option>
                     <option value="panelSma">Mostra Smascherati</option>
                 </select>
             </div>
+            
+            <!-- Controlli tastiera per mappa -->
+            <div id="keyboard-controls" class="keyboard-controls" role="group" aria-label="Controlli tastiera per la mappa">
+                <button id="zoom-in" aria-label="Ingrandisci mappa">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                </button>
+                <button id="zoom-out" aria-label="Rimpicciolisci mappa">
+                    <i class="fa-solid fa-minus" aria-hidden="true"></i>
+                </button>
+                <button id="reset-view" aria-label="Ripristina vista iniziale della mappa">
+                    <i class="fa-solid fa-home" aria-hidden="true"></i>
+                </button>
+            </div>
         </section>
     </main>
     
+    <script src="./assets/js/accessibility.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/map-perugia-it.js"></script>
+    <script src="./assets/js/map-accessibility-enhancer.js"></script>
+    <script src="./assets/js/sidebar-fix.js"></script>
+
 </body>
 </html>

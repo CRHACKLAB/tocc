@@ -14,8 +14,8 @@ let userCoordinates = null;
 const hideInfoCard = () => {
     console.log("Hide info card");
     infoCard.setAttribute("hidden", "hidden");
-    sidebar.removeAttribute("hidden");
-    mapContainer.removeAttribute("hidden");
+    // sidebar.removeAttribute("hidden");
+    // mapContainer.removeAttribute("hidden");
 };
 
 const showInfoCard = (title_it, title_en, description_it, description_en, img, markerType, site) => {
@@ -53,6 +53,32 @@ const showInfoCard = (title_it, title_en, description_it, description_en, img, m
     infoCard.focus();
     sidebar.setAttribute("hidden", "hidden");
     mapContainer.setAttribute("hidden", "hidden");
+    
+    // 🔧 AGGIUNGI PULSANTE "TORNA ALLA MAPPA" SE NON ESISTE
+    let backBtn = document.getElementById('back-to-map');
+    if (!backBtn) {
+        backBtn = document.createElement('button');
+        backBtn.id = 'back-to-map';
+        backBtn.className = 'btn-primary';
+        backBtn.textContent = 'Torna alla mappa';
+        backBtn.style.cssText = `
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        `;
+        infoCard.appendChild(backBtn);
+    }
+    
+    // 🔧 COLLEGA IL PULSANTE A hideInfoCard
+    backBtn.onclick = hideInfoCard;
+    
+    console.log('✅ Back button connected to hideInfoCard');
 };
 
 const hideSidebar = () => {
@@ -97,3 +123,12 @@ function initializeMap(latitude, longitude) {
     userCoordinates = [longitude, latitude]; //store the user's coordinates
 }
 
+// 🔧 SUPPORTO ESC PER CHIUDERE
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const infoCard = document.getElementById('info-card-layer');
+        if (infoCard && !infoCard.hasAttribute('hidden')) {
+            hideInfoCard();
+        }
+    }
+});
