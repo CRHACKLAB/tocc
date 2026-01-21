@@ -51,22 +51,34 @@
         <img id="room4" src="../room4/R0010196.jpg" >
         <!-- strange fruit -->
         <img id="strangeFruit" src="../assets/images/03_1997_strangeFruit.jpg">
-        <video id="strangeFruitVideo" src="../../../toccSma/Carriola Strange Fruit.mp4" preload="auto" loop></video>
+        <video id="strangeFruitVideo" src="/toccSma/Carriola Strange Fruit.mp4" preload="auto" loop></video>
         <!-- il cielo è muto -->
         <img id="cieloMuto" src="../assets/images/33_2024_ilCieloMuto.jpg">
-        <video id="cieloMutoVideo" src="../../../toccSma/Coperte Il Cielo È Muto.mp4" preload="auto" loop></video>
+        <video id="cieloMutoVideo" src="/toccSma/Coperte Il Cielo È Muto.mp4" preload="auto" loop></video>
         <!-- dry -->
         <img id="dry" src="../assets/images/14_2007_dry.jpg">
-        <video id="dryVideo" src="../../../toccSma/Wc Dry.mp4" preload="auto" loop></video>
+        <video id="dryVideo" src="/toccSma/Wc Dry.mp4" preload="auto" loop></video>
         <!-- spifferi -->
         <img id="spifferi" src="../assets/images/20_2012_spifferi.jpg">
-        <video id="spifferiVideo" src="../../../toccSma/Finestrella Spifferi.mp4" preload="auto" loop>
+        <video id="spifferiVideo" src="/toccSma/Finestrella Spifferi.mp4" preload="auto" loop>
         </video>
         <!-- hei guis -->
         <img id="heiGuis" src="../assets/images/31_2022_stormyWeather.jpg">
-        <video id="heiGuisVideo" src="../../../toccSma/Valigie Hey Guis.mp4" preload="auto" loop></video>
+        <video id="heiGuisVideo" src="/toccSma/Valigie Hey Guis.mp4" preload="auto" loop></video>
         <!-- spifferi2 -->
-        <video id="spifferi2Video" src="../../../toccSma/Porte Spifferi.mp4" preload="auto" loop></video>
+        <video id="spifferi2Video" src="/toccSma/Porte Spifferi.mp4" preload="auto" loop></video>
+        <!-- nell'opaco -->
+        <img id="nellOpaco" src="../assets/images/30_2021_nellOpaco.jpg">
+        <video id="nellOpacoVideo" src="/toccSma/Gabbione Nell'opaco.mp4" preload="auto" loop></video>
+        <!-- imagine -->
+        <img id="imagine" src="../assets/images/01_1995_imagine.jpg">
+        <video id="imagineVideo" src="/toccSma/Bottiglie Imagine.mp4" preload="auto" loop></video>
+        <!-- babel -->
+        <img id="babel" src="../assets/images/23_2015_babel.jpg">
+        <video id="babelVideo" src="/toccSma/Scala Babel.mp4" preload="auto" loop></video>
+        <!-- desidera -->
+        <img id="desidera" src="../assets/images/22_2014_desidera.jpg">
+        <video id="desideraVideo" src="/toccSma/Pozzo - Desidera.mp4" preload="auto" loop></video>
     </a-assets>
     <!-- Portals and hotspots -->
     <a-entity id="hotspots">
@@ -78,27 +90,48 @@
         <!-- Info Panel-->
         <!-- <a-circle id="F492AP01S01S00" class="interactable" src="#infopanel" radius="0.1" position="-2.5 3 -3" look-at="#cam" show-info="href: info/index.html"></a-circle> -->
         <!-- Hotspots --> 
-        <a-circle id="strangeFruiteBtn" class="interactable" src="#strangeFruit" radius="0.4" position="5.50437 2.09807 5.6205" look-at="#cam" video-overlay="src: #strangeFruitVideo" material="" geometry="" rotation="3.6226813506877393 -135.59807595130533 0">
-            <a-text value="Strange Fruit" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        <a-circle id="strangeFruiteBtn" class="interactable" src="#strangeFruit" radius="0.4" position="3.43121 0.65685 3.58361" look-at="#cam" video-overlay="src: #strangeFruitVideo" material="opacity: 0; transparent: true" geometry="" rotation="-10.763367448459507 -136.24457981639665 -8.09378178989289e-16">
+            <a-text value="Strange Fruit" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="dryBtn" class="interactable" src="#dry" radius="0.4" position="2.46948 0.75364 -0.75705" look-at="#cam" video-overlay="src: #dryVideo" material="" geometry="">
-            <a-text value="Dry" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+
+        <a-circle id="dryBtn" class="interactable" src="#dry" radius="0.4" position="2.46948 0.75364 -0.75705" look-at="#cam" video-overlay="src: #dryVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Dry" color="white" scale="0.8 0.8 1" position="0 0 0" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="cieloMutoBtn" class="interactable" src="#cieloMuto" radius="0.4" position="7.70968 0.19244 3.99944" look-at="#cam" video-overlay="src: #cieloMutoVideo" material="" geometry="">
-            <a-text value="Il Cielo e' Muto" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+
+        <a-circle id="cieloMutoBtn" class="interactable" src="#cieloMuto" radius="0.4" position="4.94876 1.00205 2.48715" look-at="#cam" video-overlay="src: #cieloMutoVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Il Cielo e' Muto" color="white" scale="0.8 0.8 1" position="0 -0.08826 -0.00953" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="spifferiBtn" class="interactable" src="#spifferi" radius="0.4" position="-2.85668 1.77942 -5.7623" look-at="#cam" video-overlay="src: #spifferiVideo" material="" geometry="">
-            <a-text value="Spifferi" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+
+        <a-circle id="spifferiBtn" class="interactable" src="#spifferi" radius="0.4" position="-1.9024 2.01399 -3.7586" look-at="#cam" video-overlay="src: #spifferiVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Spifferi" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="heiGuisBtn" class="interactable" src="#heiGuis" radius="0.4" position="0.06993 2.31977 8.01755" look-at="#cam" video-overlay="src: #heiGuisVideo" material="" geometry="" rotation="5.129742901076897 -179.50027224494997 -3.118500696411432e-18">
-            <a-text value="Hei Guys!" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+
+        <a-circle id="heiGuisBtn" class="interactable" src="#heiGuis" radius="0.4" position="0.06993 1.05425 5.57772" look-at="#cam" video-overlay="src: #heiGuisVideo" material="opacity: 0; transparent: true" geometry="" rotation="-5.587860472142289 -179.28169862431346 0">
+            <a-text value="Hei Guys!" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="spifferi2Btn" class="interactable" src="#spifferi" radius="0.4" position="1.88833 2.47175 9.76526" look-at="#cam" video-overlay="src: #spifferi2Video" material="" geometry="">
-            <a-text value="Spifferi" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        
+        <a-circle id="spifferi2Btn" class="interactable" src="#spifferi" radius="0.4" position="1.08841 1.1441 5.75212" look-at="#cam" video-overlay="src: #spifferi2Video" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Spifferi" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
+
+        <a-circle id="nellOpacoBtn" class="interactable" src="#nellOpaco" radius="0.4" position="-4.98451 1.25887 3.67774" look-at="#cam" video-overlay="src: #nellOpacoVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Nell'Opaco" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
+
+        <a-circle id="imagineBtn" class="interactable" src="#imagine" radius="0.4" position="2.07539 0.93849 4.82166" look-at="#cam" video-overlay="src: #imagineVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Imagine..." color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
+
+        <a-circle id="babelBtn" class="interactable" src="#babel" radius="0.4" position="3.16111 1.95618 4.70842" look-at="#cam" video-overlay="src: #babelVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Babel" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
+
+        <a-circle id="desideraBtn" class="interactable" src="#desidera" radius="0.4" position="-2.45569 1.23101 -4.22456" look-at="#cam" video-overlay="src: #desideraVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="DeSidera" color="white" scale="0.8 0.8 1" position="0 0 0" align="center" text=""></a-text>
         </a-circle>
     </a-entity>
     <!-- Camera and sky -->
-    <a-camera id="cam"  wasd-controls="enabled: true" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">
+    <a-camera id="cam"  wasd-controls="enabled: false" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">
     </a-camera>
     <a-sky id="skybox" src="#sky" rotation="0 -90 0"></a-sky>
 </a-scene>
