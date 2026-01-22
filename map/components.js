@@ -742,3 +742,4 @@ AFRAME.registerComponent('itinerary-manager', {
         el.emit('updateitinerary', {itinerary: this.system.data.itinerary});
     }
 })
+

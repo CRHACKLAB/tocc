@@ -10,6 +10,7 @@
     <script src="../assets/scripts/components.js"></script>
     <script src="../assets/scripts/main.js"></script>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
     <!-- Fontawesome cdn -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     
@@ -47,36 +48,36 @@
         <button id="playPauseBtn"><i class="fa-solid fa-play"></i>/<i class="fa-solid fa-pause"></i></button>
         <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="1">
     </div> -->
-    </div>
+</div>
 
-    <!-- entrance link -->
-    <!-- Link fisso in basso a destra -->
-    <div id="entranceLink" style="
-        position: fixed;
-        bottom: 1rem;
-        left: 1rem;
-        z-index: 1000;
-        cursor: pointer;
-        background: rgba(0, 0, 0, 0.4);
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-    ">
-        <a href="../entrance/index.html" style="
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-family: Helvetica, Arial, sans-serif;
-            font-weight: bold;
-        ">Visita la mostra</a>
-    </div>
+<!-- entrance link -->
+<!-- Link fisso in basso a destra -->
+<div id="entranceLink" style="
+position: fixed;
+bottom: 1rem;
+left: 1rem;
+z-index: 1000;
+cursor: pointer;
+background: rgba(0, 0, 0, 0.4);
+padding: 1rem 2rem;
+border-radius: 8px;
+transition: all 0.3s ease;
+">
+<a href="../entrance/index.html" style="
+color: white;
+text-decoration: none;
+font-size: 1.2rem;
+font-family: Helvetica, Arial, sans-serif;
+font-weight: bold;
+">Visita la mostra</a>
+</div>
 
-    <style>
-        #entranceLink:hover {
-            background: rgba(0, 0, 0, 0.9);
-            transform: scale(1.05);
-        }
-    </style>
+<style>
+    #entranceLink:hover {
+        background: rgba(0, 0, 0, 0.9);
+        transform: scale(1.05);
+    }
+</style>
 
 <!-- A-Frame Scene -->
 <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .interactable" inspector>
@@ -115,7 +116,7 @@
             scale="0.80887 0.80887 0.80887" 
             radius="1"
             material="color: #ffffff; transparent: true; opacity: 0.2; shader: flat; side: double">
-        
+            
             <!-- Freccia costruita con forme geometriche -->
             <!-- Asta della freccia -->
             <a-box width="0.6" 
@@ -127,19 +128,19 @@
             
             <!-- Punta della freccia (triangolo) -->
             <a-cone radius-bottom="0.2" 
-                    radius-top="0" 
-                    height="0.3" 
-                    color="white" 
-                    rotation="0 0 -90" 
-                    position="0.4 0 0.1">
+                radius-top="0" 
+                height="0.3" 
+                color="white" 
+                rotation="0 0 -90" 
+                position="0.4 0 0.1">
             </a-cone>
-            
+
             <!-- Bordo del cerchio -->
             <a-ring color="white" 
-                    radius-inner="0.97" 
-                    radius-outer="1" 
-                    segments-theta="64" 
-                    material="side: double">
+                radius-inner="0.97" 
+                radius-outer="1" 
+                segments-theta="64" 
+                material="side: double">
             </a-ring>
         </a-circle>
 
@@ -149,34 +150,34 @@
 <!-- <a-circle id="F492AP01S01H01" class="interactable" src="#logoscietondo" radius="0.1" position="-0.6 -0.2 -3" look-at="#cam" show-slides="src: F492AP01S01H01.jpg; steps: 0, 20.00, 40.00, 60.00, 80.00, 100; index: 0; items:4;">
     <a-text  value="Info su Piazza" color="white" scale="0.3 0.3 1" position="0 0.2 0" align="center"></a-text>
 </a-circle> -->
-<a-circle id="rumbleBtn" class="interactable" src="#rumble" radius="0.4" position="1.74398 2 1.84324" look-at="#cam" video-overlay="src: #rumbleVideo" material="opacity: 0; transparent: true" geometry="">
-    <a-text value="Rumble" color="white" scale="0.8 0.8 1" position="0 0 0" align="center" text=""></a-text>
-</a-circle>
+        <a-circle id="rumbleBtn" class="interactable" src="#rumble" radius="0.4" position="1.74398 2 1.84324" look-at="#cam" video-overlay="src: #rumbleVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Rumble" color="white" scale="0.8 0.8 1" position="0 0 0" align="center" text=""></a-text>
+        </a-circle>
 
-<a-circle id="dispersiBtn" class="interactable" src="#dispersi" radius="0.4" position="-2.02366 0.606 -3.23991" look-at="#cam" video-overlay="src: #dispersiVideo" material="opacity: 0; transparent: true" geometry="" scale="1.256 1.25575 1.25575">
-    <a-text value="Dispersi" color="white" scale="0.8 0.8 1" position="0 0 0" align="center" text=""></a-text>
-</a-circle>
+        <a-circle id="dispersiBtn" class="interactable" src="#dispersi" radius="0.4" position="-2.02366 0.606 -3.23991" look-at="#cam" video-overlay="src: #dispersiVideo" material="opacity: 0; transparent: true" geometry="" scale="1.256 1.25575 1.25575">
+            <a-text value="Dispersi" color="white" scale="0.8 0.8 1" position="0 0 0" align="center" text=""></a-text>
+        </a-circle>
 
-<a-circle id="brandBtn" class="interactable" src="#brand" radius="0.4" position="2.75455 -0.0566 -2.04141" look-at="#cam" video-overlay="src: #brandVideo" material="opacity: 0; transparent: true" geometry="">
-    <a-text value="Brand" color="white" scale="0.8 0.8 1" position="0 0 0" align="center" text=""></a-text>
-</a-circle>
+        <a-circle id="brandBtn" class="interactable" src="#brand" radius="0.4" position="2.75455 -0.0566 -2.04141" look-at="#cam" video-overlay="src: #brandVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Brand" color="white" scale="0.8 0.8 1" position="0 0 0" align="center" text=""></a-text>
+        </a-circle>
 
-<a-circle id="enpassantBtn" class="interactable" src="#enpassant" radius="0.4" position="3.13985 0.6717 -1.94593" look-at="#cam" video-overlay="src: #enpassantVideo" material="opacity: 0; transparent: true" geometry="" rotation="-14.106458924623048 -58.211330036931756 8.198619801658406e-16">
-    <a-text value="En Passant" color="white" scale="0.8 0.8 1" position="-0.17951 0.02712 -0.1079" align="center" text="" rotation="0 0 90"></a-text>
-</a-circle>
+        <a-circle id="enpassantBtn" class="interactable" src="#enpassant" radius="0.4" position="3.13985 0.6717 -1.94593" look-at="#cam" video-overlay="src: #enpassantVideo" material="opacity: 0; transparent: true" geometry="" rotation="-14.106458924623048 -58.211330036931756 8.198619801658406e-16">
+            <a-text value="En Passant" color="white" scale="0.8 0.8 1" position="-0.17951 0.02712 -0.1079" align="center" text="" rotation="0 0 90"></a-text>
+        </a-circle>
 
-<a-circle id="nubiBtn" class="interactable" src="#nubi" radius="0.4" position="7.22319 1.3377 -4.00389" look-at="#cam" video-overlay="src: #nubiVideo" material="opacity: 0; transparent: true" geometry="" scale="1.5 1.5 1">
-    <a-text value="Nubi" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-</a-circle>
+        <a-circle id="nubiBtn" class="interactable" src="#nubi" radius="0.4" position="7.22319 1.3377 -4.00389" look-at="#cam" video-overlay="src: #nubiVideo" material="opacity: 0; transparent: true" geometry="" scale="1.5 1.5 1">
+            <a-text value="Nubi" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
 
-<a-circle id="ohGregorBtn" class="interactable" src="#ohGregor" radius="0.4" position="4.0128 1.54162 -1.77291" look-at="#cam" video-overlay="src: #ohGregorVideo" material="opacity: 0; transparent: true" geometry="">
-    <a-text value="Oh Gregor!" color="white" scale="0.8 0.8 1" position="" align="center" text="" rotation="0 0 90"></a-text>
-</a-circle>
+        <a-circle id="ohGregorBtn" class="interactable" src="#ohGregor" radius="0.4" position="4.0128 1.54162 -1.77291" look-at="#cam" video-overlay="src: #ohGregorVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Oh Gregor!" color="white" scale="0.8 0.8 1" position="" align="center" text="" rotation="0 0 90"></a-text>
+        </a-circle>
 
-<a-circle id="nellOpacoBtn" class="interactable" src="#nellOpaco" radius="0.4" position="4.94329 2.33021 -3.38107" look-at="#cam" video-overlay="" material="opacity: 0; transparent: true" geometry="">
-    <a-text value="Nell'opaco" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
-</a-circle>
-</a-entity>
+        <a-circle id="nellOpacoBtn" class="interactable" src="#nellOpaco" radius="0.4" position="4.94329 2.33021 -3.38107" look-at="#cam" video-overlay="" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Nell'opaco" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+    </a-entity>
 <!-- Plane for video texture display -->
 <!-- Camera and sky -->
 <a-camera id="cam"  wasd-controls="enabled: false" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">
