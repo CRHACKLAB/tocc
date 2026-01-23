@@ -72,31 +72,138 @@
         <!-- babel -->
         <img id="babel" src="../assets/images/23_2015_babel.jpg">
         <video id="babelVideo" src="/toccSma/Scala Babel.mp4" preload="auto" loop></video>
+        <!-- strange fruit -->
+        <img id="strangeFruit" src="../assets/images/03_1997_strangeFruit.jpg">
+        <video id="strangeFruitVideo" src="/toccSma/Carriola Strange Fruit.mp4" preload="auto" loop></video>
+        <!-- break -->
+        <img id="break" src="../assets/images/17_2009_break.jpg">
+        <video id="break" src="/toccSma/Tubi Rossi Break.mp4" preload="auto" loop></video>
+        <!-- senza dove -->
+        <img id="senzaDove" src="../assets/images/24_2016_senzaDove.jpg">
+        <video id="senzaDoveVideo" src="/toccSma/Copertoni Senzadove Torri.mp4" preload="auto" loop></video>
+        <!-- nell'opaco -->
+        <img id="nellOpaco" src="../assets/images/30_2021_nellOpaco.jpg">
+        <video id="nellOpacoVideo" src="/toccSma/Gabbione Nell'opaco.mp4" preload="auto" loop></video>
+        <!-- via di qua -->
+        <img id="viaDiQua" src="../assets/images/27_2018_viaDiQua.jpg">
+        <video id="viaDiQuaVideo" src="/toccSma/Cavallino-Via Di Qua.mp4" preload="auto" loop></video>
+        <!-- desidera -->
+        <img id="desidera" src="../assets/images/22_2014_desidera.jpg">
+        <video id="desideraVideo" src="/toccSma/Pozzo - Desidera.mp4" preload="auto" loop></video>
+        <!-- spifferi -->
+        <img id="spifferi" src="../assets/images/20_2012_spifferi.jpg">
+        <video id="spifferiVideo" src="/toccSma/Finestrella Spifferi.mp4" preload="auto" loop>
+        </video>
     </a-assets>
     <!-- Portals and hotspots -->
     <a-entity id="hotspots">
         <!-- Portals -->
-        <a-link class="interactable" href="../room8/index.html" title="Prosegui" image="#room8" position="4.46911 2.21898 -6.11983" rotation="3.1042853340188 -51.466506905421326 1.1069544601927506" scale="0.80887 0.80887 0.80887" link="backgroundColor: #d7f8fe" geometry="primitive: circle; segments: 64" material="backgroundColor: #d7f8fe; shader: portal; side: double; pano: http://127.0.0.1:5500/map/aframe/room8/R0010202.jpg"></a-link>
-        <a-link class="interactable" href="../room1/index.html" title="Prosegui" image="#room1" position="-5.59284 1.52202 -3.84971" rotation="2.2614644173813594 59.36702194248024 1.61459506667866" scale="0.80887 0.80887 0.80887" link="backgroundColor: #d7f8fe" geometry="primitive: circle; segments: 64" material="backgroundColor: #d7f8fe; shader: portal; side: double; pano: http://127.0.0.1:5500/map/aframe/room1/R0010191.jpg"></a-link>
+        <a-circle class="interactable" 
+            portal-link="href: ../room8/index.html"
+            position="4.46911 2.21898 -6.11983" 
+            rotation="3.1042853340188 -51.466506905421326 90" 
+            scale="0.80887 0.80887 0.80887" 
+            radius="1"
+            material="color: #ffffff; transparent: true; opacity: 0.2; shader: flat; side: double">
+            
+            <!-- Freccia costruita con forme geometriche -->
+            <!-- Asta della freccia -->
+            <a-box width="0.6" 
+                height="0.1" 
+                depth="0.05" 
+                color="white" 
+                position="0 0 0.1">
+            </a-box>
+            
+            <!-- Punta della freccia (triangolo) -->
+            <a-cone radius-bottom="0.2" 
+                radius-top="0" 
+                height="0.3" 
+                color="white" 
+                rotation="0 0 -90" 
+                position="0.4 0 0.1">
+            </a-cone>
+
+            <!-- Bordo del cerchio -->
+            <a-ring color="white" 
+                radius-inner="0.97" 
+                radius-outer="1" 
+                segments-theta="64" 
+                material="side: double">
+            </a-ring>
+        </a-circle>
+
+        <a-circle class="interactable" 
+            portal-link="href: ../room1/index.html"
+            position="-7.23641 1.75148 -3.31756" 
+            rotation="2.2614644173813594 59.36702194248024 90" 
+            scale="0.80887 0.80887 0.80887" 
+            radius="1"
+            material="color: #ffffff; transparent: true; opacity: 0.2; shader: flat; side: double">
+            
+            <!-- Freccia costruita con forme geometriche -->
+            <!-- Asta della freccia -->
+            <a-box width="0.6" 
+                height="0.1" 
+                depth="0.05" 
+                color="white" 
+                position="0 0 0.1">
+            </a-box>
+            
+            <!-- Punta della freccia (triangolo) -->
+            <a-cone radius-bottom="0.2" 
+                radius-top="0" 
+                height="0.3" 
+                color="white" 
+                rotation="0 0 -90" 
+                position="0.4 0 0.1">
+            </a-cone>
+
+            <!-- Bordo del cerchio -->
+            <a-ring color="white" 
+                radius-inner="0.97" 
+                radius-outer="1" 
+                segments-theta="64" 
+                material="side: double">
+            </a-ring>
+        </a-circle>
         
         <!-- Hotspots --> 
-        <a-circle id="endBagBtn" class="interactable" src="#endBag" radius="0.4" position="-0.03427 0.66125 6.13887" look-at="#cam" video-overlay="src: #endBagVideo" material="" geometry="" rotation="-8.69412915941923 179.6801518899618 3.142115281821887e-18">
-            <a-text value="End Bag" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        <a-circle id="endBagBtn" class="interactable" src="#endBag" radius="0.4" position="-0.03427 -0.71985 4.91805" look-at="#cam" video-overlay="src: #endBagVideo" material="opacity: 0; transparent: true" geometry="" rotation="-25.25277053108861 179.60075749848977 0">
+            <a-text value="End Bag" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="cieloMutoBtn" class="interactable" src="#cieloMuto" radius="0.4" position="-4.8391 -0.01108 2.8187" look-at="#cam" video-overlay="src: #cieloMutoVideo" material="" geometry="">
-            <a-text value="Il Cielo e' Muto" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        <a-circle id="cieloMutoBtn" class="interactable" src="#cieloMuto" radius="0.4" position="-4.8391 -0.01108 2.8187" look-at="#cam" video-overlay="src: #cieloMutoVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Il Cielo e' Muto" color="white" scale="0.8 0.8 1" position="0 0 0" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="papierBtn" class="interactable" src="#papier" radius="0.4" position="4.30964 -0.47636 0.17017" look-at="#cam" video-overlay="src: #papierVideo" material="" geometry="" rotation="-25.707054498901915 -92.2612005482506 3.5299348528972444e-15">
-            <a-text value="Papiers" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        <a-circle id="papierBtn" class="interactable" src="#papier" radius="0.4" position="4.30964 1.16999 0.43572" look-at="#cam" video-overlay="src: #papierVideo" material="opacity: 0; transparent: true" geometry="" rotation="-5.669322869011404 -95.77319027702441 7.9904712563413e-16">
+            <a-text value="Papiers" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="viaDiQuaBtn" class="interactable" src="#viaDiQua" radius="0.4" position="1.76329 1.03993 -7.0499" look-at="#cam" video-overlay="src: #viaDiQuaVideo" material="" geometry="">
-            <a-text value="Via di Qua" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        <a-circle id="viaDiQuaBtn" class="interactable" src="#viaDiQua" radius="0.4" position="1.78108 0.59652 -5.26103" look-at="#cam" video-overlay="src: #viaDiQuaVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Via di Qua" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="babelBtn" class="interactable" src="#babel" radius="0.4" position="-6.92839 1.96147 1.94663" look-at="#cam" video-overlay="src: #babelVideo" material="" geometry="">
-            <a-text value="Babel" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        <a-circle id="babelBtn" class="interactable" src="#babel" radius="0.4" position="-6.92839 1.60141 1.70581" look-at="#cam" video-overlay="src: #babelVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Babel" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
         </a-circle>
-        <a-circle id="dalGorgo" class="interactable" src="#dalGorgo" radius="0.4" position="4.62422 0.77851 -1.42619" look-at="#cam" video-overlay="src: #dalGorgoVideo" material="" geometry="">
-            <a-text value="Dal Gorgo" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        <a-circle id="dalGorgo" class="interactable" src="#dalGorgo" radius="0.4" position="4.80856 -0.68133 -0.64643" look-at="#cam" video-overlay="src: #dalGorgoVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Dal Gorgo" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="strangeFruitBtn" class="interactable" src="#strangeFruit" radius="0.4" position="-5.15984 0.43763 -1.42659" look-at="#cam" video-overlay="src: #strangeFruitVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Strange Fruit" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="spifferiBtn" class="interactable" src="#spifferi" radius="0.4" position="0.04659 1.55978 -5.30233" look-at="#cam" video-overlay="src: #spifferiVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="Spifferi" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="desideraBtn" class="interactable" src="#desidera" radius="0.4" position="-5.28669 0.37856 0.81749" look-at="#cam" video-overlay="src: #desideraVideo" material="opacity: 0; transparent: true" geometry="">
+            <a-text value="DeSidera" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="breakBtn" class="interactable" src="#break" radius="0.4" position="-4.63235 1.68881 -4.70114" look-at="#cam" video-overlay="" material="opacity: 0; transparent: true" geometry="" rotation="0.04305894286186582 44.57772437647767 -6.212022616455111e-18">
+            <a-text value="Break" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="senzaDoveBtn" class="interactable" src="#senzaDove" radius="0.4" position="-4.7629 0.8182 -4.79214" look-at="#cam" video-overlay="src: #senzaDoveVideo" material="opacity: 0; transparent: true" geometry="" rotation="-6.600420935833704 44.824666002089785 8.004440768116296e-16">
+            <a-text value="Senza Dove" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
+        </a-circle>
+        <a-circle id="nellOpacoBtn" class="interactable" src="#nellOpaco" radius="0.4" position="-4.3836 1.19154 -5.75626" look-at="#cam" video-overlay="src: #nellOpacoVideo" material="opacity: 0; transparent: true" geometry="" rotation="-3.231105312484751 37.29058259662791 0">
+            <a-text value="Nell'Opaco" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
         </a-circle>
     </a-entity>
     <!-- Camera and sky -->
