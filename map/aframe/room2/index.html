@@ -160,36 +160,145 @@
         <!-- <a-link class="interactable" href="../room6/index.html" title="Prosegui" image="#room6" position="7.20539 1.52202 -1.50047" rotation="2.2614644173813594 -78.67569963838899 1.61459506667866" scale="0.80887 0.80887 0.80887" link="backgroundColor: #d7f8fe" geometry="primitive: circle; segments: 64" material="backgroundColor: #d7f8fe; shader: portal; side: double; pano: http://127.0.0.1:5500/map/aframe/room6/R0010199.jpg"></a-link> -->
         
         <!-- Hotspots --> 
-        <a-circle id="babelBtn" class="interactable" src="#babel" radius="0.4" position="2.78273 1.77747 4.32716" look-at="#cam" video-overlay="src: #babelVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Babel" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="heiGuisBtn" class="interactable" src="#heiGuis" radius="0.4" position="-2.79975 0.81067 7.01841" look-at="#cam" video-overlay="src: #heiGuisVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Hey Guys!" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="dryBtn" class="interactable" src="#dry" radius="0.4" position="6.82668 1.18066 0.11277" look-at="#cam" video-overlay="src: #dryVideo" material="opacity: 0; transparent: true" geometry="" rotation="-3.5145921868111087 -90.94638351907034 -1.9915924268933998e-16">
-            <a-text value="Dry" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="imagineBtn" class="interactable" src="#imagine" radius="0.4" position="1.47135 0.98747 5.62558" look-at="#cam" video-overlay="src: #imagineVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Imagine..." color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="senzaDoveBtn" class="interactable" src="#senzaDove" radius="0.4" position="3.51449 0.47778 -1.97105" look-at="#cam" video-overlay="src: #senzaDoveVideo" material="opacity: 0; transparent: true" geometry="" rotation="-15.562663640303112 -60.71475371045641 -8.253998067151263e-16">
-            <a-text value="Senza Dove" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="breakBtn" class="interactable" src="#break" radius="0.4" position="0.66516 1.67888 -3.68791" look-at="#cam" video-overlay="src: #breakVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Break" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="nellOpacoBtn" class="interactable" src="#nellOpaco" radius="0.4" position="-2.34109 1.25136 -3.7673" look-at="#cam" video-overlay="src: #nellOpacoVideo" material="opacity: 0; transparent: true" geometry="" rotation="-4.4943794627538125 31.857802967282083 0">
-            <a-text value="Nell'Opaco" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="desideraBtn" class="interactable" src="#desidera" radius="0.4" position="0.1363 1.20793 7.833" look-at="#cam" video-overlay="src: #desideraVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Desidera" color="white" scale="0.8 0.8 1" position="-0.04948 -0.14349 2.04294" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="desidera2Btn" class="interactable" src="#desidera" radius="0.4" position="2.9022 1.14416 4.65599" look-at="#cam" video-overlay="src: #desidera2Video" material="opacity: 0; transparent: true" geometry="" rotation="-4.749503348214086 -148.06363658840095 1.9946960227065963e-16">
-            <a-text value="DeSidera" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="strangeFruitBtn" class="interactable" src="#strangeFruit" radius="0.4" position="4.59068 1.00555 3.3536" look-at="#cam" video-overlay="src: #strangeFruitVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Strange Fruit" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
+        <a-plane 
+            id="babelBtn" 
+            class="interactable" 
+            width="0.6" 
+            height="0.2" 
+            position="1.868 1.777 2.822" 
+            look-at="#cam" 
+            video-overlay="src: #babelVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.0; height: 0.4; radius: 0.08">
+            <a-text value="Babel" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="heiGuisBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-1.237 1.273 3.222" 
+            look-at="#cam" 
+            video-overlay="src: #heiGuisVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="Hey Guys!" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="dryBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="2.361 1.431 0.044" 
+            rotation="-3.5145921868111087 -90.94638351907034 0" 
+            video-overlay="src: #dryVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.0; height: 0.4; radius: 0.08">
+            <a-text value="Dry" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="imagineBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="0.871 1.225 3.297" 
+            look-at="#cam" 
+            video-overlay="src: #imagineVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="Imagine..." color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="senzaDoveBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="2.064 0.908 -1.109" 
+            rotation="-15.562663640303112 -60.71475371045641 0" 
+            video-overlay="src: #senzaDoveVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="Senza Dove" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="breakBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="0.713 1.694 -2.943" 
+            look-at="#cam" 
+            video-overlay="src: #breakVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.0; height: 0.4; radius: 0.08">
+            <a-text value="Break" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="nellOpacoBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-2.212 1.392 -3.379" 
+            rotation="-4.4943794627538125 31.857802967282083 0" 
+            video-overlay="src: #nellOpacoVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="Nell'Opaco" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="desideraBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-0.060 1.364 2.908" 
+            look-at="#cam" 
+            video-overlay="src: #desideraVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.0; height: 0.4; radius: 0.08">
+            <a-text value="DeSidera" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="desidera2Btn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="2.022 1.275 3.413" 
+            rotation="-4.749503348214086 -148.06363658840095 0" 
+            video-overlay="src: #desidera2Video"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="DeSidera" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="strangeFruitBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="2.668 1.224 1.982" 
+            look-at="#cam" 
+            video-overlay="src: #strangeFruitVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.3; height: 0.4; radius: 0.08">
+            <a-text value="Strange Fruit" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
     </a-entity>
     <!-- Camera and sky -->
     <a-camera id="cam"  wasd-controls="enabled: false" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">

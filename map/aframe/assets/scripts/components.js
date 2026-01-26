@@ -380,3 +380,67 @@ AFRAME.registerComponent('center-glow', {
         }
     }
 });
+
+AFRAME.registerComponent('button-hover', {
+    schema: {
+        normalColor: {type: 'color', default: '#ffffff'},
+        hoverColor: {type: 'color', default: '#FFD700'}
+    },
+    init: function() {
+        const el = this.el;
+        
+        el.addEventListener('mouseenter', () => {
+            el.setAttribute('material', 'color', this.data.hoverColor);
+            el.setAttribute('material', 'opacity', '0.8');
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            el.setAttribute('material', 'color', this.data.normalColor);
+            el.setAttribute('material', 'opacity', '0');
+        });
+    }
+});
+
+AFRAME.registerComponent('rounded-rectangle', {
+    schema: {
+        width: {type: 'number', default: 1},
+        height: {type: 'number', default: 0.5},
+        radius: {type: 'number', default: 0.1}
+    },
+    init: function() {
+        const data = this.data;
+        const canvas = document.createElement('canvas');
+        canvas.width = 512;
+        canvas.height = 256;
+        const ctx = canvas.getContext('2d');
+        
+        // Calcola il raggio in pixel
+        const radiusPixels = (data.radius / data.width) * canvas.width;
+        
+        // Funzione per disegnare rettangolo con bordi arrotondati
+        function roundRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+            ctx.fill();
+        }
+        
+        // Disegna il rettangolo arrotondato bianco
+        ctx.fillStyle = 'white';
+        roundRect(ctx, 0, 0, canvas.width, canvas.height, radiusPixels);
+        
+        // Applica la texture al materiale
+        const texture = new THREE.CanvasTexture(canvas);
+        texture.needsUpdate = true;
+        this.el.setAttribute('material', 'src', texture);
+        this.el.setAttribute('material', 'transparent', true);
+    }
+});

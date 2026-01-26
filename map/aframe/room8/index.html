@@ -146,21 +146,75 @@
         <a-link class="interactable" href="../room7/index.html" title="Prosegui" image="#room7" position="4.52246 1.52202 3.96381" rotation="2.4092875285251116 -127.77703676551027 -0.3300236899953542" scale="0.80887 0.80887 0.80887" link="backgroundColor: #d7f8fe" geometry="primitive: circle; segments: 64" material="backgroundColor: #d7f8fe; shader: portal; side: double; pano: http://127.0.0.1:5500/map/aframe/room7/R0010200.jpg"><a-entity text="color: white; align: center; font: kelsonsans; value: Prosegui; width: 5" position="0 1.5 0" rotation="-4.789927167293682 -3.9952347054472304 0.8267780983737779"></a-entity></a-link> -->
         
         <!-- Hotspots --> 
-        <a-circle id="endBagBtn" class="interactable" src="#endBag" radius="0.4" position="0.70808 1.02276 -3.56424" look-at="#cam" video-overlay="src: #endBagVideo" material="opacity: 0; transparent: true" geometry="" rotation="-9.02595800647699 -11.236215058670846 -2.0127700706655173e-16">
-            <a-text value="End Bag" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="papierBtn" class="interactable" src="#papier" radius="0.4" position="-1.38543 1.75737 -4.44127" look-at="#cam" video-overlay="src: #papierVideo" material="opacity: 0; transparent: true" geometry="" rotation="1.937346456414604 17.32502684694601 0">
-            <a-text value="Papiers" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="spifferiBtn" class="interactable" src="#spifferi" radius="0.4" position="2.71321 1.73641 5.15101" look-at="#cam" video-overlay="src: #spifferiVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Spifferi" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="dalGorgo" class="interactable" src="#dalGorgo" radius="0.4" position="0.92532 -0.51437 -3.2969" look-at="#cam" video-overlay="src: #dalGorgoVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Dal Gorgo" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="strangeFruitBtn" class="interactable" src="#strangeFruit" radius="0.4" position="5.17755 1.02035 -1.43261" look-at="#cam" video-overlay="src: #strangeFruitVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Strange Fruit" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
+        <a-plane 
+            id="endBagBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="0.70808 1.02276 -3.56424" 
+            rotation="-9.02595800647699 -11.236215058670846 0" 
+            video-overlay="src: #endBagVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 0.7; height: 0.2; radius: 0.05">
+            <a-text value="End Bag" color="white" scale="0.35 0.35 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="papierBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-1.38543 1.75737 -4.44127" 
+            rotation="1.937346456414604 17.32502684694601 0" 
+            video-overlay="src: #papierVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 0.7; height: 0.2; radius: 0.05">
+            <a-text value="Papiers" color="white" scale="0.35 0.35 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="spifferiBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="2.71321 1.73641 5.15101" 
+            look-at="#cam" 
+            video-overlay="src: #spifferiVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 0.7; height: 0.2; radius: 0.05">
+            <a-text value="Spifferi" color="white" scale="0.35 0.35 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="dalGorgo" 
+            class="interactable" 
+            width="0.8" 
+            height="0.2" 
+            position="0.92532 -0.51437 -3.2969" 
+            look-at="#cam" 
+            video-overlay="src: #dalGorgoVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 0.8; height: 0.2; radius: 0.05">
+            <a-text value="Dal Gorgo" color="white" scale="0.35 0.35 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="strangeFruitBtn" 
+            class="interactable" 
+            width="0.9" 
+            height="0.2" 
+            position="5.17755 1.02035 -1.43261" 
+            look-at="#cam" 
+            video-overlay="src: #strangeFruitVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 0.9; height: 0.2; radius: 0.05">
+            <a-text value="Strange Fruit" color="white" scale="0.35 0.35 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
     </a-entity>
     <!-- Camera and sky -->
     <a-camera id="cam"  wasd-controls="enabled: false" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">

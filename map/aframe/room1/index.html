@@ -162,39 +162,159 @@
         </a-circle>
         
         <!-- Hotspots --> 
-        <a-circle id="strangeFruitBtn" class="interactable" src="#strangeFruit" radius="0.4" position="-3.60685 0.68871 0.37242" look-at="#cam" video-overlay="src: #strangeFruitVideo" material="opacity: 0; transparent: true" geometry="" rotation="-14.107360989400929 95.89510100623858 -8.198652240694706e-16">
-            <a-text value="Strange Fruit" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="cieloMutoBtn" class="interactable" src="#cieloMuto" radius="0.4" position="-2.22136 0.76123 2.67682" look-at="#cam" video-overlay="src: #cieloMutoVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Il Cielo e' Muto" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="spifferiBtn" class="interactable" src="#spifferi" radius="0.4" position="2.20473 1.72147 -3.07701" look-at="#cam" video-overlay="src: #spifferiVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Spifferi" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="viaDiQuaBtn" class="interactable" src="#viaDiQua" radius="0.4" position="4.62778 1.10207 -0.99635" look-at="#cam" video-overlay="src: #viaDiQuaVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Via di Qua" color="white" scale="0.8 0.8 1" position="0 0.1761 0.02221" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="desideraBtn" class="interactable" src="#desidera" radius="0.4" position="-5.28669 1.11295 1.52458" look-at="#cam" video-overlay="src: #desideraVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="DeSidera" color="white" scale="0.8 0.8 1" position="0 0.5 0" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="dispersiBtn" class="interactable" src="#dispersi" radius="0.4" position="-1.51064 1.35636 -5.51889" look-at="#cam" video-overlay="src: #dispersiVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Dispersi" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="heiGuisBtn" class="interactable" src="#heiGuis" radius="0.4" position="-5.17964 1.19858 -1.4491" look-at="#cam" video-overlay="src: #heiGuisVideo" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Hey Guys!" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="spifferi2Btn" class="interactable" src="#spifferi" radius="0.4" position="-6.58227 1.67228 -0.66779" look-at="#cam" video-overlay="src: #spifferi2Video" material="opacity: 0; transparent: true" geometry="">
-            <a-text value="Spifferi" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="breakBtn" class="interactable" src="#break" radius="0.4" position="-3.1445 1.79305 -4.56024" look-at="#cam" video-overlay="" material="opacity: 0; transparent: true" geometry="" rotation="1.996011570754047 34.58808994604359 9.945267630983884e-17">
-            <a-text value="Break" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="senzaDoveBtn" class="interactable" src="#senzaDove" radius="0.4" position="-3.22849 1.12105 -4.85244" look-at="#cam" video-overlay="src: #senzaDoveVideo" material="opacity: 0; transparent: true" geometry="" rotation="-4.697801176663783 33.63714590764911 5.983641889487089e-16">
-            <a-text value="Senza Dove" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
-        <a-circle id="nellOpacoBtn" class="interactable" src="#nellOpaco" radius="0.4" position="-2.4298 1.56623 -5.63082" look-at="#cam" video-overlay="src: #nellOpacoVideo" material="opacity: 0; transparent: true" geometry="" rotation="-0.31549848589591817 23.341065584208213 -1.2424230084035144e-17">
-            <a-text value="Nell'Opaco" color="white" scale="0.8 0.8 1" position="" align="center" text=""></a-text>
-        </a-circle>
+        <a-plane 
+            id="strangeFruitBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-2.996 0.882 0.372" 
+            rotation="-14.107360989400929 95.89510100623858 0" 
+            video-overlay="src: #strangeFruitVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.3; height: 0.4; radius: 0.08">
+            <a-text value="Strange Fruit" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="cieloMutoBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-2.22136 0.76123 2.67682" 
+            look-at="#cam" 
+            video-overlay="src: #cieloMutoVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.5; height: 0.4; radius: 0.08">
+            <a-text value="Il Cielo e' Muto" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="spifferiBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="2.20473 1.72147 -3.07701" 
+            look-at="#cam" 
+            video-overlay="src: #spifferiVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.0; height: 0.4; radius: 0.08">
+            <a-text value="Spifferi" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="viaDiQuaBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="3.110 1.410 -0.679" 
+            look-at="#cam" 
+            video-overlay="src: #viaDiQuaVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="Via di Qua" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="desideraBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-2.841 1.491 0.637" 
+            look-at="#cam" 
+            video-overlay="src: #desideraVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="DeSidera" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="dispersiBtn" 
+            class="interactable" 
+            width="0.5" 
+            height="0.2" 
+            position="-0.747 1.486 -2.724" 
+            look-at="#cam" 
+            video-overlay="src: #dispersiVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.0; height: 0.4; radius: 0.08">
+            <a-text value="Dispersi" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="heiGuisBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-3.589 1.313 -1.039" 
+            look-at="#cam" 
+            video-overlay="src: #heiGuisVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="Hey Guys!" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="spifferi2Btn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-3.596 1.672 -0.290" 
+            look-at="#cam" 
+            video-overlay="src: #spifferi2Video"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.0; height: 0.4; radius: 0.08">
+            <a-text value="Spifferi" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="breakBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-1.590 1.739 -2.469" 
+            rotation="1.996011570754047 34.58808994604359 0" 
+            video-overlay="src: #breakVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.0; height: 0.4; radius: 0.08">
+            <a-text value="Break" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="senzaDoveBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-1.777 1.295 -2.845" 
+            rotation="-4.697801176663783 33.63714590764911 0" 
+            video-overlay="src: #senzaDoveVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="Senza Dove" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
+
+        <a-plane 
+            id="nellOpacoBtn" 
+            class="interactable" 
+            width="0.7" 
+            height="0.2" 
+            position="-1.308 2.025 -2.885" 
+            rotation="-0.31549848589591817 23.341065584208213 0" 
+            video-overlay="src: #nellOpacoVideo"
+            material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
+            button-hover="normalColor: #ffffff; hoverColor: #FFD700"
+            rounded-rectangle="width: 1.2; height: 0.4; radius: 0.08">
+            <a-text value="Nell'Opaco" color="white" scale="0.5 0.5 1" position="0 0 0.01" align="center" shader="flat"></a-text>
+        </a-plane>
     </a-entity>
     <!-- Camera and sky -->
     <a-camera id="cam"  wasd-controls="enabled: false" look-controls cursor="rayOrigin: mouse;" raycaster="objects: .interactable; far: 20">
