@@ -44,7 +44,9 @@
 
 <!-- entrance link -->
     <!-- Link fisso in basso a destra -->
-    <div id="entranceLink" style="
+    <div id="entranceLink" 
+        class="entranceLink"
+        style="
         position: fixed;
         bottom: 1rem;
         left: 1rem;
@@ -64,12 +66,11 @@
         ">Visita la mostra</a>
     </div>
 
-    <style>
+    <!-- <style>
         #entranceLink:hover {
             background: rgba(0, 0, 0, 0.9);
-            transform: scale(1.05);
         }
-    </style>
+    </style> -->
 <!-- A-Frame Scene -->
 <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .interactable" inspector>
     <!-- Assets -->
@@ -227,7 +228,7 @@
             class="interactable" 
             width="0.9" 
             height="0.2" 
-            position="3.43121 0.65685 3.58361" 
+            position="1.548 1.220 1.723" 
             rotation="-10.763367448459507 -136.24457981639665 0" 
             video-overlay="src: #strangeFruitVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -241,7 +242,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="2.46948 0.75364 -0.75705" 
+            position="1.080 1.212 -0.259" 
             look-at="#cam" 
             video-overlay="src: #dryVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -255,7 +256,7 @@
             class="interactable" 
             width="1.0" 
             height="0.2" 
-            position="4.94876 1.00205 2.48715" 
+            position="2.326 1.301 1.058" 
             look-at="#cam" 
             video-overlay="src: #cieloMutoVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -269,7 +270,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="-1.9024 2.01399 -3.7586" 
+            position="-0.736 1.761 -1.437" 
             look-at="#cam" 
             video-overlay="src: #spifferiVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -283,12 +284,12 @@
             class="interactable" 
             width="0.8" 
             height="0.2" 
-            position="0.06993 1.05425 5.57772" 
+            position="0.070 1.319 2.761" 
             rotation="-5.587860472142289 -179.28169862431346 0" 
             video-overlay="src: #heiGuisVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
             button-hover="normalColor: #ffffff; hoverColor: #FFD700"
-            rounded-rectangle="width: 0.8; height: 0.2; radius: 0.05">
+            rounded-rectangle="width: 0.4; height: 0.2; radius: 0.05">
             <a-text value="Hei Guys!" color="white" scale="0.35 0.35 1" position="0 0 0.01" align="center" shader="flat"></a-text>
         </a-plane>
         
@@ -297,12 +298,12 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="1.08841 1.1441 5.75212" 
+            position="0.861 1.577 3.252" 
             look-at="#cam" 
             video-overlay="src: #spifferi2Video"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
             button-hover="normalColor: #ffffff; hoverColor: #FFD700"
-            rounded-rectangle="width: 0.7; height: 0.2; radius: 0.05">
+            rounded-rectangle="width: 0.4; height: 0.2; radius: 0.05">
             <a-text value="Spifferi" color="white" scale="0.35 0.35 1" position="0 0 0.01" align="center" shader="flat"></a-text>
         </a-plane>
 
@@ -311,7 +312,7 @@
             class="interactable" 
             width="0.8" 
             height="0.2" 
-            position="-4.98451 1.25887 3.67774" 
+            position="-2.147 1.454 1.665" 
             look-at="#cam" 
             video-overlay="src: #nellOpacoVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -325,7 +326,7 @@
             class="interactable" 
             width="0.8" 
             height="0.2" 
-            position="2.07539 0.93849 4.82166" 
+            position="0.814 1.262 2.006" 
             look-at="#cam" 
             video-overlay="src: #imagineVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -339,7 +340,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="3.16111 1.95618 4.70842" 
+            position="1.832 1.742 2.640" 
             look-at="#cam" 
             video-overlay="src: #babelVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -353,7 +354,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="3.68942 1.28298 4.60714" 
+            position="1.601 1.437 2.101" 
             rotation="-3.0744563397216713 -141.3120846100316 0" 
             video-overlay="src: #desideraVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"

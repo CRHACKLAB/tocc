@@ -403,8 +403,8 @@ AFRAME.registerComponent('button-hover', {
 
 AFRAME.registerComponent('rounded-rectangle', {
     schema: {
-        width: {type: 'number', default: 1},
-        height: {type: 'number', default: 0.5},
+        width: {type: 'number', default: 0.4},
+        height: {type: 'number', default: 0.2},
         radius: {type: 'number', default: 0.1}
     },
     init: function() {

@@ -52,32 +52,27 @@
 
 <!-- entrance link -->
 <!-- Link fisso in basso a destra -->
-<div id="entranceLink" style="
-position: fixed;
-bottom: 1rem;
-left: 1rem;
-z-index: 1000;
-cursor: pointer;
-background: rgba(0, 0, 0, 0.4);
-padding: 1rem 2rem;
-border-radius: 8px;
-transition: all 0.3s ease;
-">
-<a href="../entrance/index.html" style="
-color: white;
-text-decoration: none;
-font-size: 1.2rem;
-font-family: Helvetica, Arial, sans-serif;
-font-weight: bold;
-">Visita la mostra</a>
+<div id="entranceLink" 
+    class="entranceLink"
+    style="
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    ">
+    <a href="../entrance/index.html" style="
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    ">Visita la mostra</a>
 </div>
-
-<style>
-    #entranceLink:hover {
-        background: rgba(0, 0, 0, 0.9);
-        transform: scale(1.05);
-    }
-</style>
 
 <!-- A-Frame Scene -->
 <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .interactable" inspector>

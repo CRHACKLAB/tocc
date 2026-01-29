@@ -46,6 +46,29 @@
         <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="1">
     </div> -->
 </div>
+<!-- entrance link -->
+    <!-- Link fisso in basso a destra -->
+    <div id="entranceLink" 
+        class="entranceLink"
+        style="
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    ">
+        <a href="../entrance/index.html" style="
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+        ">Visita la mostra</a>
+    </div>
 <!-- A-Frame Scene -->
 <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .interactive" inspector>
     <!-- Assets -->
@@ -174,7 +197,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="-0.03427 -0.71985 4.91805" 
+            position="0.170 0.974 1.137" 
             rotation="-25.25277053108861 179.60075749848977 0" 
             video-overlay="src: #endBagVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -188,7 +211,7 @@
             class="interactable" 
             width="1.0" 
             height="0.2" 
-            position="-4.8391 -0.01108 2.8187" 
+            position="-1.649 0.900 0.510" 
             look-at="#cam" 
             video-overlay="src: #cieloMutoVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -202,7 +225,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="4.30964 1.16999 0.43572" 
+            position="1.654 1.443 0.157" 
             rotation="-5.669322869011404 -95.77319027702441 0" 
             video-overlay="src: #papierVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -216,7 +239,7 @@
             class="interactable" 
             width="0.8" 
             height="0.2" 
-            position="1.78108 0.59652 -5.26103" 
+            position="0.770 1.182 -2.372" 
             look-at="#cam" 
             video-overlay="src: #viaDiQuaVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -230,7 +253,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="-6.92839 1.60141 1.70581" 
+            position="-2.984 1.601 0.763" 
             look-at="#cam" 
             video-overlay="src: #babelVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -244,7 +267,7 @@
             class="interactable" 
             width="0.8" 
             height="0.2" 
-            position="4.80856 -0.68133 -0.64643" 
+            position="1.543 0.775 -0.445" 
             look-at="#cam" 
             video-overlay="src: #dalGorgoVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -258,7 +281,7 @@
             class="interactable" 
             width="0.9" 
             height="0.2" 
-            position="-5.15984 0.43763 -1.42659" 
+            position="-2.245 1.053 -0.587"
             look-at="#cam" 
             video-overlay="src: #strangeFruitVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -272,7 +295,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="0.04659 1.55978 -5.30233" 
+            position="0.078 1.560 -3.029" 
             look-at="#cam" 
             video-overlay="src: #spifferiVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -286,7 +309,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="-5.28669 0.37856 0.81749" 
+            position="-2.244 1.295 0.407" 
             look-at="#cam" 
             video-overlay="src: #desideraVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -300,7 +323,7 @@
             class="interactable" 
             width="0.7" 
             height="0.2" 
-            position="-4.63235 1.68881 -4.70114" 
+            position="-1.872 1.698 -1.868" 
             rotation="0.04305894286186582 44.57772437647767 0" 
             video-overlay="src: #breakVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -314,7 +337,7 @@
             class="interactable" 
             width="0.8" 
             height="0.2" 
-            position="-4.7629 0.8182 -4.79214" 
+            position="-1.997 1.284 -1.991" 
             rotation="-6.600420935833704 44.824666002089785 0" 
             video-overlay="src: #senzaDoveVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
@@ -328,7 +351,7 @@
             class="interactable" 
             width="0.8" 
             height="0.2" 
-            position="-4.3836 1.19154 -5.75626" 
+            position="-1.923 1.376 -2.810" 
             rotation="-3.231105312484751 37.29058259662791 0" 
             video-overlay="src: #nellOpacoVideo"
             material="color: #ffffff; transparent: true; opacity: 0.1; shader: flat; side: double"
